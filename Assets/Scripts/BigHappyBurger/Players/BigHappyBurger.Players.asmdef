@@ -1,0 +1,18 @@
+{
+    "name": "BigHappyBurger.Players",
+    "rootNamespace": "BigHappyBurger.Players",
+    "references": [
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:b28a31c08beef024d83a7aa1ec3f2f6d",
+        "GUID:bc9c2eb1bf6b94f4b82f86ecd181f5c7"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

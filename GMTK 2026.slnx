@@ -9,11 +9,11 @@
   <Project Path="Unity.Timeline.Editor.csproj" />
   <Project Path="Unity.Multiplayer.Center.Editor.csproj" />
   <Project Path="Unity.RenderPipelines.Core.Editor.csproj" />
-  <Project Path="Unity.Collections.csproj" />
+  <Project Path="Shears.StateMachineGraphs.Editor.csproj" />
   <Project Path="Unity.RenderPipelines.Universal.2D.Runtime.csproj" />
   <Project Path="UnityEngine.UI.csproj" />
   <Project Path="Unity.Addressables.Editor.csproj" />
-  <Project Path="Shears.StateMachineGraphs.Editor.csproj" />
+  <Project Path="Unity.Collections.csproj" />
   <Project Path="Unity.VisualScripting.Core.Editor.csproj" />
   <Project Path="Unity.RenderPipelines.Universal.Editor.csproj" />
   <Project Path="Unity.PerformanceTesting.Editor.csproj" />
@@ -34,6 +34,7 @@
   <Project Path="Unity.VisualScripting.State.Editor.csproj" />
   <Project Path="Shears.GraphViews.Editor.csproj" />
   <Project Path="Unity.Burst.CodeGen.csproj" />
+  <Project Path="Shears.Cameras.csproj" />
   <Project Path="Unity.Addressables.DocExampleCode.Editor.Tests.csproj" />
   <Project Path="Unity.VisualScripting.Flow.csproj" />
   <Project Path="Unity.PerformanceTesting.csproj" />
@@ -48,9 +49,11 @@
   <Project Path="Unity.AutoGroupGenerator.Editor.csproj" />
   <Project Path="Unity.VisualScripting.State.csproj" />
   <Project Path="Unity.AI.Navigation.Updater.csproj" />
+  <Project Path="Shears.Shaders.csproj" />
   <Project Path="Shears.Input.csproj" />
   <Project Path="UnityEditor.UI.csproj" />
   <Project Path="Unity.RenderPipelines.Universal.2D.Editor.Overrides.csproj" />
+  <Project Path="BigHappyBurger.Players.csproj" />
   <Project Path="Unity.AI.Navigation.Editor.csproj" />
   <Project Path="Unity.Multiplayer.Center.Common.csproj" />
   <Project Path="Unity.RenderPipelines.Core.Runtime.Shared.csproj" />
@@ -84,7 +87,6 @@
   <Project Path="Shears.Detection.csproj" />
   <Project Path="Shears.Logging.Editor.csproj" />
   <Project Path="Unity.CollabProxy.Editor.csproj" />
-  <Project Path="Shears.Cameras.csproj" />
   <Project Path="Unity.RenderPipeline.Universal.ShaderLibrary.csproj" />
   <Project Path="Shears.Loading.Editor.csproj" />
   <Project Path="Shears.UI.Editor.csproj" />
