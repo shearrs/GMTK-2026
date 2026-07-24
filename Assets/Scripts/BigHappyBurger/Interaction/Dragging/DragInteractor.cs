@@ -20,27 +20,42 @@ namespace BigHappyBurger.Interaction
 
         public Item Item { get; private set; }
 
-        public void UpdateInteraction(bool dragInput)
+        public readonly struct UpdateInfo
+        {
+            public static readonly UpdateInfo Empty = new();
+
+            public Item Item { get; }
+            public bool ReleasedItem { get; }
+
+            public UpdateInfo(Item item, bool releasedItem = false)
+            {
+                Item = item;
+                ReleasedItem = releasedItem;
+            }
+        }
+
+        public UpdateInfo UpdateDragging(bool dragInput)
         {
             if (Item != null)
             {
                 if (dragInput)
                 {
                     UpdateDrag();
-                    return;
+                    return new(Item);
                 }
                 else
                 {
+                    var releasedItem = Item;
                     Release();
-                    return;
+                    return new(releasedItem, true);
                 }
             }
 
             if (!dragInput || !detector.Detect())
-                return;
+                return UpdateInfo.Empty;
 
             if (!detector.TryGetDetection(out Item item, true) || !item.IsDraggable)
-                return;
+                return UpdateInfo.Empty;
 
             var hit = detector.GetHit(0);
             var cam = Camera.main;
@@ -53,6 +68,8 @@ namespace BigHappyBurger.Interaction
             Item = item;
             Item.OnDragBegin();
             UpdateDrag();
+
+            return new(Item);
         }
 
         public void Release()

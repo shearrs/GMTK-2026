@@ -15,11 +15,13 @@ namespace BigHappyBurger.Interaction
         {
             TryGetComponent(out Item item);
             rigidbody = GetComponent<Rigidbody>();
+            rigidbody.collisionDetectionMode = CollisionDetectionMode.Continuous;
+            item.SetRigidbody(rigidbody);
 
             item.SetHoldable(this);
         }
 
-        protected override void OnHoldEndImplementation()
+        protected override void OnHoldBeginImplementation()
         {
             wasKinematic = rigidbody.isKinematic;
 
@@ -27,7 +29,7 @@ namespace BigHappyBurger.Interaction
             rigidbody.isKinematic = true;
         }
 
-        protected override void OnHoldBeginImplementation()
+        protected override void OnHoldEndImplementation()
         {
             rigidbody.isKinematic = wasKinematic;
         }

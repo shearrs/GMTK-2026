@@ -7,14 +7,14 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Base Test Really Red
+  m_Name: Test Holder
   m_Shader: {fileID: 4800000, guid: bdd2635aa32521a4392073a915cac3bd, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _RECEIVE_SHADOWS_ON
-  - _RIM_LIGHTING_ON
   m_InvalidKeywords:
+  - _RECEIVE_SHADOWS_ON_ON
   - _RIM_LIGHTING_ON_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -114,7 +114,8 @@ Material:
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _RECEIVE_SHADOWS: 1
-    - _RIM_LIGHTING: 1
+    - _RECEIVE_SHADOWS_ON: 1
+    - _RIM_LIGHTING: 0
     - _RIM_LIGHTING_ON: 1
     - _ReceiveShadows: 1
     - _RimLightCutoff: 0.1
@@ -132,7 +133,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 0.15827337, b: 0, a: 1}
+    - _Color: {r: 1, g: 0.7093661, b: 0.65471697, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []

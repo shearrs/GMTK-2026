@@ -8,29 +8,59 @@ namespace BigHappyBurger.Interaction
         [field: SerializeField]
         public bool IsLocked { get; set; }
 
+        [SerializeField]
+        private Transform container;
+
+        private Transform previousParent;
+
         public Item Item { get; private set; }
         public Func<Item, bool> CanBeHeldCallback { get; set; }
-
-        public event Action<Item> ItemChanged;
+        public Func<Item, bool> CanBeReleasedCallback { get; set; }
 
         public bool CanBeHeld(Item item)
         {
-            return CanBeHeldCallback(item);
+            bool callbackValue = CanBeHeldCallback == null || CanBeHeldCallback(item);
+
+            return Item == null && !IsLocked && callbackValue;
+        }
+
+        public bool CanBeReleased()
+        {
+            if (Item == null)
+                return true;
+
+            bool callbackValue = CanBeReleasedCallback == null || CanBeReleasedCallback(Item);
+
+            return !IsLocked && callbackValue;
         }
 
         public bool Hold(Item item)
         {
-            if (Item != null)
+            if (Item != null || !CanBeHeld(item))
                 return false;
 
-            if (CanBeHeld(item))
-            {
-                return true;
-            }
-            else
-                return false;
+            Item = item;
+            previousParent = item.Parent;
+            item.OnHoldBegin(this);
+            item.SetParent(container);
+            item.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+
+            return true;
         }
 
-        public void Release() { }
+        public bool Release()
+        {
+            if (Item == null)
+                return true;
+
+            if (!CanBeReleased())
+                return false;
+
+            Item.SetParent(previousParent);
+            Item.OnHoldEnd();
+            Item = null;
+
+            return true;
+        }
     }
 }
