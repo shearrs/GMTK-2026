@@ -69,5 +69,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Shears.Shaders::DownscaleRendererFeature
   m_Active: 0
   _injectionPoint: 600
-  _resolution: {x: 256, y: 144}
+  _resolution: {x: 512, y: 288}
   _material: {fileID: 2100000, guid: 68735fc6971a06041bb600ffe34cff4f, type: 2}
