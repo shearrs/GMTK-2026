@@ -156,6 +156,15 @@ namespace BigHappyBurger.Players
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Hold Item"",
+                    ""type"": ""Button"",
+                    ""id"": ""e78f1888-0a86-4d8d-890b-31e40bb0963a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -235,6 +244,17 @@ namespace BigHappyBurger.Players
                     ""action"": ""Rotate Down"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c44955e0-3e2b-4f7f-bfb3-5a0e5fbe90a6"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hold Item"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -250,6 +270,7 @@ namespace BigHappyBurger.Players
             m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
             m_Player_ScrollItem = m_Player.FindAction("Scroll Item", throwIfNotFound: true);
             m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
+            m_Player_HoldItem = m_Player.FindAction("Hold Item", throwIfNotFound: true);
         }
 
         ~@PlayerInputActions()
@@ -337,6 +358,7 @@ namespace BigHappyBurger.Players
         private readonly InputAction m_Player_Interact;
         private readonly InputAction m_Player_ScrollItem;
         private readonly InputAction m_Player_Look;
+        private readonly InputAction m_Player_HoldItem;
         /// <summary>
         /// Provides access to input actions defined in input action map "Player".
         /// </summary>
@@ -376,6 +398,10 @@ namespace BigHappyBurger.Players
             /// Provides access to the underlying input action "Player/Look".
             /// </summary>
             public InputAction @Look => m_Wrapper.m_Player_Look;
+            /// <summary>
+            /// Provides access to the underlying input action "Player/HoldItem".
+            /// </summary>
+            public InputAction @HoldItem => m_Wrapper.m_Player_HoldItem;
             /// <summary>
             /// Provides access to the underlying input action map instance.
             /// </summary>
@@ -423,6 +449,9 @@ namespace BigHappyBurger.Players
                 @Look.started += instance.OnLook;
                 @Look.performed += instance.OnLook;
                 @Look.canceled += instance.OnLook;
+                @HoldItem.started += instance.OnHoldItem;
+                @HoldItem.performed += instance.OnHoldItem;
+                @HoldItem.canceled += instance.OnHoldItem;
             }
 
             /// <summary>
@@ -455,6 +484,9 @@ namespace BigHappyBurger.Players
                 @Look.started -= instance.OnLook;
                 @Look.performed -= instance.OnLook;
                 @Look.canceled -= instance.OnLook;
+                @HoldItem.started -= instance.OnHoldItem;
+                @HoldItem.performed -= instance.OnHoldItem;
+                @HoldItem.canceled -= instance.OnHoldItem;
             }
 
             /// <summary>
@@ -544,6 +576,13 @@ namespace BigHappyBurger.Players
             /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
             /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
             void OnLook(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "Hold Item" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnHoldItem(InputAction.CallbackContext context);
         }
     }
 }

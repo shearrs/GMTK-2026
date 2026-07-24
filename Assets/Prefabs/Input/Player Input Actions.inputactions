@@ -68,6 +68,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Hold Item",
+                    "type": "Button",
+                    "id": "e78f1888-0a86-4d8d-890b-31e40bb0963a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -145,6 +154,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Rotate Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c44955e0-3e2b-4f7f-bfb3-5a0e5fbe90a6",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hold Item",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

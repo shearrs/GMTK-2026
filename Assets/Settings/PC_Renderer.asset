@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db319f8336a538e4698a45b4edba5575, type: 3}
   m_Name: DownscaleRendererFeature
   m_EditorClassIdentifier: Shears.Shaders::DownscaleRendererFeature
-  m_Active: 0
+  m_Active: 1
   _injectionPoint: 600
   _resolution: {x: 512, y: 288}
   _material: {fileID: 2100000, guid: 68735fc6971a06041bb600ffe34cff4f, type: 2}

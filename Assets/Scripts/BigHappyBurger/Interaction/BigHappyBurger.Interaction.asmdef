@@ -1,11 +1,11 @@
 {
-    "name": "BigHappyBurger.Players",
-    "rootNamespace": "BigHappyBurger.Players",
+    "name": "BigHappyBurger.Interaction",
+    "rootNamespace": "BigHappyBurger.Interaction",
     "references": [
-        "GUID:75469ad4d38634e559750d17036d5f7c",
         "GUID:b28a31c08beef024d83a7aa1ec3f2f6d",
-        "GUID:bc9c2eb1bf6b94f4b82f86ecd181f5c7",
-        "GUID:5fd467d2e238d8045a80c47090444a92"
+        "GUID:82e1ca9b695ad5f4b9951665b5cfbd3f",
+        "GUID:624a85509f829424398b0fa44ae4b076",
+        "GUID:f9343658ba9f34f40af4f1a7b0c76be7"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -20,8 +20,8 @@ namespace BigHappyBurger.Players
             cam.GlobalData.RotateRight = () =>
                 input.PlayerActions.RotateRight.WasPressedThisFrame();
             cam.GlobalData.RotateLeft = () => input.PlayerActions.RotateLeft.WasPressedThisFrame();
-            cam.GlobalData.RotateUp = () => input.PlayerActions.RotateUp.WasPressedThisFrame();
-            cam.GlobalData.RotateDown = () => input.PlayerActions.RotateDown.WasPressedThisFrame();
+            cam.GlobalData.RotateUp = () => input.PlayerActions.RotateUp.IsPressed();
+            cam.GlobalData.RotateDown = () => input.PlayerActions.RotateDown.IsPressed();
 
             cam.Initialize();
         }
