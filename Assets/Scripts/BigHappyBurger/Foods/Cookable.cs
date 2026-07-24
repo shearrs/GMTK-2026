@@ -3,7 +3,7 @@ using UnityEngine;
 public class Cookable : MonoBehaviour
 {
     [SerializeField]
-    private float cookTime = 0.0f;
+    private int cookTime = 0;
 
-    public float CookTime => cookTime;
+    public int CookTime => cookTime;
 }
