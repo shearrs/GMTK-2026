@@ -351,10 +351,10 @@ MonoBehaviour:
   highlightOnDetect: 0
   defaultGizmoColor: {r: 1, g: 0, b: 0, a: 1}
   detectingGizmoColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  maxDetections: 10
+  maxDetections: 100
   detectionMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1
   detectTriggers: 1
   continuousDetection: 0
   continuousDetectionStep: 0.1

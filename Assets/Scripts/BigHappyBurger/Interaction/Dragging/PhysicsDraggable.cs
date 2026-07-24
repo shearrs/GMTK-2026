@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace BigHappyBurger.Interaction
 {
-    [RequireComponent(typeof(Item))]
-    public class Draggable : MonoBehaviour
+    [RequireComponent(typeof(Rigidbody))]
+    public class PhysicsDraggable : Draggable
     {
         private const float INTERPOLATION_DURATION = 5.0f;
 
@@ -32,16 +32,13 @@ namespace BigHappyBurger.Interaction
         [SerializeField, Min(0)]
         private float angularDamping = 10.0f;
 
-        private bool isBeingDragged = false;
-        private bool previouslyUsedGravity = false;
         private readonly Timer interpolateTimer = new(INTERPOLATION_DURATION);
-        private Vector3 targetPosition;
-        private Quaternion targetRotation;
 
         private void Reset()
         {
-            var item = GetComponent<Item>();
-            TryGetComponent(out rigidbody);
+            TryGetComponent(out Item item);
+            rigidbody = GetComponent<Rigidbody>();
+            rigidbody.collisionDetectionMode = CollisionDetectionMode.Continuous;
 
             colliders = GetComponentsInChildren<Collider>();
 
@@ -54,47 +51,25 @@ namespace BigHappyBurger.Interaction
                 rigidbody.interpolation = RigidbodyInterpolation.None;
         }
 
-        public void OnDragBegin()
+        protected override void OnDragBeginImplementation()
         {
-            if (isBeingDragged)
-                return;
-
-            previouslyUsedGravity = rigidbody.useGravity;
-
             foreach (var collider in colliders)
                 collider.material = noBounceMaterial;
 
             rigidbody.interpolation = RigidbodyInterpolation.Interpolate;
-            rigidbody.useGravity = false;
-            isBeingDragged = true;
         }
 
-        public void OnDragEnd()
+        protected override void OnDragEndImplementation()
         {
-            if (!isBeingDragged)
-                return;
-
             foreach (var collider in colliders)
                 collider.material = normalBounceMaterial;
 
             interpolateTimer.Restart();
-            rigidbody.useGravity = previouslyUsedGravity;
-            isBeingDragged = false;
-        }
-
-        public void SetTargetPosition(Vector3 position)
-        {
-            targetPosition = position;
-        }
-
-        public void SetTargetRotation(Quaternion rotation)
-        {
-            targetRotation = rotation;
         }
 
         private void FixedUpdate()
         {
-            if (isBeingDragged)
+            if (IsBeingDragged)
             {
                 MoveTowardsTarget();
                 RotateTowardsTarget();
@@ -103,7 +78,7 @@ namespace BigHappyBurger.Interaction
 
         private void MoveTowardsTarget()
         {
-            var heading = targetPosition - rigidbody.position;
+            var heading = TargetPosition - rigidbody.position;
             float distance = heading.magnitude;
 
             Vector3 springForce = Vector3.zero;
@@ -116,13 +91,13 @@ namespace BigHappyBurger.Interaction
 
             Vector3 dampForce = damping * -rigidbody.linearVelocity;
 
-            rigidbody.AddForceAtPosition(springForce, targetPosition, ForceMode.Force);
-            rigidbody.AddForceAtPosition(dampForce, targetPosition, ForceMode.Acceleration);
+            rigidbody.AddForceAtPosition(springForce, TargetPosition, ForceMode.Force);
+            rigidbody.AddForceAtPosition(dampForce, TargetPosition, ForceMode.Acceleration);
         }
 
         private void RotateTowardsTarget()
         {
-            var heading = targetRotation * Quaternion.Inverse(rigidbody.rotation);
+            var heading = TargetRotation * Quaternion.Inverse(rigidbody.rotation);
 
             heading.ToAngleAxis(out float angle, out var axis);
 
@@ -142,11 +117,11 @@ namespace BigHappyBurger.Interaction
 
         private void OnDrawGizmosSelected()
         {
-            if (!isBeingDragged)
+            if (!IsBeingDragged)
                 return;
 
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(targetPosition, 0.25f);
+            Gizmos.DrawWireSphere(TargetPosition, 0.25f);
         }
     }
 }

@@ -18,7 +18,10 @@ namespace BigHappyBurger.Interaction
         [SerializeField, Local]
         private Draggable draggable;
 
-        public bool IsDraggable => draggable != null;
+        [SerializeField, Local]
+        private Holdable holdable;
+
+        public bool IsDraggable => draggable != null && (holdable == null || !holdable.IsLocked);
 
         private void Reset()
         {
@@ -56,5 +59,7 @@ namespace BigHappyBurger.Interaction
         }
 
         internal void SetDraggable(Draggable draggable) => this.draggable = draggable;
+
+        internal void SetHoldable(Holdable holdable) => this.holdable = holdable;
     }
 }

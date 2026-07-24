@@ -95,6 +95,7 @@ namespace BigHappyBurger.Interaction
                 Color.magenta
             );
 
+            // in case we decide that an offset is better
             dragPosition += flatCamRotation * dragOffset;
 
             Item.SetDragPosition(dragPosition);
