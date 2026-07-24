@@ -7,21 +7,21 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Transparent
+  m_Name: Item 1
   m_Shader: {fileID: 4800000, guid: bdd2635aa32521a4392073a915cac3bd, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _RECEIVE_SHADOWS_ON
-  - _RIM_LIGHTING_ON
   m_InvalidKeywords:
+  - _RECEIVE_SHADOWS_ON_ON
   - _RIM_LIGHTING_ON_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: 2000
   stringTagMap:
-    RenderType: Transparent
+    RenderType: Opaque
   disabledShaderPasses:
   - MOTIONVECTORS
   m_LockedProperties: 
@@ -53,8 +53,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
+        m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -85,10 +85,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints:
-    - _DstBlend: 10
-    - _SrcBlend: 5
-    - _SurfaceType: 1
-    - _ZWrite: 0
+    - _DstBlend: 0
+    - _SrcBlend: 1
+    - _SurfaceType: 0
+    - _ZWrite: 1
     m_Floats:
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
@@ -98,7 +98,7 @@ Material:
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _ColorBands: 3.16
+    - _ColorBands: 4
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
@@ -115,14 +115,14 @@ Material:
     - _QueueOffset: 0
     - _RECEIVE_SHADOWS: 1
     - _RECEIVE_SHADOWS_ON: 1
-    - _RIM_LIGHTING: 1
+    - _RIM_LIGHTING: 0
     - _RIM_LIGHTING_ON: 1
     - _ReceiveShadows: 1
-    - _RimLightCutoff: 0
-    - _RimLightRadius: 9.2
+    - _RimLightCutoff: 0.1
+    - _RimLightRadius: 1
     - _RimLightSmoothness: 0.01
     - _RimLightStrength: 1
-    - _Smoothness: 0.8
+    - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -133,12 +133,12 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.8792453, g: 0.8792453, b: 0.8792453, a: 0.5294118}
+    - _Color: {r: 0.9245283, g: 0.62336254, b: 0.284336, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &8348099524655662057
+--- !u!114 &6915636454494186680
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

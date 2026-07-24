@@ -186,7 +186,7 @@ MonoBehaviour:
   <HorizontalTweenData>k__BackingField:
     usesDataObject: 0
     tweenDataObject: {fileID: 0}
-    duration: 0.25
+    duration: 0.35
     forceFinalValue: 1
     updateMode: 0
     unscaledTime: 0
@@ -219,11 +219,11 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     unityEvents: []
-  <VerticalRotationIncrement>k__BackingField: 15
+  <VerticalRotationIncrement>k__BackingField: 30
   <VerticalTweenData>k__BackingField:
     usesDataObject: 0
     tweenDataObject: {fileID: 0}
-    duration: 0.15
+    duration: 0.25
     forceFinalValue: 1
     updateMode: 0
     unscaledTime: 0
@@ -284,6 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Players::BigHappyBurger.Players.PlayerInteractor
   dragInteractor: {fileID: 1624616269570611870}
+  itemScrollSensitivity: 0.1
 --- !u!1 &3298915670472268125
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,7 +331,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.DragInteractor
   detector: {fileID: 5360209703247083839}
-  <PlaneDistance>k__BackingField: 2
+  PlaneDistanceRange:
+    min: 1
+    max: 3
+  planeDistance: 2
 --- !u!114 &5360209703247083839
 MonoBehaviour:
   m_ObjectHideFlags: 0

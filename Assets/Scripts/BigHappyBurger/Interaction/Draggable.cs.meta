@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: 2118c6777a5fdf74790f2c2a0340a9dc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - normalBounceMaterial: {fileID: 13400000, guid: 9ad28177b18f7964c83496da4ea6161a, type: 2}
+  - noBounceMaterial: {fileID: 13400000, guid: f298dd7ef0dbae341bafebd1b1f1fd32, type: 2}
+  - rigidbody: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -11,7 +11,9 @@ Material:
   m_Shader: {fileID: 4800000, guid: bdd2635aa32521a4392073a915cac3bd, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _RECEIVE_SHADOWS_ON
+  - _RIM_LIGHTING_ON
   m_InvalidKeywords:
   - _RIM_LIGHTING_ON_ON
   m_LightmapFlags: 4
@@ -111,10 +113,12 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
+    - _RECEIVE_SHADOWS: 1
+    - _RIM_LIGHTING: 1
     - _RIM_LIGHTING_ON: 1
     - _ReceiveShadows: 1
     - _RimLightCutoff: 0
-    - _RimLightRadius: 10.36
+    - _RimLightRadius: 12
     - _RimLightSmoothness: 0.01
     - _RimLightStrength: 1
     - _Smoothness: 1

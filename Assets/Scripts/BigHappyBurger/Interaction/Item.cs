@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace BigHappyBurger.Interaction
 {
+    [SelectionBase]
     public class Item : MonoBehaviour, ISHLoggable
     {
         [field: Header("Logging")]

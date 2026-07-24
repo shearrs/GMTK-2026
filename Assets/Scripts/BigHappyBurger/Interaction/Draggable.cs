@@ -1,3 +1,4 @@
+using Shears;
 using UnityEngine;
 
 namespace BigHappyBurger.Interaction
@@ -5,8 +6,19 @@ namespace BigHappyBurger.Interaction
     [RequireComponent(typeof(Item))]
     public class Draggable : MonoBehaviour
     {
-        [SerializeField]
+        private const float INTERPOLATION_DURATION = 5.0f;
+
+        [SerializeField, Required, Local]
+        private PhysicsMaterial normalBounceMaterial;
+
+        [SerializeField, Required, Local]
+        private PhysicsMaterial noBounceMaterial;
+
+        [SerializeField, Required, Local]
         private Rigidbody rigidbody;
+
+        [SerializeField, Required(targetCollectionSize: 1), Local]
+        private Collider[] colliders;
 
         [SerializeField, Min(0)]
         private float springiness = 500.0f;
@@ -22,6 +34,7 @@ namespace BigHappyBurger.Interaction
 
         private bool isBeingDragged = false;
         private bool previouslyUsedGravity = false;
+        private readonly Timer interpolateTimer = new(INTERPOLATION_DURATION);
         private Vector3 targetPosition;
         private Quaternion targetRotation;
 
@@ -30,7 +43,15 @@ namespace BigHappyBurger.Interaction
             var item = GetComponent<Item>();
             TryGetComponent(out rigidbody);
 
+            colliders = GetComponentsInChildren<Collider>();
+
             item.SetDraggable(this);
+        }
+
+        private void Awake()
+        {
+            interpolateTimer.Completed += () =>
+                rigidbody.interpolation = RigidbodyInterpolation.None;
         }
 
         public void OnDragBegin()
@@ -40,6 +61,10 @@ namespace BigHappyBurger.Interaction
 
             previouslyUsedGravity = rigidbody.useGravity;
 
+            foreach (var collider in colliders)
+                collider.material = noBounceMaterial;
+
+            rigidbody.interpolation = RigidbodyInterpolation.Interpolate;
             rigidbody.useGravity = false;
             isBeingDragged = true;
         }
@@ -49,6 +74,10 @@ namespace BigHappyBurger.Interaction
             if (!isBeingDragged)
                 return;
 
+            foreach (var collider in colliders)
+                collider.material = normalBounceMaterial;
+
+            interpolateTimer.Restart();
             rigidbody.useGravity = previouslyUsedGravity;
             isBeingDragged = false;
         }
