@@ -32,7 +32,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: bigHappyBox|happyBoxClose
+      name: Close
       takeName: bigHappyBox|happyBoxClose
       internalID: -3836891881543745235
       firstFrame: 0

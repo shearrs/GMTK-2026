@@ -70,9 +70,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Hold Item",
+                    "name": "Flip Item",
                     "type": "Button",
-                    "id": "e78f1888-0a86-4d8d-890b-31e40bb0963a",
+                    "id": "054baa78-7842-426c-ae4f-d17c36ae57a5",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -159,12 +159,12 @@
                 },
                 {
                     "name": "",
-                    "id": "c44955e0-3e2b-4f7f-bfb3-5a0e5fbe90a6",
-                    "path": "<Keyboard>/e",
+                    "id": "48d07541-ce4d-4de1-af1c-168f8e065cca",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Hold Item",
+                    "action": "Flip Item",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

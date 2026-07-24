@@ -6,7 +6,10 @@ namespace BigHappyBurger.Interaction
     public class ItemHolder : MonoBehaviour
     {
         [field: SerializeField]
-        public bool IsLocked { get; set; }
+        public bool IsLocked { get; private set; }
+
+        [SerializeField]
+        private bool disableCollision;
 
         [SerializeField]
         private Transform container;
@@ -34,6 +37,10 @@ namespace BigHappyBurger.Interaction
             return !IsLocked && callbackValue;
         }
 
+        public void Lock() => IsLocked = true;
+
+        public void Unlock() => IsLocked = false;
+
         public bool Hold(Item item)
         {
             if (Item != null || !CanBeHeld(item))
@@ -41,6 +48,10 @@ namespace BigHappyBurger.Interaction
 
             Item = item;
             previousParent = item.Parent;
+
+            if (disableCollision)
+                Item.DisableCollision();
+
             item.OnHoldBegin(this);
             item.SetParent(container);
             item.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
@@ -55,6 +66,9 @@ namespace BigHappyBurger.Interaction
 
             if (!CanBeReleased())
                 return false;
+
+            if (disableCollision)
+                Item.EnableCollision();
 
             Item.SetParent(previousParent);
             Item.OnHoldEnd();

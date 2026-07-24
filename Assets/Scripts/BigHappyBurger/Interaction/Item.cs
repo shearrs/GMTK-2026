@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using Shears;
 using Shears.Logging;
+using Shears.Tweens;
 using UnityEngine;
 
 namespace BigHappyBurger.Interaction
@@ -20,20 +22,29 @@ namespace BigHappyBurger.Interaction
         private Rigidbody rigidbody;
 
         [SerializeField, Local]
+        private Collider[] colliders;
+
+        [SerializeField, Local]
         private Draggable draggable;
 
         [SerializeField, Local]
         private Holdable holdable;
 
+        private Tween scaleTween;
+
+        public IReadOnlyList<Collider> Colliders => colliders;
         public Vector3 Position => rigidbody != null ? rigidbody.position : transform.position;
         public Quaternion Rotation => rigidbody != null ? rigidbody.rotation : transform.rotation;
         public Transform Parent => transform.parent;
         public bool IsDraggable => draggable != null && (!IsBeingHeld || holdable.CanBeReleased());
         public bool IsBeingHeld => holdable != null && holdable.IsBeingHeld;
+        public bool IsBeingDragged => IsDraggable && draggable.IsBeingDragged;
+        public bool IsFlipped { get; internal set; }
 
         private void Reset()
         {
             ID = Guid.NewGuid().ToString();
+            colliders = GetComponentsInChildren<Collider>();
 
             TryGetComponent(out rigidbody);
         }
@@ -44,7 +55,31 @@ namespace BigHappyBurger.Interaction
                 ID = Guid.NewGuid().ToString();
         }
 
-        public void OnDragBegin()
+        public void EnableCollision()
+        {
+            foreach (var collider in colliders)
+                collider.enabled = true;
+        }
+
+        public void DisableCollision()
+        {
+            foreach (var collider in colliders)
+                collider.enabled = false;
+        }
+
+        public void SetScale(Vector3 scale)
+        {
+            scaleTween.Dispose();
+            transform.localScale = scale;
+        }
+
+        public void TweenScale(Vector3 scale, ITweenData data = null)
+        {
+            scaleTween.Dispose();
+            scaleTween = transform.DoScaleLocalTween(scale, data);
+        }
+
+        internal void OnDragBegin()
         {
             if (IsBeingHeld)
             {
@@ -58,17 +93,17 @@ namespace BigHappyBurger.Interaction
             draggable.OnDragBegin();
         }
 
-        public void OnDragEnd() => draggable.OnDragEnd();
+        internal void OnDragEnd() => draggable.OnDragEnd();
 
-        public void SetDragPosition(Vector3 position) => draggable.SetTargetPosition(position);
+        internal void SetDragPosition(Vector3 position) => draggable.SetTargetPosition(position);
 
-        public void SetDragRotation(Quaternion rotation) => draggable.SetTargetRotation(rotation);
+        internal void SetDragRotation(Quaternion rotation) => draggable.SetTargetRotation(rotation);
 
-        public void OnHoldBegin(ItemHolder holder) => holdable.OnHoldBegin(holder);
+        internal void OnHoldBegin(ItemHolder holder) => holdable.OnHoldBegin(holder);
 
-        public void OnHoldEnd() => holdable.OnHoldEnd();
+        internal void OnHoldEnd() => holdable.OnHoldEnd();
 
-        public void SetParent(Transform parent)
+        internal void SetParent(Transform parent)
         {
             if (rigidbody != null)
                 rigidbody.transform.SetParent(parent);
@@ -76,7 +111,7 @@ namespace BigHappyBurger.Interaction
                 transform.SetParent(parent);
         }
 
-        public void SetLocalPositionAndRotation(Vector3 position, Quaternion rotation)
+        internal void SetLocalPositionAndRotation(Vector3 position, Quaternion rotation)
         {
             if (rigidbody == null || rigidbody.isKinematic)
                 transform.SetLocalPositionAndRotation(position, rotation);

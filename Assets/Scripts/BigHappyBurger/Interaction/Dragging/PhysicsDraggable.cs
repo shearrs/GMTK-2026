@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace BigHappyBurger.Interaction
 {
-    [RequireComponent(typeof(Rigidbody))]
+    [RequireComponent(typeof(Rigidbody), typeof(Item))]
     public class PhysicsDraggable : Draggable
     {
         private const float INTERPOLATION_DURATION = 5.0f;
@@ -15,10 +15,10 @@ namespace BigHappyBurger.Interaction
         private PhysicsMaterial noBounceMaterial;
 
         [SerializeField, Required, Local]
-        private Rigidbody rigidbody;
+        private Item item;
 
-        [SerializeField, Required(targetCollectionSize: 1), Local]
-        private Collider[] colliders;
+        [SerializeField, Required, Local]
+        private Rigidbody rigidbody;
 
         [SerializeField, Min(0)]
         private float springiness = 500.0f;
@@ -36,12 +36,10 @@ namespace BigHappyBurger.Interaction
 
         private void Reset()
         {
-            TryGetComponent(out Item item);
+            item = GetComponent<Item>();
             rigidbody = GetComponent<Rigidbody>();
             rigidbody.collisionDetectionMode = CollisionDetectionMode.Continuous;
             item.SetRigidbody(rigidbody);
-
-            colliders = GetComponentsInChildren<Collider>();
 
             item.SetDraggable(this);
         }
@@ -54,7 +52,7 @@ namespace BigHappyBurger.Interaction
 
         protected override void OnDragBeginImplementation()
         {
-            foreach (var collider in colliders)
+            foreach (var collider in item.Colliders)
                 collider.material = noBounceMaterial;
 
             rigidbody.interpolation = RigidbodyInterpolation.Interpolate;
@@ -62,7 +60,7 @@ namespace BigHappyBurger.Interaction
 
         protected override void OnDragEndImplementation()
         {
-            foreach (var collider in colliders)
+            foreach (var collider in item.Colliders)
                 collider.material = normalBounceMaterial;
 
             interpolateTimer.Restart();

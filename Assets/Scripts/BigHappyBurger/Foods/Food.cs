@@ -8,7 +8,7 @@ namespace BigHappyBurger.Foods
     {
         private Item item;
 
-        private Item Item
+        internal Item Item
         {
             get
             {

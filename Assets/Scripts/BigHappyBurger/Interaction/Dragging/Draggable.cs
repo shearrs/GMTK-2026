@@ -6,7 +6,7 @@ namespace BigHappyBurger.Interaction
     [RequireComponent(typeof(Item))]
     public abstract class Draggable : MonoBehaviour
     {
-        protected bool IsBeingDragged { get; private set; }
+        public bool IsBeingDragged { get; private set; }
         protected Vector3 TargetPosition { get; private set; }
         protected Quaternion TargetRotation { get; private set; }
 

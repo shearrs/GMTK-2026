@@ -18,12 +18,14 @@ namespace BigHappyBurger.Players
         [SerializeField]
         private float itemScrollSensitivity = 0.1f;
 
-        private PlayerInput input;
+        private InputAction interactInput;
+        private InputAction flipInput;
         private InputAction scrollItemInput;
 
         public void Initialize(PlayerInput input)
         {
-            this.input = input;
+            interactInput = input.PlayerActions.Interact;
+            flipInput = input.PlayerActions.FlipItem;
             scrollItemInput = input.PlayerActions.ScrollItem;
         }
 
@@ -34,10 +36,13 @@ namespace BigHappyBurger.Players
                     scrollItemInput.ReadValue<Vector2>().y * itemScrollSensitivity
                 );
 
-            var dragInfo = dragInteractor.UpdateDragging(input.PlayerActions.Interact.IsPressed());
+            var dragInfo = dragInteractor.UpdateDragging(
+                interactInput.IsPressed(),
+                flipInput.IsPressed()
+            );
 
             if (dragInfo.ReleasedItem)
-                holdInteractor.TryToPlaceIntoHolder(dragInfo.Item);
+                holdInteractor.TryToPlaceIntoHolder(dragInfo.Item, dragInfo.DragOffset);
         }
     }
 }
