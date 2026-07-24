@@ -11,7 +11,7 @@ namespace BigHappyBurger.Players
         [SerializeField, Required, Local]
         private PlayerInteractor interactor;
 
-        private void Awake()
+        private void Start()
         {
             interactor.Initialize(input);
         }

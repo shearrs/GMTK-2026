@@ -39,6 +39,7 @@ namespace BigHappyBurger.Interaction
             TryGetComponent(out Item item);
             rigidbody = GetComponent<Rigidbody>();
             rigidbody.collisionDetectionMode = CollisionDetectionMode.Continuous;
+            item.SetRigidbody(rigidbody);
 
             colliders = GetComponentsInChildren<Collider>();
 
