@@ -29,7 +29,7 @@ namespace BigHappyBurger.Interaction
         {
             var item = Instantiate(itemToSpawn, spawnTransform.position, spawnTransform.rotation);
 
-            return new(item, dragOffset);
+            return new(item, transform.rotation * dragOffset);
         }
     }
 }

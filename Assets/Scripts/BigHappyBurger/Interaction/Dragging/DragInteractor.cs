@@ -95,9 +95,11 @@ namespace BigHappyBurger.Interaction
             }
 
             var cam = Camera.main;
-            var flatCamRotation = Quaternion.Euler(0, cam.transform.eulerAngles.y, 0);
+            var localItemPosition = cam.transform.InverseTransformPoint(item.Position);
+            float distance = localItemPosition.z;
+            planeDistance = PlaneDistanceRange.Clamp(distance);
 
-            dragOffset = Quaternion.Inverse(flatCamRotation) * offset;
+            dragOffset = Quaternion.Inverse(item.Rotation) * offset;
             Item = item;
             Item.OnDragBegin();
         }
@@ -133,21 +135,15 @@ namespace BigHappyBurger.Interaction
                 planePosition
             );
 
-            var flatCamRotation = Quaternion.Euler(0, cam.transform.eulerAngles.y, 0);
             var dragRotation = Quaternion.LookRotation(-cam.transform.forward);
-            var offset = dragOffset;
 
             Debug.DrawRay(planePosition, planeNormal, Color.blue);
             Debug.DrawLine(planePosition, dragPosition, Color.yellow);
-            Debug.DrawLine(dragPosition, dragPosition + flatCamRotation * offset, Color.magenta);
 
             if (flipInput)
-            {
-                dragPosition += flatCamRotation * offset.With(y: -offset.y);
                 dragRotation = Quaternion.Euler(180.0f, 0, 0) * dragRotation;
-            }
-            else
-                dragPosition += flatCamRotation * offset;
+
+            dragPosition += dragRotation * dragOffset;
 
             Item.SetDragPosition(dragPosition);
             Item.SetDragRotation(dragRotation);
