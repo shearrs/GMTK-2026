@@ -1,0 +1,991 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2937826988335357523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4952638087025522177}
+  - component: {fileID: 1472346335355153832}
+  - component: {fileID: 8026679048278377474}
+  - component: {fileID: 6062309879065189878}
+  m_Layer: 0
+  m_Name: BBQ Sauce Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4952638087025522177
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2937826988335357523}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.261, y: 1.652, z: -1.888}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2937987244146248701}
+  - {fileID: 2349901443269202320}
+  - {fileID: 2811077453802087440}
+  - {fileID: 537626401198733072}
+  - {fileID: 1667058052215027205}
+  - {fileID: 6294413429198841604}
+  - {fileID: 700338406522540447}
+  - {fileID: 6851614840232882278}
+  - {fileID: 3937012543688191692}
+  - {fileID: 4744291926672816288}
+  - {fileID: 8672107761109870244}
+  - {fileID: 969031039623763212}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1472346335355153832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2937826988335357523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd623cc58dbdaf4ba2b2a8484372218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.FoodSpawnContainer
+  itemPrefab: {fileID: 6521080497682778552, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  container: {fileID: 4952638087025522177}
+  planeOffset: 0.35
+  maxCount: 12
+  spawnedItems:
+  - {fileID: 1102997848579490111}
+  - {fileID: 511149278938504018}
+  - {fileID: 38708766360022738}
+  - {fileID: 2377189473038171602}
+  - {fileID: 3506585647661300935}
+  - {fileID: 8129365441361931718}
+  - {fileID: 3329122712264661853}
+  - {fileID: 8691562465723333284}
+  - {fileID: 1236349606064038926}
+  - {fileID: 7375890380928627298}
+  - {fileID: 6904851013450214502}
+  - {fileID: 3096719518621540302}
+--- !u!114 &8026679048278377474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2937826988335357523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f2cb18f7dbd6bc49809643e35d2fb6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Shears.UI::Shears.UI.GridLayout3D
+  isStatic: 0
+  dimensions: {x: 3, y: 4, z: 1}
+  xSpacing: -0.17
+  ySpacing: 0.1
+  zSpacing: 0.1
+--- !u!65 &6062309879065189878
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2937826988335357523}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5, y: 0.4, z: 0.25}
+  m_Center: {x: -0.18, y: 0.2, z: 0}
+--- !u!1001 &409120856395883998
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4952638087025522177}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_Name
+      value: BBQ Sauce (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.16999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+--- !u!114 &6904851013450214502 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 409120856395883998}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!4 &8672107761109870244 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 409120856395883998}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2513336430559933212
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4952638087025522177}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_Name
+      value: BBQ Sauce (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.16999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.20000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+--- !u!4 &6851614840232882278 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 2513336430559933212}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8691562465723333284 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 2513336430559933212}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!1001 &3075614285304095870
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4952638087025522177}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_Name
+      value: BBQ Sauce (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.34000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.100000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+--- !u!4 &6294413429198841604 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 3075614285304095870}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8129365441361931718 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 3075614285304095870}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!1001 &4333559129540180954
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4952638087025522177}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_Name
+      value: BBQ Sauce (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+--- !u!4 &4744291926672816288 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 4333559129540180954}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7375890380928627298 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 4333559129540180954}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!1001 &5429068748234960310
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4952638087025522177}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_Name
+      value: BBQ Sauce (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.34000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.20000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+--- !u!114 &1236349606064038926 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 5429068748234960310}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!4 &3937012543688191692 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 5429068748234960310}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6138734610420713607
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4952638087025522177}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_Name
+      value: BBQ Sauce
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+--- !u!114 &1102997848579490111 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 6138734610420713607}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!4 &2937987244146248701 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 6138734610420713607}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6554440890785015658
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4952638087025522177}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_Name
+      value: BBQ Sauce (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.34000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+--- !u!114 &38708766360022738 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 6554440890785015658}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!4 &2811077453802087440 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 6554440890785015658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6730769994152383210
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4952638087025522177}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_Name
+      value: BBQ Sauce (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.16999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+--- !u!114 &511149278938504018 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 6730769994152383210}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!4 &2349901443269202320 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 6730769994152383210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7698460703665534335
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4952638087025522177}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_Name
+      value: BBQ Sauce (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.16999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.100000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+--- !u!4 &1667058052215027205 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 7698460703665534335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3506585647661300935 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 7698460703665534335}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!1001 &8108249367504787062
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4952638087025522177}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_Name
+      value: BBQ Sauce (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.34000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+--- !u!4 &969031039623763212 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 8108249367504787062}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3096719518621540302 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 8108249367504787062}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!1001 &8380323001612391141
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4952638087025522177}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_Name
+      value: BBQ Sauce (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.20000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+--- !u!4 &700338406522540447 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 8380323001612391141}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3329122712264661853 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 8380323001612391141}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!1001 &8827883281360942186
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4952638087025522177}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_Name
+      value: BBQ Sauce (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.100000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+--- !u!4 &537626401198733072 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 8827883281360942186}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2377189473038171602 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
+  m_PrefabInstance: {fileID: 8827883281360942186}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
