@@ -14,6 +14,9 @@ namespace BigHappyBurger.Players
         [SerializeField, Required, Local]
         private HoldInteractor holdInteractor;
 
+        [SerializeField, Required, Local]
+        private SpawnInteractor spawnInteractor;
+
         [Header("Settings")]
         [SerializeField]
         private float itemScrollSensitivity = 0.1f;
@@ -31,6 +34,12 @@ namespace BigHappyBurger.Players
 
         public void UpdateInteraction()
         {
+            if (dragInteractor.Item == null && interactInput.WasPressedThisFrame())
+            {
+                if (spawnInteractor.TryToSpawnItem(out var info))
+                    dragInteractor.BeginDragging(info.Item, info.Offset);
+            }
+
             if (scrollItemInput.WasPressedThisFrame() && dragInteractor.Item != null)
                 dragInteractor.ChangePlaneDistance(
                     scrollItemInput.ReadValue<Vector2>().y * itemScrollSensitivity

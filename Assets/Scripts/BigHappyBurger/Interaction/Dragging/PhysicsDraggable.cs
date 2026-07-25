@@ -90,8 +90,8 @@ namespace BigHappyBurger.Interaction
 
             Vector3 dampForce = damping * -rigidbody.linearVelocity;
 
-            rigidbody.AddForceAtPosition(springForce, TargetPosition, ForceMode.Force);
-            rigidbody.AddForceAtPosition(dampForce, TargetPosition, ForceMode.Acceleration);
+            rigidbody.AddForce(springForce, ForceMode.Force);
+            rigidbody.AddForce(dampForce, ForceMode.Acceleration);
         }
 
         private void RotateTowardsTarget()

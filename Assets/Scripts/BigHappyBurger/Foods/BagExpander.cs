@@ -17,7 +17,7 @@ namespace BigHappyBurger.Foods
 
         private void Start()
         {
-            scaleTarget.DoScaleLocalTween(expandSize, scaleTween);
+            scaleTarget.GetScaleLocalTween(expandSize, scaleTween).PlayAfter(0.15f);
         }
     }
 }
