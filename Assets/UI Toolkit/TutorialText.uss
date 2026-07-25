@@ -1,0 +1,14 @@
+:root {
+}
+
+.TextBoxReady {
+    flex-grow: 1;
+    flex-direction: row;
+    align-self: stretch;
+    align-items: flex-end;
+}
+
+.TextBoxHidden {
+    translate: 0 393px;
+    opacity: 0;
+}

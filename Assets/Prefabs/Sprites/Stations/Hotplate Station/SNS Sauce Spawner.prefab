@@ -1,0 +1,991 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &941866566778234077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2209841411759948753}
+  - component: {fileID: 6421344534955975143}
+  - component: {fileID: 8928714156453271135}
+  - component: {fileID: 4385668881847494073}
+  m_Layer: 0
+  m_Name: SNS Sauce Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2209841411759948753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941866566778234077}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.949, y: 1.652, z: -1.888}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1001333032479798239}
+  - {fileID: 6441249846166622261}
+  - {fileID: 1618034699805471492}
+  - {fileID: 8411301324799525957}
+  - {fileID: 8079087794368564285}
+  - {fileID: 4718854995160815289}
+  - {fileID: 9125996764236808283}
+  - {fileID: 1397525942478198681}
+  - {fileID: 6136704163237318504}
+  - {fileID: 2937728916569415518}
+  - {fileID: 3660791137042196536}
+  - {fileID: 1811239791312063113}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6421344534955975143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941866566778234077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd623cc58dbdaf4ba2b2a8484372218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.FoodSpawnContainer
+  itemPrefab: {fileID: 6521080497682778552, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  container: {fileID: 2209841411759948753}
+  planeOffset: 0.35
+  maxCount: 12
+  spawnedItems:
+  - {fileID: 3057383878831126813}
+  - {fileID: 9144730556706298615}
+  - {fileID: 3602625278994004422}
+  - {fileID: 5994713984263802503}
+  - {fileID: 6311195563893638911}
+  - {fileID: 7419624292818476155}
+  - {fileID: 6425929487008762521}
+  - {fileID: 3814112475517869403}
+  - {fileID: 8260308196506551722}
+  - {fileID: 1103269228492739996}
+  - {fileID: 1533140608378659578}
+  - {fileID: 4515317777725898827}
+--- !u!114 &8928714156453271135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941866566778234077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f2cb18f7dbd6bc49809643e35d2fb6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Shears.UI::Shears.UI.GridLayout3D
+  isStatic: 0
+  dimensions: {x: 3, y: 4, z: 1}
+  xSpacing: -0.17
+  ySpacing: 0.1
+  zSpacing: 0.1
+--- !u!65 &4385668881847494073
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941866566778234077}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5, y: 0.4, z: 0.25}
+  m_Center: {x: -0.18, y: 0.2, z: 0}
+--- !u!1001 &239523089359143713
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2209841411759948753}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_Name
+      value: Sweet and Sour (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.20000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+--- !u!114 &6425929487008762521 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 239523089359143713}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!4 &9125996764236808283 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 239523089359143713}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &670482958913652543
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2209841411759948753}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_Name
+      value: Sweet and Sour (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.100000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+--- !u!114 &5994713984263802503 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 670482958913652543}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!4 &8411301324799525957 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 670482958913652543}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1002709270178484039
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2209841411759948753}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_Name
+      value: Sweet and Sour (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.16999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.100000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+--- !u!114 &6311195563893638911 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 1002709270178484039}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!4 &8079087794368564285 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 1002709270178484039}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2636597908492751695
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2209841411759948753}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_Name
+      value: Sweet and Sour (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.16999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+--- !u!4 &6441249846166622261 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 2636597908492751695}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9144730556706298615 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 2636597908492751695}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!1001 &2944521429587676178
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2209841411759948753}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_Name
+      value: Sweet and Sour (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.34000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.20000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+--- !u!4 &6136704163237318504 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 2944521429587676178}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8260308196506551722 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 2944521429587676178}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!1001 &4361811909391013315
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2209841411759948753}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_Name
+      value: Sweet and Sour (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.34000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.100000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+--- !u!4 &4718854995160815289 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 4361811909391013315}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7419624292818476155 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 4361811909391013315}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!1001 &5708672528382094146
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2209841411759948753}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_Name
+      value: Sweet and Sour (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.16999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+--- !u!114 &1533140608378659578 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 5708672528382094146}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!4 &3660791137042196536 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 5708672528382094146}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6138425727100509220
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2209841411759948753}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_Name
+      value: Sweet and Sour (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+--- !u!114 &1103269228492739996 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 6138425727100509220}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!4 &2937728916569415518 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 6138425727100509220}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7266040892841511411
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2209841411759948753}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_Name
+      value: Sweet and Sour (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.34000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+--- !u!4 &1811239791312063113 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 7266040892841511411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4515317777725898827 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 7266040892841511411}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!1001 &7746350457909129342
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2209841411759948753}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_Name
+      value: Sweet and Sour (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.34000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+--- !u!4 &1618034699805471492 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 7746350457909129342}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3602625278994004422 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 7746350457909129342}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!1001 &7967425464815637731
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2209841411759948753}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_Name
+      value: Sweet and Sour (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.16999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.20000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+--- !u!4 &1397525942478198681 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 7967425464815637731}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3814112475517869403 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 7967425464815637731}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!1001 &8075387725997420709
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2209841411759948753}
+    m_Modifications:
+    - target: {fileID: 6841018627615554408, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_Name
+      value: Sweet and Sour
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+--- !u!4 &1001333032479798239 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9076153269062108026, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 8075387725997420709}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3057383878831126813 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6521080497682778552, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
+  m_PrefabInstance: {fileID: 8075387725997420709}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
