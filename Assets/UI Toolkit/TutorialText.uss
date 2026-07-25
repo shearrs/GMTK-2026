@@ -6,9 +6,19 @@
     flex-direction: row;
     align-self: stretch;
     align-items: flex-end;
+    transition-timing-function: ease-in-out-back;
+    transition-duration: 1s;
 }
 
 .TextBoxHidden {
     translate: 0 393px;
     opacity: 0;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out-back;
+}
+
+.TextBoxAbove {
+    transition-timing-function: ease-in-out-back;
+    align-items: stretch;
+    transition-duration: 0s;
 }

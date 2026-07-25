@@ -113,27 +113,50 @@ MonoBehaviour:
     only wants FRIES and KETCHUP.
   - That won't take long at all. In fact, I bet the cook is already done making the
     stuff.
-  - 'Press D or <- to rotate towards the Hotplate Station! '
+  - 'Press D to rotate towards the Hotplate Station! '
   - This screen shows you how much time is left until the food gets done. Looks like
     Chef is pretty slow today. Gonna have to dock his pay again.
   - While he's cooking, let's get a bag ready. Grab one from that slot over there
-    by pressing and holding <LEFT-CLICK>!
+    by pressing and holding LEFT-CLICK!
   - Nice grabbin. I wish I had arms. Now place it on the counter by letting go of
-    <LEFT-CLICK>.
+    LEFT-CLICK.
   - God, FINALLY! Now we can fulfill the order.
-  - You know the drill. Fries in the bag. Use the <SCROLL-WHEEL> to move it closer
+  - You know the drill. Fries in the bag. Use the SCROLL-WHEEL to move it closer
     or further. Hurry now, the customer's waiting!!
-  - Alright, now we need some ketchup. Grab it from that container over here! Hurry
-    hurry!
-  - "Oops! Almost forgot the napkins! That\u2019s a hangable offense around here.
-    Hahah\u2026"
-  - Seriously, put the napkins in.
-  - "Alright! Now for the perfect handoff. Hold onto the bag and press A or \u2190
-    until you get to the Drive-Thru Window."
+  - Alright, now we need some ketchup. Unfortunately, night shift forgot to restock
+    it last night. Needless to say, they're fired.
+  - 'Let''s go back to the order counter. There''s a computer we can use to restock.
+    Press A to rotate again. '
+  - Grab that joystick on the desk and use it to move the cursor on the computer.
+    Move it over the "BUY" button on the screen.
+  - 'Wow you''re suprisingly good with computers. Somebody went to college! Now just
+    press the green button to click "BUY" and wait for the supplies to arrive. '
+  - While we're waiting, I wanna level with you. This company is within weeks of
+    bankrupcy, and there's no job security or mobility.
+  - I've been waiting on a bonus check for three years. Every time I ask corporate
+    about it they plug their ears and pretend I'm not in the room.
+  - 'I owe a lot of a bad people money. Eventually, I think I''m gonna have to take
+    some drastic actio '
+  - OH, hey look. The ketchup is here. Let's finish that order! Go back to the hotplate.
+  - "Oops! In all this chaos, we almost forgot the napkins! That\u2019s a hangable
+    offense around here. Hahah\u2026"
+  - Seriously though. EVERY order needs napkins. Put them in the bag. If you ran
+    out somehow, restock them first like I taught you.
+  - Alright! Now for the perfect handoff. Hold onto the bag and rotate to the Drive-Thru
+    Window.
   - There they are. Move the bag to the customer to give it to them. Be sure to smile!
-  - "Alright! Just do that 1000 more times and you\u2019ll earn a promotion."
-  - "Ope, another customer! Hurry up and check the order screen (D or \u2192)."
+  - "Alright! Just do that 1000 more times and PERHAPS you\u2019ll earn a promotion."
+  - Ope, another customer! Hurry up and check the order screen.
   - "JUST a soda?! DON\u2019T YOU PEOPLE WANT FOOD??"
-  - "Whatever, let\u2019s go to the drink station. Press W or \u2190 twice to get
-    there."
-  - Now place the cup on the conveyor and watch the magic!
+  - "Whatever, let\u2019s go to the drink station. Press A or D to get there from
+    here."
+  - Take a cup from the side there and place it on the conveyor, then watch the magic!
+  - Don't forget to put a lid on the drink! Don't want any nasty spills.
+  - "Now take it to that customer who thinks he\u2019s too good for our burgers!"
+  - "Alright that\u2019s it! Let\u2019s go back inside and wrap up orientation. Go
+    back to the order screen for me real quick."
+  - Another customer already! And this one actually wants food. I'll let you take
+    it from here.
+  - "See this timer on the order? Don\u2019t let it count down to zero, or the customer
+    will leave and you\u2019ll be written up. Three strikes and you're out."
+  - I'm watching you.

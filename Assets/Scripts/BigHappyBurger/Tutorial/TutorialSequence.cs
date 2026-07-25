@@ -54,8 +54,6 @@ public class TutorialSequence : MonoBehaviour
 
         yield return new WaitForSeconds(1.0f);
 
-        Debug.Log(tutorialLines1.Count);
-
         if (lineIndex < tutorialLines1.Count)
         {
             dialogue1 = StartCoroutine(TutorialDialogue1(tutorialLines1[lineIndex]));
@@ -81,7 +79,7 @@ public class TutorialSequence : MonoBehaviour
 
         if (lineIndex < tutorialLines1.Count)
         {
-            switch (lineIndex)
+            switch (lineIndex) //CHECKS TO PROCEED TO NEXT DIALOGUE LINE
             {
                 case 6:
                     //enable all turning
@@ -102,28 +100,65 @@ public class TutorialSequence : MonoBehaviour
                     //check if the player put the fries in a bag
                     break;
 
-                case 12:
-                    //check if the player put ketchup in the fry bag
+                case 13:
+                    //check if the player has gone back to the order counter
                     break;
 
                 case 14:
-                    //check if napkins have been placed in the fry bag
+                    //check to see if cursor is over the buy button on the restock comp
                     break;
 
                 case 15:
-                    //check if player is at the drive-thru window
+                    //wait until player purchases napkins
                     break;
 
                 case 16:
-                    //wait for first customer completed
+                    break;
+
+                case 17:
                     break;
 
                 case 18:
-                    //wait for player to return to order screen
                     break;
 
-                case 20:
-                    //wait for player to go to drink screen
+                case 19:
+                    //wait for player to navigate back to hotplate
+                    break;
+
+                case 21:
+                    //wait for player to put napkins in the bag
+                    break;
+
+                case 22:
+                    //wait for navigation to customer window WITH bag of food
+                    break;
+
+                case 23:
+                    //wait for customer order to be completed
+                    break;
+
+                case 25:
+                    //check to see if player is looking at order screen
+                    break;
+
+                case 27:
+                    //check for navigation 
+                    break;
+
+                case 28:
+                    //check for drink being filled
+                    break;
+
+                case 29:
+                    //check for lid on drink
+                    break;
+
+                case 30:
+                    //complete customer order #2
+                    break;
+
+                case 31:
+                    //navigate back to order screen
                     break;
 
                 default:
@@ -132,14 +167,116 @@ public class TutorialSequence : MonoBehaviour
                     break;
             }
 
+            //DO AT THE START OF THE NEXT LINE OF DIALOGUE
+
             if (lineIndex == 2)
             {
-                //add first customer to board
+                //add first customer to board, always fries and ketchup
+                //finger points to order on board
             }
 
-            if (lineIndex == 17)
+            if (lineIndex == 4)
+                //teleport finger out of sight
+
+            if(lineIndex == 6)
             {
-                //add second customer to board
+                //finger points at now cooking board
+            }
+
+            if(lineIndex == 7)
+            {
+                //finger points at bag holder
+            }
+
+            if(lineIndex == 8)
+            {
+                //finger disappears
+            }
+
+            if(lineIndex == 10)
+            {
+                root.AddToClassList("TextBoxAbove");
+            }
+
+            if (lineIndex == 13)
+            {
+                //disable rotating for the player
+                //disable buy button on restock comptuer for everything except ketchup
+                //finger point at joystick
+            }
+
+            if(lineIndex == 14)
+            {
+                //finger point at button
+            }
+
+            if (lineIndex == 15)
+            {
+                //finger disappears
+            }
+
+            if (lineIndex == 18)
+            {
+                //reenable rotating
+                //reenable buy button for everything on the computer
+            }
+
+            if (lineIndex == 20)
+            {
+                //finger point at napkins
+            }
+
+            if (lineIndex == 21)
+            {
+                //finger disappears
+            }
+
+            if (lineIndex == 23)
+            {
+                root.RemoveFromClassList("TextBoxAbove");
+                yield return new WaitForSeconds(1.0f);
+            }
+
+            if (lineIndex == 24)
+            {
+                //add second customer to board, always a medium drink
+            }
+
+            if (lineIndex == 27)
+            {
+                //finger points at cups
+            }
+
+            if (lineIndex == 28)
+            {
+                //finger points at lids
+                root.AddToClassList("TextBoxAbove");
+            }
+
+            if (lineIndex == 29)
+            {
+                //finger disappears
+            }
+
+            if (lineIndex == 30)
+            {
+                root.RemoveFromClassList("TextBoxAbove");
+                yield return new WaitForSeconds(1.0f);
+            }
+
+            if (lineIndex == 31)
+            {
+                //add third customer to board
+            }
+
+            if (lineIndex == 32)
+            {
+                //hand point to timer on order
+            }
+
+            if (lineIndex == 33)
+            {
+                //finger disappears
             }
 
             dialogue1 = StartCoroutine(TutorialDialogue1(tutorialLines1[lineIndex]));
@@ -148,6 +285,7 @@ public class TutorialSequence : MonoBehaviour
         {
             yield return new WaitForSeconds(2f);
             root.AddToClassList("TextBoxHidden");
+            lineIndex = 0;
         }
     }
 }
