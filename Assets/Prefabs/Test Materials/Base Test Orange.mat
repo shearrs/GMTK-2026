@@ -13,7 +13,6 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _RECEIVE_SHADOWS_ON
-  - _RIM_LIGHTING_ON
   m_InvalidKeywords:
   - _RIM_LIGHTING_ON_ON
   m_LightmapFlags: 4
@@ -85,13 +84,17 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints:
+    - _ALPHA_CLIP: 0
     - _DstBlend: 0
+    - _RECEIVE_SHADOWS: 1
+    - _RIM_LIGHTING: 0
     - _SrcBlend: 1
     - _SurfaceType: 0
     - _ZWrite: 1
     m_Floats:
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
+    - _AlphaClipThreshold: 0.5
     - _AlphaToMask: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1

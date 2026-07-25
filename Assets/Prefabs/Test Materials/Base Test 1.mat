@@ -28,7 +28,8 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs: []
-    m_Ints: []
+    m_Ints:
+    - _RIM_LIGHTING: 0
     m_Floats:
     - _RIM_LIGHTING: 0
     m_Colors:
