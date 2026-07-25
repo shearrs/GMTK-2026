@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7538da4959ea0774888329adf581d4b3
+guid: dab348011a2ff684f84e4fa483394e32
 ModelImporter:
   serializedVersion: 24501
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: sauceShelf
-    second: {fileID: 2100000, guid: 8e75855ff1029b7478236e9879d0383e, type: 2}
+      name: sign
+    second: {fileID: 2100000, guid: 80b5053033fa8c9469299dbb16b3d046, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
