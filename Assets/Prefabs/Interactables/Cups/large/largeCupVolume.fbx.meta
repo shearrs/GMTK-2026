@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a936f844d0e2b2c41af22f71a185b1d8
+guid: fb919664734d702409163326d3590f43
 ModelImporter:
   serializedVersion: 24501
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: smallCup
-    second: {fileID: 2100000, guid: 38c958b7bc388fd4abcfd6d8e5b87846, type: 2}
+      name: largeCupVolume
+    second: {fileID: 2100000, guid: ec6f33ea438d72c488a8a8213db6b0fb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

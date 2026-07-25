@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a936f844d0e2b2c41af22f71a185b1d8
+guid: 76baad5d7fa60bb458366464aaed27a3
 ModelImporter:
   serializedVersion: 24501
   internalIDToNameTable: []
@@ -7,8 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: smallCup
-    second: {fileID: 2100000, guid: 38c958b7bc388fd4abcfd6d8e5b87846, type: 2}
+      name: eyes
+    second: {fileID: 2100000, guid: aa3712cec4ef98e44bee93775ba60f5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kittyBeige
+    second: {fileID: 2100000, guid: 8cb432d0015456b4992d08ee3a619243, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mouths
+    second: {fileID: 2100000, guid: dadd779faac395b429ce9f0f3ba544cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: whiskers
+    second: {fileID: 2100000, guid: 914db3fb02d629b499db59e52cccd055, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -39,7 +54,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 100
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -100,7 +115,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 100
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

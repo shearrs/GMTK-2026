@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: a936f844d0e2b2c41af22f71a185b1d8
+guid: 7ae1459fdb5b15f4ba8fdb020713200e
 ModelImporter:
   serializedVersion: 24501
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: smallCup
-    second: {fileID: 2100000, guid: 38c958b7bc388fd4abcfd6d8e5b87846, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -100,7 +95,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 100
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

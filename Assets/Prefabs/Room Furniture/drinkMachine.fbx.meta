@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a936f844d0e2b2c41af22f71a185b1d8
+guid: 5f300affa810f0c4782f37f15136b3d9
 ModelImporter:
   serializedVersion: 24501
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: smallCup
-    second: {fileID: 2100000, guid: 38c958b7bc388fd4abcfd6d8e5b87846, type: 2}
+      name: drinkMachine
+    second: {fileID: 2100000, guid: 943f19833767c72409bcfc0c235a5fb4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: drinkMachineScreens
+    second: {fileID: 2100000, guid: ed2388d174fd4eb46b9dd79c925662a9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
