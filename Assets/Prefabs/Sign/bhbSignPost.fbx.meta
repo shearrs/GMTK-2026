@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 7538da4959ea0774888329adf581d4b3
+guid: 8d8b176d3e4dceb42bb3d18201fe1a2c
 ModelImporter:
   serializedVersion: 24501
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: sauceShelf
-    second: {fileID: 2100000, guid: 8e75855ff1029b7478236e9879d0383e, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -100,7 +95,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 100
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

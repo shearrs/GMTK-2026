@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7155328295111834793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4606527694640953724}
+  m_Layer: 0
+  m_Name: BHB Sign and Post
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4606527694640953724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7155328295111834793}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.014104322, y: 6.277942, z: 6.825684}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3437090412517067005}
+  - {fileID: 2702715451503667212}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &852932247675711948
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4606527694640953724}
+    m_Modifications:
+    - target: {fileID: 2622439519199476017, guid: 70851df3950e1774fb43ff340f62809f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.014104322
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622439519199476017, guid: 70851df3950e1774fb43ff340f62809f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.082057476
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622439519199476017, guid: 70851df3950e1774fb43ff340f62809f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.014315605
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622439519199476017, guid: 70851df3950e1774fb43ff340f62809f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622439519199476017, guid: 70851df3950e1774fb43ff340f62809f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622439519199476017, guid: 70851df3950e1774fb43ff340f62809f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622439519199476017, guid: 70851df3950e1774fb43ff340f62809f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622439519199476017, guid: 70851df3950e1774fb43ff340f62809f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622439519199476017, guid: 70851df3950e1774fb43ff340f62809f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622439519199476017, guid: 70851df3950e1774fb43ff340f62809f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6267482272447498112, guid: 70851df3950e1774fb43ff340f62809f, type: 3}
+      propertyPath: m_Name
+      value: BHB Sign Post Model
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 70851df3950e1774fb43ff340f62809f, type: 3}
+--- !u!4 &3437090412517067005 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2622439519199476017, guid: 70851df3950e1774fb43ff340f62809f, type: 3}
+  m_PrefabInstance: {fileID: 852932247675711948}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3547372422581391084
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4606527694640953724}
+    m_Modifications:
+    - target: {fileID: 1493846036759635680, guid: e7df98797ec33cf43bf261ee1abd4543, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493846036759635680, guid: e7df98797ec33cf43bf261ee1abd4543, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493846036759635680, guid: e7df98797ec33cf43bf261ee1abd4543, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493846036759635680, guid: e7df98797ec33cf43bf261ee1abd4543, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493846036759635680, guid: e7df98797ec33cf43bf261ee1abd4543, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493846036759635680, guid: e7df98797ec33cf43bf261ee1abd4543, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493846036759635680, guid: e7df98797ec33cf43bf261ee1abd4543, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493846036759635680, guid: e7df98797ec33cf43bf261ee1abd4543, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493846036759635680, guid: e7df98797ec33cf43bf261ee1abd4543, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493846036759635680, guid: e7df98797ec33cf43bf261ee1abd4543, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682957706730253024, guid: e7df98797ec33cf43bf261ee1abd4543, type: 3}
+      propertyPath: m_Name
+      value: BHB Sign Model
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e7df98797ec33cf43bf261ee1abd4543, type: 3}
+--- !u!4 &2702715451503667212 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1493846036759635680, guid: e7df98797ec33cf43bf261ee1abd4543, type: 3}
+  m_PrefabInstance: {fileID: 3547372422581391084}
+  m_PrefabAsset: {fileID: 0}
