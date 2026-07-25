@@ -51,6 +51,8 @@ MonoBehaviour:
   <LogLevels>k__BackingField: 29
   <ID>k__BackingField: 05a271fd-c04f-41e0-bdca-9b1a3de8057a
   rigidbody: {fileID: 7267604367494726359}
+  colliders:
+  - {fileID: 8097693391670968119}
   draggable: {fileID: 1333393891133005964}
   holdable: {fileID: 0}
 --- !u!54 &7267604367494726359
@@ -94,9 +96,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.PhysicsDraggable
   normalBounceMaterial: {fileID: 13400000, guid: cf73da34db3bfeb4c9e35e97246f3d70, type: 2}
   noBounceMaterial: {fileID: 13400000, guid: f298dd7ef0dbae341bafebd1b1f1fd32, type: 2}
+  item: {fileID: 6521080497682778552}
   rigidbody: {fileID: 7267604367494726359}
-  colliders:
-  - {fileID: 8097693391670968119}
   springiness: 500
   damping: 25
   angularSpringiness: 0.1
@@ -180,19 +181,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7632088479411089431, guid: 47fd38aa6036f074bb12ca4947836eb8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.000002108514
+      value: 0.68301296
       objectReference: {fileID: 0}
     - target: {fileID: 7632088479411089431, guid: 47fd38aa6036f074bb12ca4947836eb8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0000020712612
+      value: -0.6830126
       objectReference: {fileID: 0}
     - target: {fileID: 7632088479411089431, guid: 47fd38aa6036f074bb12ca4947836eb8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: -0.18301263
       objectReference: {fileID: 0}
     - target: {fileID: 7632088479411089431, guid: 47fd38aa6036f074bb12ca4947836eb8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.70710677
+      value: -0.1830124
       objectReference: {fileID: 0}
     - target: {fileID: 7632088479411089431, guid: 47fd38aa6036f074bb12ca4947836eb8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -200,7 +201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7632088479411089431, guid: 47fd38aa6036f074bb12ca4947836eb8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 180
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 7632088479411089431, guid: 47fd38aa6036f074bb12ca4947836eb8, type: 3}
       propertyPath: m_ConstrainProportionsScale
