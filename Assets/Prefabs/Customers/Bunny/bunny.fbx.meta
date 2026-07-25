@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a936f844d0e2b2c41af22f71a185b1d8
+guid: 4f266102a2c4fb747856355f74d00b80
 ModelImporter:
   serializedVersion: 24501
   internalIDToNameTable: []
@@ -7,8 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: smallCup
-    second: {fileID: 2100000, guid: 38c958b7bc388fd4abcfd6d8e5b87846, type: 2}
+      name: bunnyPink
+    second: {fileID: 2100000, guid: 9c316ed48bb32fb48a8a2fea9d44f7f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyes
+    second: {fileID: 2100000, guid: 9ad0a9f908bbed840bbf5fa4c9af0357, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mouths
+    second: {fileID: 2100000, guid: 193507528e6856242884a83e02454166, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -39,7 +49,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 100
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -100,7 +110,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 100
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
