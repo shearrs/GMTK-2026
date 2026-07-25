@@ -1,0 +1,332 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &286860774314552122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3748426347603270114}
+  - component: {fileID: 7613480551647951053}
+  - component: {fileID: 7531289028710920069}
+  - component: {fileID: 6189272095430500858}
+  m_Layer: 0
+  m_Name: Napkin Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3748426347603270114
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286860774314552122}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.47692856, z: 0, w: 0.8789421}
+  m_LocalPosition: {x: 1.347, y: 1.496, z: -1.393}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6718840642009034038}
+  - {fileID: 682453149064603178}
+  - {fileID: 6140948075631638811}
+  - {fileID: 2806877783995987956}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -56.97, z: 0}
+--- !u!114 &7613480551647951053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286860774314552122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf29394d4b23f31489c018390ad26b1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.ItemSpawner
+  itemToSpawn: {fileID: 5287054887795928058, guid: 8a851c379a47008489112573c60aba92, type: 3}
+  interactionCollider: {fileID: 6189272095430500858}
+  spawnTransform: {fileID: 2806877783995987956}
+  hasLimitedSupply: 1
+  maxCount: 15
+  currentCount: 15
+  dragOffset: {x: 0, y: 0, z: 0}
+  planeDistanceOffset: 0
+--- !u!114 &7531289028710920069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286860774314552122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cd84c01e0accba4891b5739dc064f25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Foods.Graphics::BigHappyBurger.Foods.Graphics.NapkinSpawnerGraphics
+  napkinStacks:
+  - {fileID: 5400283838138532469}
+  - {fileID: 2213303692410980713}
+  - {fileID: 4825241703621613144}
+--- !u!65 &6189272095430500858
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286860774314552122}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5, y: 0.16986454, z: 0.3563155}
+  m_Center: {x: 0, y: 0.09638435, z: -0.0030682683}
+--- !u!1 &6623314971498885711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2806877783995987956}
+  m_Layer: 0
+  m_Name: Spawn Transform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2806877783995987956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6623314971498885711}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.303, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3748426347603270114}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1517278828659578922
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3748426347603270114}
+    m_Modifications:
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6917490028096412255, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_Name
+      value: Napkin Model
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2468157192994181691, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+--- !u!1 &5400283838138532469 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6917490028096412255, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+  m_PrefabInstance: {fileID: 1517278828659578922}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6718840642009034038 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+  m_PrefabInstance: {fileID: 1517278828659578922}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2092325840111668231
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3748426347603270114}
+    m_Modifications:
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.108
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6917490028096412255, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_Name
+      value: Napkin Model (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2468157192994181691, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+--- !u!1 &4825241703621613144 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6917490028096412255, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+  m_PrefabInstance: {fileID: 2092325840111668231}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6140948075631638811 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+  m_PrefabInstance: {fileID: 2092325840111668231}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4704264334774752054
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3748426347603270114}
+    m_Modifications:
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.054
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6917490028096412255, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+      propertyPath: m_Name
+      value: Napkin Model (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2468157192994181691, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+--- !u!4 &682453149064603178 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+  m_PrefabInstance: {fileID: 4704264334774752054}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2213303692410980713 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6917490028096412255, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+  m_PrefabInstance: {fileID: 4704264334774752054}
+  m_PrefabAsset: {fileID: 0}

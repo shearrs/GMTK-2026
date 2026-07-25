@@ -1,4 +1,5 @@
 using System;
+using Shears;
 using UnityEngine;
 
 namespace BigHappyBurger.Interaction
@@ -14,9 +15,16 @@ namespace BigHappyBurger.Interaction
         [SerializeField]
         private Transform container;
 
+        [SerializeField]
+        private bool overridePlaneDistance;
+
+        [field: SerializeField, ShowIf(nameof(overridePlaneDistance))]
+        public float PlaneDistanceOverride { get; private set; }
+
         private Transform previousParent;
 
         public Item Item { get; private set; }
+        public bool OverridePlaneDistance => overridePlaneDistance;
         public Func<Item, bool> CanBeHeldCallback { get; set; }
         public Func<Item, bool> CanBeReleasedCallback { get; set; }
 
@@ -81,6 +89,18 @@ namespace BigHappyBurger.Interaction
             ItemChanged?.Invoke(Item);
 
             return true;
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            if (!overridePlaneDistance)
+                return;
+
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(
+                transform.position + PlaneDistanceOverride * -transform.forward,
+                0.15f
+            );
         }
     }
 }

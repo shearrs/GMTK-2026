@@ -1,3 +1,4 @@
+using Shears;
 using UnityEngine;
 
 namespace BigHappyBurger.Foods
@@ -8,6 +9,18 @@ namespace BigHappyBurger.Foods
         [SerializeField]
         private int cookTime = 0;
 
+        private Food food;
+
+        public Food Food
+        {
+            get
+            {
+                if (food == null)
+                    food = GetComponent<Food>();
+
+                return food;
+            }
+        }
         public int CookTime => cookTime;
 
         private void Reset()

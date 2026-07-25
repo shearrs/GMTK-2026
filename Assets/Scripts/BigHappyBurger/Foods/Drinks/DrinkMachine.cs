@@ -68,7 +68,7 @@ namespace BigHappyBurger.Foods
 
             if (firstItem.TryGetComponent(out Drinkable drinkable))
             {
-                if (drinkable.IsFull)
+                if (drinkable.HasLiquid || drinkable.HasLid)
                     return;
             }
 
@@ -86,20 +86,22 @@ namespace BigHappyBurger.Foods
             }
 
             isPouring = true;
+            drinkable.DisableLidHolder();
             pourTimer.Start(GetPourTime(drinkable.DrinkSize));
 
-            var drink = drinkQueue[0];
+            var drinkOrder = drinkQueue[0];
             drinkQueue.RemoveAt(0);
             holder.Lock();
 
             DrinkQueueChanged?.Invoke();
-            PourChanged?.Invoke(drink);
+            PourChanged?.Invoke(drinkOrder);
 
             while (!pourTimer.IsDone)
                 yield return null;
 
             PourChanged?.Invoke(DrinkTypeSize.Empty);
-            drinkable.Fill(drink);
+            drinkable.Fill(drinkOrder);
+            drinkable.EnableLidHolder();
 
             holder.Unlock();
 

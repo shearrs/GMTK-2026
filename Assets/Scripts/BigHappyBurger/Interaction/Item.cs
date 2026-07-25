@@ -18,6 +18,9 @@ namespace BigHappyBurger.Interaction
         [field: SerializeField, ReadOnly]
         public string ID { get; private set; }
 
+        [field: SerializeField, Local, RuntimeReadOnly]
+        public Sprite Sprite { get; set; }
+
         [SerializeField, Local]
         private Rigidbody rigidbody;
 
@@ -44,6 +47,20 @@ namespace BigHappyBurger.Interaction
         public bool IsBeingDragged => IsDraggable && draggable.IsBeingDragged;
         public bool IsFlipped { get; internal set; }
         public bool IsHoldable => holdable != null && !IsBeingDragged;
+        public float ExtraPlaneDistance
+        {
+            get
+            {
+                if (
+                    holdable != null
+                    && holdable.Holder != null
+                    && holdable.Holder.OverridePlaneDistance
+                )
+                    return holdable.Holder.PlaneDistanceOverride;
+                else
+                    return 0;
+            }
+        }
 
         public event Action DragBegan;
 
@@ -150,6 +167,20 @@ namespace BigHappyBurger.Interaction
                     SHLogLevels.Warning
                 );
 
+                return;
+            }
+        }
+
+        internal void SetPosition(Vector3 position)
+        {
+            if (rigidbody == null || rigidbody.isKinematic)
+                transform.position = position;
+            else
+            {
+                this.Log(
+                    $"Should not be trying to set the transform of an active {nameof(Rigidbody)}.",
+                    SHLogLevels.Warning
+                );
                 return;
             }
         }

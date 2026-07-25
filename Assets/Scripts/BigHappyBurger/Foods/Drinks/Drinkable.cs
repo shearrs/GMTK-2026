@@ -43,5 +43,15 @@ namespace BigHappyBurger.Foods
             DrinkType = drink.Type;
             IsFull = drink.Size == DrinkSize;
         }
+
+        public void EnableLidHolder()
+        {
+            lidHolder.gameObject.SetActive(true);
+        }
+
+        public void DisableLidHolder()
+        {
+            lidHolder.gameObject.SetActive(false);
+        }
     }
 }

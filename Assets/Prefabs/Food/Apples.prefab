@@ -166,6 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
   <LogLevels>k__BackingField: 29
   <ID>k__BackingField: 05a271fd-c04f-41e0-bdca-9b1a3de8057a
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 22c22dc0f79e6794096c16db5e2be572, type: 3}
   rigidbody: {fileID: 7267604367494726359}
   colliders:
   - {fileID: 2723321007888569245}

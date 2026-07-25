@@ -29,10 +29,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 433693615578340524}
+  - {fileID: 7792629627576097043}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &112153994987289415
+--- !u!1001 &7759211941388025592
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -84,17 +84,177 @@ PrefabInstance:
       propertyPath: m_Name
       value: joystick
       objectReference: {fileID: 0}
-    - target: {fileID: 8836927355981272205, guid: 93f9188f85528aa4385c9e36f0f00f25, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 6c28943d119fd5f489fa783963f7b181, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -7442495531226585596, guid: 93f9188f85528aa4385c9e36f0f00f25, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3736097083076571473}
+    - targetCorrespondingSourceObject: {fileID: 8093430829680100866, guid: 93f9188f85528aa4385c9e36f0f00f25, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6381893289257387283}
+    - targetCorrespondingSourceObject: {fileID: -1995864958897635492, guid: 93f9188f85528aa4385c9e36f0f00f25, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4451272009582041823}
+    - targetCorrespondingSourceObject: {fileID: -955696739867585960, guid: 93f9188f85528aa4385c9e36f0f00f25, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4707953617591524795}
   m_SourcePrefab: {fileID: 100100000, guid: 93f9188f85528aa4385c9e36f0f00f25, type: 3}
---- !u!4 &433693615578340524 stripped
+--- !u!1 &1144760115243991460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1995864958897635492, guid: 93f9188f85528aa4385c9e36f0f00f25, type: 3}
+  m_PrefabInstance: {fileID: 7759211941388025592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4451272009582041823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144760115243991460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceed461444e2fb44caf617b6a284c986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Shears.Common::Shears.SpringRotator
+  targetTransform: {fileID: 7065103723539606061}
+  offset: {x: 0, y: 0, z: 0}
+  strength: 8000
+  damping: 10
+  usesFixedUpdate: 1
+  usesCustomFixedTimestep: 0
+  timestep: 0.01
+  xRange:
+    min: -180
+    max: 180
+  yRange:
+    min: -180
+    max: 180
+  zRange:
+    min: -180
+    max: 180
+--- !u!1 &1806766737360120992 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -955696739867585960, guid: 93f9188f85528aa4385c9e36f0f00f25, type: 3}
+  m_PrefabInstance: {fileID: 7759211941388025592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4707953617591524795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806766737360120992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceed461444e2fb44caf617b6a284c986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Shears.Common::Shears.SpringRotator
+  targetTransform: {fileID: 3419430000845433253}
+  offset: {x: 0, y: 0, z: 0}
+  strength: 8000
+  damping: 10
+  usesFixedUpdate: 1
+  usesCustomFixedTimestep: 0
+  timestep: 0.01
+  xRange:
+    min: -180
+    max: 180
+  yRange:
+    min: -180
+    max: 180
+  zRange:
+    min: -180
+    max: 180
+--- !u!1 &2017584406505584890 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8093430829680100866, guid: 93f9188f85528aa4385c9e36f0f00f25, type: 3}
+  m_PrefabInstance: {fileID: 7759211941388025592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6381893289257387283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017584406505584890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceed461444e2fb44caf617b6a284c986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Shears.Common::Shears.SpringRotator
+  targetTransform: {fileID: 8311283207802490594}
+  offset: {x: 0, y: 0, z: 0}
+  strength: 8000
+  damping: 10
+  usesFixedUpdate: 1
+  usesCustomFixedTimestep: 0
+  timestep: 0.01
+  xRange:
+    min: -180
+    max: 180
+  yRange:
+    min: -180
+    max: 180
+  zRange:
+    min: -180
+    max: 180
+--- !u!4 &2586786774714157682 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4014854634330721142, guid: 93f9188f85528aa4385c9e36f0f00f25, type: 3}
+  m_PrefabInstance: {fileID: 7759211941388025592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3419430000845433253 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4961281644076095325, guid: 93f9188f85528aa4385c9e36f0f00f25, type: 3}
+  m_PrefabInstance: {fileID: 7759211941388025592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7065103723539606061 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 694126371621360853, guid: 93f9188f85528aa4385c9e36f0f00f25, type: 3}
+  m_PrefabInstance: {fileID: 7759211941388025592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7792629627576097043 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 93f9188f85528aa4385c9e36f0f00f25, type: 3}
-  m_PrefabInstance: {fileID: 112153994987289415}
+  m_PrefabInstance: {fileID: 7759211941388025592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8293576186159192316 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7442495531226585596, guid: 93f9188f85528aa4385c9e36f0f00f25, type: 3}
+  m_PrefabInstance: {fileID: 7759211941388025592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3736097083076571473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8293576186159192316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceed461444e2fb44caf617b6a284c986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Shears.Common::Shears.SpringRotator
+  targetTransform: {fileID: 2586786774714157682}
+  offset: {x: 0, y: 0, z: 0}
+  strength: 8000
+  damping: 10
+  usesFixedUpdate: 1
+  usesCustomFixedTimestep: 0
+  timestep: 0.01
+  xRange:
+    min: -180
+    max: 180
+  yRange:
+    min: -180
+    max: 180
+  zRange:
+    min: -180
+    max: 180
+--- !u!4 &8311283207802490594 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1799713808077975578, guid: 93f9188f85528aa4385c9e36f0f00f25, type: 3}
+  m_PrefabInstance: {fileID: 7759211941388025592}
   m_PrefabAsset: {fileID: 0}

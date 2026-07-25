@@ -17,36 +17,43 @@ namespace BigHappyBurger.Foods
         [SerializeField]
         private bool holdsDrinkable = false;
 
-        [Auto]
-        [AutoEvent(nameof(ItemHolder.ItemChanged), nameof(OnItemChanged))]
         private ItemHolder holder;
 
-        public Item Item => holder.Item;
+        [AutoEvent(nameof(ItemHolder.ItemChanged), nameof(OnItemChanged))]
+        private ItemHolder Holder
+        {
+            get
+            {
+                if (holder == null)
+                    holder = GetComponent<ItemHolder>();
+
+                return holder;
+            }
+        }
+        public Item Item => Holder.Item;
 
         public event Action<FoodHolder> ItemChanged;
 
         private void Awake()
         {
-            __AutoAwake();
-
-            holder.CanBeHeldCallback = CanHoldItem;
+            Holder.CanBeHeldCallback = CanHoldItem;
         }
 
-        public bool CanBeHeld(Food food) => holder.CanBeHeld(food.Item);
+        public bool CanHold(Food food) => Holder.CanBeHeld(food.Item);
 
         public bool Hold(Food food)
         {
-            return holder.Hold(food.Item);
+            return Holder.Hold(food.Item);
         }
 
         public bool Release()
         {
-            return holder.Release();
+            return Holder.Release();
         }
 
-        public void Lock() => holder.Lock();
+        public void Lock() => Holder.Lock();
 
-        public void Unlock() => holder.Unlock();
+        public void Unlock() => Holder.Unlock();
 
         private bool CanHoldItem(Item item)
         {

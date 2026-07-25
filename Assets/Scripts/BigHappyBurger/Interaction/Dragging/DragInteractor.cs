@@ -73,9 +73,11 @@ namespace BigHappyBurger.Interaction
 
             var localItemPosition = cam.transform.InverseTransformPoint(item.Position);
             float distance = localItemPosition.z;
-            planeDistance = PlaneDistanceRange.Clamp(distance);
 
             Item = item;
+
+            planeDistance = PlaneDistanceRange.Clamp(distance + item.ExtraPlaneDistance);
+
             Item.OnDragBegin();
             UpdateDrag(flipInput);
             CursorManager.SetCursorVisibility(false);

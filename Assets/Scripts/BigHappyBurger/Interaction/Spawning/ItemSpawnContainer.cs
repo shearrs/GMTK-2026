@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace BigHappyBurger.Interaction
 {
-    public class ItemSpawnContainer : MonoBehaviour
+    public class ItemSpawnContainer : MonoBehaviour, IItemSpawner
     {
         [SerializeField, Required, Local]
         private Item itemPrefab;
@@ -21,13 +21,16 @@ namespace BigHappyBurger.Interaction
         [SerializeField]
         private List<Item> spawnedItems = new();
 
+        public int MaxCount => maxCount;
+        public Item ItemToSpawn => itemPrefab;
+
         private void Awake()
         {
             foreach (var item in spawnedItems)
                 LockItem(item);
         }
 
-        public void Spawn(int count)
+        public void AddCount(int count)
         {
             int countToAdd = count;
 

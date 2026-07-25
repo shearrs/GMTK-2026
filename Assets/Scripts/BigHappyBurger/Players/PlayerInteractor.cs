@@ -34,16 +34,6 @@ namespace BigHappyBurger.Players
 
         public void UpdateInteraction()
         {
-            if (dragInteractor.Item == null && interactInput.WasPressedThisFrame())
-            {
-                if (spawnInteractor.TryToSpawnItem(out var info))
-                    dragInteractor.BeginDragging(
-                        info.Item,
-                        info.PointerOffset,
-                        info.PlaneDistanceOffset
-                    );
-            }
-
             if (scrollItemInput.WasPressedThisFrame() && dragInteractor.Item != null)
                 dragInteractor.ChangePlaneDistance(
                     scrollItemInput.ReadValue<Vector2>().y * itemScrollSensitivity
@@ -56,6 +46,20 @@ namespace BigHappyBurger.Players
 
             if (dragInfo.ReleasedItem && dragInfo.Item.IsHoldable)
                 holdInteractor.TryToPlaceIntoHolder(dragInfo.Item, dragInfo.DragOffset);
+
+            if (dragInteractor.Item == null && interactInput.WasPressedThisFrame())
+            {
+                if (spawnInteractor.TryToSpawnItem(out var info))
+                {
+                    dragInteractor.BeginDragging(
+                        info.Item,
+                        info.PointerOffset,
+                        info.PlaneDistanceOffset
+                    );
+
+                    dragInteractor.UpdateDragging(interactInput.IsPressed(), flipInput.IsPressed());
+                }
+            }
         }
     }
 }

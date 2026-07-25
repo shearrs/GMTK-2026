@@ -52,8 +52,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.ItemSpawner
   itemToSpawn: {fileID: 7995428495544808388, guid: 7faafff841272e3448ec556c4b12a511, type: 3}
-  dragOffset: {x: 0, y: 0, z: 0.1}
+  interactionCollider: {fileID: 7790116804415503521}
   spawnTransform: {fileID: 4223778469692281066}
+  hasLimitedSupply: 0
+  maxCount: 0
+  currentCount: 0
+  dragOffset: {x: 0, y: 0, z: 0.1}
+  planeDistanceOffset: 0
 --- !u!65 &7790116804415503521
 BoxCollider:
   m_ObjectHideFlags: 0
