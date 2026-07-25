@@ -93,7 +93,7 @@ namespace Dialogue
 
             Response response = _responses[UnityEngine.Random.Range(0, _responses.Length)];
             this.data.dialogueText = response.text;
-            UnityEngine.Debug.LogFormat("Time increased by: {response.timeBonus}");
+            UnityEngine.Debug.LogFormat("Time increased by: {0}", response.timeBonus);
 
             if (_continueDialogue)
             {

@@ -1,9 +1,24 @@
 :root {
 }
 
+.base {
+    transition-duration: 1s;
+}
+
+
+
 .hidden {
+    flex-grow: 0;
+    height: auto;
+    position: relative;
+    bottom: auto;
+    right: auto;
+    left: auto;
     display: none;
     visibility: hidden;
-    overflow: hidden;
     opacity: 0;
+    overflow: hidden;
+    top: auto;
+    transition-duration: 1s;
+    translate: 0 500px;
 }
