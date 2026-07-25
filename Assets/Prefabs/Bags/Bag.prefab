@@ -390,6 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcf64c60601b4641b0567c5297c1f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.BagExpander
+  item: {fileID: 7995428495544808388}
   scaleTarget: {fileID: 1850920923224010201}
   expandSize: {x: 0.18, y: 0.18, z: 1.75}
   scaleTween:

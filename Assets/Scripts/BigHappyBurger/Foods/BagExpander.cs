@@ -1,3 +1,4 @@
+using BigHappyBurger.Interaction;
 using Shears;
 using Shears.Tweens;
 using UnityEngine;
@@ -6,6 +7,9 @@ namespace BigHappyBurger.Foods
 {
     public class BagExpander : MonoBehaviour
     {
+        [SerializeField, Required, Local]
+        private Item item;
+
         [SerializeField, Required, Local]
         private Transform scaleTarget;
 
@@ -17,7 +21,10 @@ namespace BigHappyBurger.Foods
 
         private void Start()
         {
-            scaleTarget.GetScaleLocalTween(expandSize, scaleTween).PlayAfter(0.15f);
+            item.LockRotation();
+            var tween = scaleTarget.GetScaleLocalTween(expandSize, scaleTween).PlayAfter(0.15f);
+
+            tween.Completed += () => item.UnlockRotation();
         }
     }
 }

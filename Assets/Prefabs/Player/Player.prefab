@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2324140181697307594}
   - component: {fileID: 4451862578262282551}
   - component: {fileID: 2796095098123392845}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 3288114911097092166}
   - component: {fileID: 1987625992617294227}
   - component: {fileID: 1481689836824430226}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spawn Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,6 +305,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   detectTriggers: 1
+  isBlockable: 0
   continuousDetection: 0
   continuousDetectionStep: 0.1
   castCameraToCursor: 1
@@ -323,7 +324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4389110127491893703}
   - component: {fileID: 4101299536320064320}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +376,7 @@ GameObject:
   - component: {fileID: 978791269993427739}
   - component: {fileID: 3445416414304042646}
   - component: {fileID: 6806986277151471161}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hold Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,7 +444,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2502740668073241601}
   - component: {fileID: 306927705265253019}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +500,7 @@ GameObject:
   - component: {fileID: 508397748366361668}
   - component: {fileID: 1624616269570611870}
   - component: {fileID: 5360209703247083839}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Drag Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -559,6 +560,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   detectTriggers: 1
+  isBlockable: 1
   continuousDetection: 0
   continuousDetectionStep: 0.1
   castCameraToCursor: 1
@@ -578,7 +580,7 @@ GameObject:
   - component: {fileID: 2091565915811858702}
   - component: {fileID: 6785653718875420520}
   - component: {fileID: 5957702065050594964}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}

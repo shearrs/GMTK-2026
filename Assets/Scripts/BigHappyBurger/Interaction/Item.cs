@@ -31,6 +31,7 @@ namespace BigHappyBurger.Interaction
         private Holdable holdable;
 
         private Tween scaleTween;
+        private bool isRotationLocked;
 
         public IReadOnlyList<Collider> Colliders => colliders;
         public Vector3 Position => rigidbody != null ? rigidbody.position : transform.position;
@@ -81,6 +82,22 @@ namespace BigHappyBurger.Interaction
             scaleTween = transform.DoScaleLocalTween(scale, data);
         }
 
+        public void LockRotation()
+        {
+            isRotationLocked = true;
+
+            if (rigidbody != null)
+                rigidbody.freezeRotation = true;
+        }
+
+        public void UnlockRotation()
+        {
+            isRotationLocked = false;
+
+            if (rigidbody != null)
+                rigidbody.freezeRotation = false;
+        }
+
         internal void OnDragBegin()
         {
             if (IsBeingHeld)
@@ -118,7 +135,12 @@ namespace BigHappyBurger.Interaction
         internal void SetLocalPositionAndRotation(Vector3 position, Quaternion rotation)
         {
             if (rigidbody == null || rigidbody.isKinematic)
-                transform.SetLocalPositionAndRotation(position, rotation);
+            {
+                if (isRotationLocked)
+                    transform.position = position;
+                else
+                    transform.SetLocalPositionAndRotation(position, rotation);
+            }
             else
             {
                 this.Log(
