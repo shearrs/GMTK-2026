@@ -41,6 +41,8 @@ namespace BigHappyBurger.Interaction
         public bool IsBeingDragged => IsDraggable && draggable.IsBeingDragged;
         public bool IsFlipped { get; internal set; }
 
+        public event Action DragBegan;
+
         private void Reset()
         {
             ID = Guid.NewGuid().ToString();
@@ -91,6 +93,8 @@ namespace BigHappyBurger.Interaction
             }
 
             draggable.OnDragBegin();
+
+            DragBegan?.Invoke();
         }
 
         internal void OnDragEnd() => draggable.OnDragEnd();
