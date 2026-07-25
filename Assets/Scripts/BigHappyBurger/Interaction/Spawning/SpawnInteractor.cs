@@ -13,10 +13,13 @@ namespace BigHappyBurger.Interaction
         {
             info = default;
 
-            if (!detector.Detect() || !detector.TryGetDetection(out ItemSpawner spawner, true))
+            if (!detector.Detect())
                 return false;
 
-            info = spawner.SpawnItem();
+            if (detector.TryGetDetection(out ItemSpawner spawner, true))
+                info = spawner.SpawnItem();
+            else if (detector.TryGetDetection(out ItemSpawnContainer container, true))
+                info = container.Release();
 
             return info.Item != null;
         }

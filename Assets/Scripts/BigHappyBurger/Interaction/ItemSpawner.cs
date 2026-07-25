@@ -16,12 +16,14 @@ namespace BigHappyBurger.Interaction
         public readonly ref struct ItemSpawnInfo
         {
             public Item Item { get; }
-            public Vector3 Offset { get; }
+            public Vector3 PointerOffset { get; }
+            public float PlaneDistanceOffset { get; }
 
-            public ItemSpawnInfo(Item item, Vector3 offset)
+            public ItemSpawnInfo(Item item, Vector3 offset, float planeDistanceOffset = 0)
             {
                 Item = item;
-                Offset = offset;
+                PointerOffset = offset;
+                PlaneDistanceOffset = planeDistanceOffset;
             }
         }
 

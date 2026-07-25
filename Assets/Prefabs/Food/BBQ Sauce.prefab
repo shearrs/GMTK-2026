@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9076153269062108026}
-  - component: {fileID: 2723321007888569245}
   - component: {fileID: 6521080497682778552}
-  - component: {fileID: 7267604367494726359}
   - component: {fileID: 1333393891133005964}
-  - component: {fileID: -7749199181445986141}
+  - component: {fileID: 3829784327436135825}
+  - component: {fileID: 2723321007888569245}
+  - component: {fileID: 7267604367494726359}
   m_Layer: 0
   m_Name: BBQ Sauce
   m_TagString: Untagged
@@ -37,6 +37,58 @@ Transform:
   - {fileID: 1116715581693917350}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6521080497682778552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841018627615554408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+  <LogLevels>k__BackingField: 29
+  <ID>k__BackingField: 05a271fd-c04f-41e0-bdca-9b1a3de8057a
+  rigidbody: {fileID: 7267604367494726359}
+  colliders:
+  - {fileID: 2723321007888569245}
+  draggable: {fileID: 1333393891133005964}
+  holdable: {fileID: 0}
+--- !u!114 &1333393891133005964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841018627615554408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc4f30ecab05d5e428a58b4e81c5c5d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.PhysicsDraggable
+  normalBounceMaterial: {fileID: 13400000, guid: cf73da34db3bfeb4c9e35e97246f3d70, type: 2}
+  noBounceMaterial: {fileID: 13400000, guid: f298dd7ef0dbae341bafebd1b1f1fd32, type: 2}
+  item: {fileID: 6521080497682778552}
+  rigidbody: {fileID: 7267604367494726359}
+  springiness: 800
+  damping: 25
+  angularSpringiness: 0.1
+  angularDamping: 20
+--- !u!114 &3829784327436135825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841018627615554408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81be58ff1ca5d243a2ce14ca25bf0b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.Food
+  cookable: {fileID: 0}
 --- !u!65 &2723321007888569245
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58,25 +110,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.16151619, y: 0.087328725, z: 0.21300529}
   m_Center: {x: 0.00019606948, y: 0.044579472, z: 0.00058273226}
---- !u!114 &6521080497682778552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6841018627615554408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
-  <LogLevels>k__BackingField: 29
-  <ID>k__BackingField: 05a271fd-c04f-41e0-bdca-9b1a3de8057a
-  rigidbody: {fileID: 7267604367494726359}
-  colliders:
-  - {fileID: 2723321007888569245}
-  draggable: {fileID: 1333393891133005964}
-  holdable: {fileID: 0}
 --- !u!54 &7267604367494726359
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -104,39 +137,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &1333393891133005964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6841018627615554408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc4f30ecab05d5e428a58b4e81c5c5d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.PhysicsDraggable
-  normalBounceMaterial: {fileID: 13400000, guid: cf73da34db3bfeb4c9e35e97246f3d70, type: 2}
-  noBounceMaterial: {fileID: 13400000, guid: f298dd7ef0dbae341bafebd1b1f1fd32, type: 2}
-  item: {fileID: 6521080497682778552}
-  rigidbody: {fileID: 7267604367494726359}
-  springiness: 500
-  damping: 25
-  angularSpringiness: 0.1
-  angularDamping: 10
---- !u!114 &-7749199181445986141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6841018627615554408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5c266e9ed5e4914882f7d6154f4b9b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Cookable
-  cookTime: 20
 --- !u!1001 &4630163231858500479
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -21,7 +21,7 @@ namespace BigHappyBurger.Interaction
         private Rigidbody rigidbody;
 
         [SerializeField, Min(0)]
-        private float springiness = 500.0f;
+        private float springiness = 800.0f;
 
         [SerializeField, Min(0)]
         private float damping = 25.0f;
@@ -30,7 +30,7 @@ namespace BigHappyBurger.Interaction
         private float angularSpringiness = 0.1f;
 
         [SerializeField, Min(0)]
-        private float angularDamping = 10.0f;
+        private float angularDamping = 20.0f;
 
         private readonly Timer interpolateTimer = new(INTERPOLATION_DURATION);
 

@@ -83,7 +83,7 @@ namespace BigHappyBurger.Interaction
             return new(Item, -(flatCamRotation * dragOffset));
         }
 
-        public void BeginDragging(Item item, Vector3 offset)
+        public void BeginDragging(Item item, Vector3 offset, float planeOffset)
         {
             if (Item != null)
             {
@@ -97,7 +97,7 @@ namespace BigHappyBurger.Interaction
             var cam = Camera.main;
             var localItemPosition = cam.transform.InverseTransformPoint(item.Position);
             float distance = localItemPosition.z;
-            planeDistance = PlaneDistanceRange.Clamp(distance);
+            planeDistance = PlaneDistanceRange.Clamp(distance + planeOffset);
 
             dragOffset = Quaternion.Inverse(item.Rotation) * offset;
             Item = item;

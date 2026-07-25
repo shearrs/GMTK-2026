@@ -37,7 +37,11 @@ namespace BigHappyBurger.Players
             if (dragInteractor.Item == null && interactInput.WasPressedThisFrame())
             {
                 if (spawnInteractor.TryToSpawnItem(out var info))
-                    dragInteractor.BeginDragging(info.Item, info.Offset);
+                    dragInteractor.BeginDragging(
+                        info.Item,
+                        info.PointerOffset,
+                        info.PlaneDistanceOffset
+                    );
             }
 
             if (scrollItemInput.WasPressedThisFrame() && dragInteractor.Item != null)

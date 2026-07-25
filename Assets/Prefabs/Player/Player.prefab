@@ -559,7 +559,7 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 1
-  detectTriggers: 1
+  detectTriggers: 0
   isBlockable: 1
   continuousDetection: 0
   continuousDetectionStep: 0.1

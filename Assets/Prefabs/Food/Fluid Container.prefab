@@ -296,8 +296,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
   <LogLevels>k__BackingField: 29
-  <ID>k__BackingField: 
+  <ID>k__BackingField: 19d50a6f-5f66-44a2-87e4-791870fa7274
   rigidbody: {fileID: 3904817056698333059}
+  colliders: []
   draggable: {fileID: 3053651767968944658}
   holdable: {fileID: 0}
 --- !u!114 &3053651767968944658
@@ -314,10 +315,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.PhysicsDraggable
   normalBounceMaterial: {fileID: 13400000, guid: cf73da34db3bfeb4c9e35e97246f3d70, type: 2}
   noBounceMaterial: {fileID: 13400000, guid: f298dd7ef0dbae341bafebd1b1f1fd32, type: 2}
+  item: {fileID: 0}
   rigidbody: {fileID: 3904817056698333059}
-  colliders:
-  - {fileID: 6262312532577776816}
-  springiness: 500
+  springiness: 800
   damping: 25
   angularSpringiness: 0.1
-  angularDamping: 10
+  angularDamping: 20

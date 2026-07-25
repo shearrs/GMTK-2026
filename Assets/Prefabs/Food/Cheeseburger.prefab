@@ -120,10 +120,10 @@ MonoBehaviour:
   noBounceMaterial: {fileID: 13400000, guid: f298dd7ef0dbae341bafebd1b1f1fd32, type: 2}
   item: {fileID: 6521080497682778552}
   rigidbody: {fileID: 7267604367494726359}
-  springiness: 500
+  springiness: 800
   damping: 25
   angularSpringiness: 0.1
-  angularDamping: 10
+  angularDamping: 20
 --- !u!114 &-7749199181445986141
 MonoBehaviour:
   m_ObjectHideFlags: 0
