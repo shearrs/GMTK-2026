@@ -1,0 +1,225 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6841018627615554408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9076153269062108026}
+  - component: {fileID: 6521080497682778552}
+  - component: {fileID: 6151296297775054226}
+  - component: {fileID: 1333393891133005964}
+  - component: {fileID: 2723321007888569245}
+  - component: {fileID: 7267604367494726359}
+  m_Layer: 0
+  m_Name: Ketchup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9076153269062108026
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841018627615554408}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8587384810997340961}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6521080497682778552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841018627615554408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+  <LogLevels>k__BackingField: 29
+  <ID>k__BackingField: 05a271fd-c04f-41e0-bdca-9b1a3de8057a
+  rigidbody: {fileID: 7267604367494726359}
+  colliders:
+  - {fileID: 2723321007888569245}
+  draggable: {fileID: 1333393891133005964}
+  holdable: {fileID: 0}
+--- !u!114 &6151296297775054226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841018627615554408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81be58ff1ca5d243a2ce14ca25bf0b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.Food
+  cookable: {fileID: 0}
+--- !u!114 &1333393891133005964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841018627615554408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc4f30ecab05d5e428a58b4e81c5c5d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.PhysicsDraggable
+  normalBounceMaterial: {fileID: 13400000, guid: cf73da34db3bfeb4c9e35e97246f3d70, type: 2}
+  noBounceMaterial: {fileID: 13400000, guid: f298dd7ef0dbae341bafebd1b1f1fd32, type: 2}
+  item: {fileID: 6521080497682778552}
+  rigidbody: {fileID: 7267604367494726359}
+  springiness: 800
+  damping: 25
+  angularSpringiness: 0.1
+  angularDamping: 35
+--- !u!65 &2723321007888569245
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841018627615554408}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.10187304, y: 0.043655872, z: 0.22792912}
+  m_Center: {x: -0.0014588237, y: 0.0038974285, z: -0.0034604073}
+--- !u!54 &7267604367494726359
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841018627615554408}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
+--- !u!1001 &4586327855359961451
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 9076153269062108026}
+    m_Modifications:
+    - target: {fileID: 5226827719905473098, guid: 076066c0488f2b7408aff068e2d1945b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226827719905473098, guid: 076066c0488f2b7408aff068e2d1945b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226827719905473098, guid: 076066c0488f2b7408aff068e2d1945b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226827719905473098, guid: 076066c0488f2b7408aff068e2d1945b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226827719905473098, guid: 076066c0488f2b7408aff068e2d1945b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226827719905473098, guid: 076066c0488f2b7408aff068e2d1945b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226827719905473098, guid: 076066c0488f2b7408aff068e2d1945b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226827719905473098, guid: 076066c0488f2b7408aff068e2d1945b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226827719905473098, guid: 076066c0488f2b7408aff068e2d1945b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226827719905473098, guid: 076066c0488f2b7408aff068e2d1945b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931326064542006927, guid: 076066c0488f2b7408aff068e2d1945b, type: 3}
+      propertyPath: m_Name
+      value: Ketchup Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 8446056134896496388, guid: 076066c0488f2b7408aff068e2d1945b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.108
+      objectReference: {fileID: 0}
+    - target: {fileID: 8446056134896496388, guid: 076066c0488f2b7408aff068e2d1945b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.00000010430811
+      objectReference: {fileID: 0}
+    - target: {fileID: 8446056134896496388, guid: 076066c0488f2b7408aff068e2d1945b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8446056134896496388, guid: 076066c0488f2b7408aff068e2d1945b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00000004371139
+      objectReference: {fileID: 0}
+    - target: {fileID: 8446056134896496388, guid: 076066c0488f2b7408aff068e2d1945b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 3.996802e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8446056134896496388, guid: 076066c0488f2b7408aff068e2d1945b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -180
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 076066c0488f2b7408aff068e2d1945b, type: 3}
+--- !u!4 &8587384810997340961 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5226827719905473098, guid: 076066c0488f2b7408aff068e2d1945b, type: 3}
+  m_PrefabInstance: {fileID: 4586327855359961451}
+  m_PrefabAsset: {fileID: 0}

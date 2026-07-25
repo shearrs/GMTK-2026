@@ -98,10 +98,10 @@ MonoBehaviour:
   noBounceMaterial: {fileID: 13400000, guid: f298dd7ef0dbae341bafebd1b1f1fd32, type: 2}
   item: {fileID: 6521080497682778552}
   rigidbody: {fileID: 7267604367494726359}
-  springiness: 500
+  springiness: 800
   damping: 25
-  angularSpringiness: 0.1
-  angularDamping: 10
+  angularSpringiness: 0.5
+  angularDamping: 35
 --- !u!114 &-7749199181445986141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,46 +123,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9076153269062108026}
     m_Modifications:
-    - target: {fileID: 1248540349742618612, guid: 0ed125cd34a861b4087cca4d3a5fd927, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.30704
-      objectReference: {fileID: 0}
-    - target: {fileID: 1248540349742618612, guid: 0ed125cd34a861b4087cca4d3a5fd927, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.30704
-      objectReference: {fileID: 0}
-    - target: {fileID: 1248540349742618612, guid: 0ed125cd34a861b4087cca4d3a5fd927, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.30704
-      objectReference: {fileID: 0}
-    - target: {fileID: 1248540349742618612, guid: 0ed125cd34a861b4087cca4d3a5fd927, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.68301284
-      objectReference: {fileID: 0}
-    - target: {fileID: 1248540349742618612, guid: 0ed125cd34a861b4087cca4d3a5fd927, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.68301266
-      objectReference: {fileID: 0}
-    - target: {fileID: 1248540349742618612, guid: 0ed125cd34a861b4087cca4d3a5fd927, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.18301259
-      objectReference: {fileID: 0}
-    - target: {fileID: 1248540349742618612, guid: 0ed125cd34a861b4087cca4d3a5fd927, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.18301244
-      objectReference: {fileID: 0}
-    - target: {fileID: 1248540349742618612, guid: 0ed125cd34a861b4087cca4d3a5fd927, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1248540349742618612, guid: 0ed125cd34a861b4087cca4d3a5fd927, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1248540349742618612, guid: 0ed125cd34a861b4087cca4d3a5fd927, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2363646097184868146, guid: 0ed125cd34a861b4087cca4d3a5fd927, type: 3}
       propertyPath: m_Name
       value: Small Cup Model

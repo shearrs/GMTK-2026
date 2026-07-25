@@ -327,8 +327,8 @@ MonoBehaviour:
   rigidbody: {fileID: 3703658159907658131}
   springiness: 500
   damping: 25
-  angularSpringiness: 0.75
-  angularDamping: 20
+  angularSpringiness: 0.5
+  angularDamping: 35
 --- !u!114 &6462724082485794926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,8 +390,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcf64c60601b4641b0567c5297c1f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.BagExpander
+  item: {fileID: 7995428495544808388}
   scaleTarget: {fileID: 1850920923224010201}
-  expandSize: {x: 0.25, y: 0.25, z: 2.85}
+  expandSize: {x: 0.18, y: 0.18, z: 1.75}
   scaleTween:
     usesDataObject: 0
     tweenDataObject: {fileID: 0}
@@ -501,10 +502,6 @@ PrefabInstance:
     - target: {fileID: 4784679965956836539, guid: 89e229126380fec4da08911414311f3a, type: 3}
       propertyPath: m_Name
       value: Bag Model
-      objectReference: {fileID: 0}
-    - target: {fileID: 6206958803315932391, guid: 89e229126380fec4da08911414311f3a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7524841363022456295, guid: 89e229126380fec4da08911414311f3a, type: 3}
       propertyPath: m_LocalPosition.x

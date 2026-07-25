@@ -1,9 +1,20 @@
 using UnityEngine;
 
-public class Cookable : MonoBehaviour
+namespace BigHappyBurger.Foods
 {
-    [SerializeField]
-    private int cookTime = 0;
+    [RequireComponent(typeof(Food))]
+    public class Cookable : MonoBehaviour
+    {
+        [SerializeField]
+        private int cookTime = 0;
 
-    public int CookTime => cookTime;
+        public int CookTime => cookTime;
+
+        private void Reset()
+        {
+            var food = GetComponent<Food>();
+
+            food.SetCookable(this);
+        }
+    }
 }

@@ -31,12 +31,15 @@ namespace BigHappyBurger.Interaction
         private Holdable holdable;
 
         private Tween scaleTween;
+        private bool isRotationLocked;
+        private bool isDraggingLocked;
 
         public IReadOnlyList<Collider> Colliders => colliders;
         public Vector3 Position => rigidbody != null ? rigidbody.position : transform.position;
         public Quaternion Rotation => rigidbody != null ? rigidbody.rotation : transform.rotation;
         public Transform Parent => transform.parent;
-        public bool IsDraggable => draggable != null && (!IsBeingHeld || holdable.CanBeReleased());
+        public bool IsDraggable =>
+            !isDraggingLocked && draggable != null && (!IsBeingHeld || holdable.CanBeReleased());
         public bool IsBeingHeld => holdable != null && holdable.IsBeingHeld;
         public bool IsBeingDragged => IsDraggable && draggable.IsBeingDragged;
         public bool IsFlipped { get; internal set; }
@@ -81,6 +84,26 @@ namespace BigHappyBurger.Interaction
             scaleTween = transform.DoScaleLocalTween(scale, data);
         }
 
+        public void LockRotation()
+        {
+            isRotationLocked = true;
+
+            if (rigidbody != null)
+                rigidbody.freezeRotation = true;
+        }
+
+        public void UnlockRotation()
+        {
+            isRotationLocked = false;
+
+            if (rigidbody != null)
+                rigidbody.freezeRotation = false;
+        }
+
+        public void LockDragging() => isDraggingLocked = true;
+
+        public void UnlockDragging() => isDraggingLocked = false;
+
         internal void OnDragBegin()
         {
             if (IsBeingHeld)
@@ -115,10 +138,30 @@ namespace BigHappyBurger.Interaction
                 transform.SetParent(parent);
         }
 
+        internal void MovePosition(Vector3 movement)
+        {
+            if (rigidbody == null || rigidbody.isKinematic)
+                transform.position += movement;
+            else
+            {
+                this.Log(
+                    $"Should not be trying to move the transform of an active {nameof(Rigidbody)}.",
+                    SHLogLevels.Warning
+                );
+
+                return;
+            }
+        }
+
         internal void SetLocalPositionAndRotation(Vector3 position, Quaternion rotation)
         {
             if (rigidbody == null || rigidbody.isKinematic)
-                transform.SetLocalPositionAndRotation(position, rotation);
+            {
+                if (isRotationLocked)
+                    transform.position = position;
+                else
+                    transform.SetLocalPositionAndRotation(position, rotation);
+            }
             else
             {
                 this.Log(

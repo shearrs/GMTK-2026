@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2324140181697307594}
   - component: {fileID: 4451862578262282551}
   - component: {fileID: 2796095098123392845}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -238,6 +238,82 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     unityEvents: []
+--- !u!1 &1280252841562308176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3288114911097092166}
+  - component: {fileID: 1987625992617294227}
+  - component: {fileID: 1481689836824430226}
+  m_Layer: 6
+  m_Name: Spawn Interactor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3288114911097092166
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280252841562308176}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4389110127491893703}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1987625992617294227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280252841562308176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459664acef8f2214da72a45e9c7719fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.SpawnInteractor
+  detector: {fileID: 1481689836824430226}
+--- !u!114 &1481689836824430226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280252841562308176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1fabbcfe4a0cf46b68fdd5e2a45c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Shears.Detection::Shears.Detection.RayDetector3D
+  gizmoType: 1
+  highlightOnDetect: 0
+  defaultGizmoColor: {r: 1, g: 0, b: 0, a: 1}
+  detectingGizmoColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  maxDetections: 100
+  detectionMask:
+    serializedVersion: 2
+    m_Bits: 1
+  detectTriggers: 1
+  isBlockable: 0
+  continuousDetection: 0
+  continuousDetectionStep: 0.1
+  castCameraToCursor: 1
+  useLocalDirection: 1
+  originCamera: {fileID: 3315672623639643054}
+  offset: {x: 0, y: 0, z: 0}
+  direction: {x: 0, y: 0, z: 1}
+  distance: 100
 --- !u!1 &1577386057108983776
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,7 +324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4389110127491893703}
   - component: {fileID: 4101299536320064320}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,6 +346,7 @@ Transform:
   m_Children:
   - {fileID: 508397748366361668}
   - {fileID: 978791269993427739}
+  - {fileID: 3288114911097092166}
   m_Father: {fileID: 6343009479316764441}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4101299536320064320
@@ -286,6 +363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: BigHappyBurger.Players::BigHappyBurger.Players.PlayerInteractor
   dragInteractor: {fileID: 1624616269570611870}
   holdInteractor: {fileID: 3445416414304042646}
+  spawnInteractor: {fileID: 1987625992617294227}
   itemScrollSensitivity: 0.1
 --- !u!1 &2245784130523143827
 GameObject:
@@ -298,7 +376,7 @@ GameObject:
   - component: {fileID: 978791269993427739}
   - component: {fileID: 3445416414304042646}
   - component: {fileID: 6806986277151471161}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hold Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +444,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2502740668073241601}
   - component: {fileID: 306927705265253019}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -422,7 +500,7 @@ GameObject:
   - component: {fileID: 508397748366361668}
   - component: {fileID: 1624616269570611870}
   - component: {fileID: 5360209703247083839}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Drag Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -481,7 +559,8 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 1
-  detectTriggers: 1
+  detectTriggers: 0
+  isBlockable: 1
   continuousDetection: 0
   continuousDetectionStep: 0.1
   castCameraToCursor: 1
@@ -501,7 +580,7 @@ GameObject:
   - component: {fileID: 2091565915811858702}
   - component: {fileID: 6785653718875420520}
   - component: {fileID: 5957702065050594964}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
