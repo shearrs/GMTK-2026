@@ -1,0 +1,9 @@
+:root {
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+    overflow: hidden;
+    opacity: 0;
+}

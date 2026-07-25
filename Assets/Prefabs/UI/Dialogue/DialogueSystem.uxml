@@ -1,20 +1,52 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 1;">
-        <ui:VisualElement style="flex-grow: 1; height: 75%;">
-            <ui:Label text="Fries in the bag, buddy." name="Textbox" data-source="project://database/Assets/Prefabs/UI/Dialogue/DialogueData.asset?fileID=11400000&amp;guid=bb96ed25fef2b0a4e843c825a212bb8f&amp;type=2#DialogueData" data-source-path="dialogueText" style="flex-grow: 0; height: auto; font-size: 80px; -unity-text-auto-size: none; -unity-text-generator: advanced; white-space: normal;">
-                <Bindings>
-                    <ui:DataBinding property="text" data-source-path="dialogueText" data-source="project://database/Assets/Prefabs/UI/Dialogue/DialogueData.asset?fileID=11400000&amp;guid=bb96ed25fef2b0a4e843c825a212bb8f&amp;type=2#DialogueData" binding-mode="ToTarget"/>
-                </Bindings>
-            </ui:Label>
+    <Style src="project://database/Assets/Prefabs/UI/Dialogue/style.uss?fileID=7433441132597879392&amp;guid=f70dd9c3981a6c7468e25f8a6dc98e55&amp;type=3#style"/>
+    <ui:VisualElement name="Top" style="flex-grow: 1; position: absolute; top: 0; left: 0; right: 0;">
+        <ui:VisualElement name="CustomerDialogue">
+            <ui:VisualElement style="flex-grow: 1; height: 75%;">
+                <ui:Label text="Fries in the bag, buddy." name="Textbox" data-source="project://database/Assets/Prefabs/UI/Dialogue/DialogueData.asset?fileID=11400000&amp;guid=bb96ed25fef2b0a4e843c825a212bb8f&amp;type=2#DialogueData" data-source-path="dialogueText" style="flex-grow: 0; height: auto; font-size: 80px; -unity-text-auto-size: none; -unity-text-generator: advanced; white-space: normal;">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="dialogueText" data-source="project://database/Assets/Prefabs/UI/Dialogue/DialogueData.asset?fileID=11400000&amp;guid=bb96ed25fef2b0a4e843c825a212bb8f&amp;type=2#DialogueData" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:Label>
+            </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement style="flex-grow: 0; height: 25%;">
+    </ui:VisualElement>
+    <ui:VisualElement enabled="true" name="Bottom" picking-mode="Position" style="flex-grow: 0; height: 25%; position: absolute; bottom: 0; right: 0; left: 0; display: flex; visibility: visible; opacity: 1; overflow: visible;">
+        <ui:VisualElement enabled="true" name="ResponseQuad" picking-mode="Position" style="flex-grow: 0; height: auto; position: relative; bottom: auto; right: auto; left: auto; display: flex; visibility: visible; opacity: 1; overflow: visible; top: auto;">
             <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                <ui:Button text="Sweet ride you got there." name="ButtonCompliment" style="flex-direction: row; width: 0; flex-grow: 1; font-size: 30px; -unity-text-auto-size: best-fit 0 100px;"/>
-                <ui:Button text="Pretty hot out today, huh?" name="ButtonWeather" style="flex-direction: column; width: 0; flex-grow: 1; -unity-text-auto-size: best-fit 0 100px; font-size: 30px;"/>
+                <ui:Button text="Sweet ride you got there." name="ButtonCompliment" style="flex-direction: row; width: 0; flex-grow: 1; font-size: 30px; -unity-text-auto-size: best-fit 0 100px;">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="replyCompliment" data-source="project://database/Assets/Prefabs/UI/Dialogue/DialogueData.asset?fileID=11400000&amp;guid=bb96ed25fef2b0a4e843c825a212bb8f&amp;type=2#DialogueData" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:Button>
+                <ui:Button text="Pretty hot out today, huh?" name="ButtonWeather" style="flex-direction: column; width: 0; flex-grow: 1; -unity-text-auto-size: best-fit 0 100px; font-size: 30px;">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="replyWeather" data-source="project://database/Assets/Prefabs/UI/Dialogue/DialogueData.asset?fileID=11400000&amp;guid=bb96ed25fef2b0a4e843c825a212bb8f&amp;type=2#DialogueData" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:Button>
             </ui:VisualElement>
             <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-                <ui:Button text="Your order should be just wrapping up now!" name="ButtonUpdate" style="flex-direction: row; width: 0; flex-grow: 1; -unity-text-auto-size: best-fit 0 100px; font-size: 30px;"/>
-                <ui:Button text="Got any special plans today?" name="ButtonPlans" style="flex-direction: column; width: 0; flex-grow: 1; -unity-text-auto-size: best-fit 0 100px; font-size: 30px;"/>
+                <ui:Button text="Your order should be just wrapping up now!" name="ButtonUpdate" style="flex-direction: row; width: 0; flex-grow: 1; -unity-text-auto-size: best-fit 0 100px; font-size: 30px;">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="replyUpdate" data-source="project://database/Assets/Prefabs/UI/Dialogue/DialogueData.asset?fileID=11400000&amp;guid=bb96ed25fef2b0a4e843c825a212bb8f&amp;type=2#DialogueData" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:Button>
+                <ui:Button text="Got any special plans today?" name="ButtonPlans" style="flex-direction: column; width: 0; flex-grow: 1; -unity-text-auto-size: best-fit 0 100px; font-size: 30px;">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="replyPlans" data-source="project://database/Assets/Prefabs/UI/Dialogue/DialogueData.asset?fileID=11400000&amp;guid=bb96ed25fef2b0a4e843c825a212bb8f&amp;type=2#DialogueData" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement enabled="true" name="Bottom" picking-mode="Position" style="flex-grow: 0; height: 12.5%; position: absolute; bottom: 0; right: 0; left: 0; display: flex; visibility: visible; opacity: 1; overflow: visible;">
+        <ui:VisualElement picking-mode="Position" name="ResponseSingular" enabled="true" style="opacity: 1; display: flex; visibility: visible; overflow: visible; position: relative; left: auto; bottom: auto; right: auto; height: auto;">
+            <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+                <ui:Button text="Pretty hot out today, huh?" name="ButtonGreeting" style="flex-direction: column; width: 0; flex-grow: 1; -unity-text-auto-size: best-fit 0 100px; font-size: 30px;">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="introduction" data-source="project://database/Assets/Prefabs/UI/Dialogue/DialogueData.asset?fileID=11400000&amp;guid=bb96ed25fef2b0a4e843c825a212bb8f&amp;type=2#DialogueData" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:Button>
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

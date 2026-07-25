@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5f2f2b672f01c848a17de13fa22924b, type: 3}
   m_Name: DialogueData
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  dialogueText: Hello there
+  dialogueText: 
+  introduction: Welcome to Big Happy Burger!
+  replyCompliment: 
+  replyUpdate: 
+  replyWeather: 
+  replyPlans: 

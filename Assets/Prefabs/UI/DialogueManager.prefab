@@ -137,3 +137,141 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
   panelRenderer: {fileID: 373900679171879925}
   data: {fileID: 11400000, guid: bb96ed25fef2b0a4e843c825a212bb8f, type: 2}
+  playerGreetings:
+  - Welcome to Big Happy Burger!
+  customerGreetingsReply:
+  - text: Oh, thank you.
+    timeBonus: 10
+  - text: "Where\u2019s my food\u2026?"
+    timeBonus: 0
+  - text: "What\u2019s so happy about it?"
+    timeBonus: 0
+  - text: "Ain\u2019t you a sweetheart!"
+    timeBonus: 10
+  - text: They make you say that every time?
+    timeBonus: 0
+  - text: Hm.
+    timeBonus: 0
+  - text: Hey.
+    timeBonus: 10
+  - text: Whazzuuuup.
+    timeBonus: 10
+  - text: Fries in the bag, buddy.
+    timeBonus: 0
+  - text: "Clock\u2019s tickin\u2019!"
+    timeBonus: 0
+  - text: I remember when I worked in fast food.
+    timeBonus: 10
+  - text: How dare you sir.
+    timeBonus: 0
+  - text: "That\u2019s nice."
+    timeBonus: 10
+  - text: You look like my ex.
+    timeBonus: 10
+  playerCompliment:
+  - Sweet ride you got there.
+  - I like your hair!
+  - "I bet you\u2019re fun to drink with."
+  - You have a soothing voice.
+  - "You\u2019re my favorite customer of the day!"
+  customerComplimentReply:
+  - text: "Don\u2019t be a creep."
+    timeBonus: 0
+  - text: ...cringe.
+    timeBonus: 0
+  - text: You lie.
+    timeBonus: 0
+  - text: "I can\u2019t believe you\u2019d say that to me."
+    timeBonus: 0
+  - text: "You\u2019re not my type, pal."
+    timeBonus: 0
+  - text: "Ooh, you\u2019re such a flirt!"
+    timeBonus: 15
+  - text: Why thank you!
+    timeBonus: 15
+  - text: Aw thanks. I wish I could tip you.
+    timeBonus: 15
+  - text: Ohhhhh gawwwsh!! I bet you say that to everyone!
+    timeBonus: 15
+  - text: I honestly needed that today.
+    timeBonus: 15
+  playerUpdate:
+  - Your order should be just wrapping up now!
+  - Be right back with your food.
+  - The food is worth the wait. Trust.
+  - Sorry about the delay.
+  - "We\u2019re a little backed up today."
+  customerUpdateReply:
+  - text: "Ugh\u2026"
+    timeBonus: 0
+  - text: Whatever.
+    timeBonus: 0
+  - text: Same crap every time I come here.
+    timeBonus: 0
+  - text: "So\u2026 hungry\u2026"
+    timeBonus: 0
+  - text: "If you make me late for my next meeting, I\u2019m suing you."
+    timeBonus: 0
+  - text: No worries, take your time!
+    timeBonus: 15
+  - text: "I\u2019m a go with the flow kind of person."
+    timeBonus: 15
+  - text: "Yay, I can\u2019t wait."
+    timeBonus: 15
+  - text: "Don\u2019t forget the napkins!"
+    timeBonus: 15
+  - text: "You don\u2019t have to worry about me\u2026 for now."
+    timeBonus: 15
+  playerWeather:
+  - Pretty hot out today, huh?
+  - I think it might rain later!
+  - That cloud over there looks like a burger.
+  - "What I wouldn\u2019t give to be outside today."
+  - Perfect day for some burgers, am I right?
+  customerWeatherReply:
+  - text: "What do I care? Where\u2019s my order?"
+    timeBonus: 0
+  - text: Weather talk, huh?
+    timeBonus: 0
+  - text: Uh, I guess?
+    timeBonus: 0
+  - text: "Oh my god. I don\u2019t care."
+    timeBonus: 0
+  - text: Whatever you say.
+    timeBonus: 0
+  - text: "At least it\u2019s a dry heat!"
+    timeBonus: 15
+  - text: You know what? Yeah!!
+    timeBonus: 15
+  - text: "My wife\u2019s a meteorologist you know!"
+    timeBonus: 15
+  - text: I appreciate you trying to make conversation.
+    timeBonus: 15
+  - text: "Finally someone who friggin\u2019 gets it."
+    timeBonus: 15
+  playerPlans:
+  - Got any special plans today?
+  customerPlansReply:
+  - text: Not telling you. Nope.
+    timeBonus: 0
+  - text: "Just because you asked, I\u2019m not doing anything anymore."
+    timeBonus: 0
+  - text: "Well I\u2019m SUPPOSED to be eating right now, but someone seems to be
+      getting in the way of that."
+    timeBonus: 0
+  - text: Ugh, do they pay you enough to care?
+    timeBonus: 0
+  - text: "That\u2019s classified."
+    timeBonus: 0
+  - text: "Let\u2019s just say I won\u2019t exactly be \u201Ceating\u201D this food."
+    timeBonus: 15
+  - text: "If I told you, I\u2019d have to kill you. And you seem nice, so I won\u2019t."
+    timeBonus: 15
+  - text: Just gonna eat my food and watch Gordon Ramsay videos. Same as anyone.
+    timeBonus: 15
+  - text: "Poker night. Me and the boys. I\u2019m getting my money back one way or
+      another."
+    timeBonus: 15
+  - text: "Think I\u2019ll go see that new movie I heard was reeeeally bad. You know
+      which one I\u2019m talking about."
+    timeBonus: 15
