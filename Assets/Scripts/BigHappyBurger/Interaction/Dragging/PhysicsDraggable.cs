@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace BigHappyBurger.Interaction
 {
-    [RequireComponent(typeof(Rigidbody), typeof(Item))]
+    [RequireComponent(typeof(Rigidbody), typeof(Item)), DisallowMultipleComponent]
     public class PhysicsDraggable : Draggable
     {
         private const float INTERPOLATION_DURATION = 5.0f;

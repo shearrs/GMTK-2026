@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace BigHappyBurger.Interaction
 {
-    [RequireComponent(typeof(Item))]
+    [RequireComponent(typeof(Item)), DisallowMultipleComponent]
     public abstract class Holdable : MonoBehaviour
     {
         public bool IsBeingHeld { get; private set; }

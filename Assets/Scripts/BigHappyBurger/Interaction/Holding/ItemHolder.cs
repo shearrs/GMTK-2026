@@ -20,6 +20,8 @@ namespace BigHappyBurger.Interaction
         public Func<Item, bool> CanBeHeldCallback { get; set; }
         public Func<Item, bool> CanBeReleasedCallback { get; set; }
 
+        public event Action<Item> ItemChanged;
+
         public bool CanBeHeld(Item item)
         {
             bool callbackValue = CanBeHeldCallback == null || CanBeHeldCallback(item);
@@ -56,6 +58,8 @@ namespace BigHappyBurger.Interaction
             item.SetParent(container);
             item.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
 
+            ItemChanged?.Invoke(item);
+
             return true;
         }
 
@@ -73,6 +77,8 @@ namespace BigHappyBurger.Interaction
             Item.SetParent(previousParent);
             Item.OnHoldEnd();
             Item = null;
+
+            ItemChanged?.Invoke(Item);
 
             return true;
         }

@@ -59,9 +59,10 @@ MonoBehaviour:
   rigidbody: {fileID: 763669059709782531}
   colliders:
   - {fileID: 5386510497180516434}
-  - {fileID: 268034048549303218}
-  - {fileID: 3225084944792497838}
+  - {fileID: 6740563691726701060}
   - {fileID: 1048204698375780879}
+  - {fileID: 4143392558516183984}
+  - {fileID: 3580017544701436748}
   draggable: {fileID: 3620709686543574338}
   holdable: {fileID: 7090368519615983654}
 --- !u!114 &3620709686543574338
@@ -207,6 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.FoodHolder
   holdsCookable: 1
+  holdsDrinkable: 0
 --- !u!114 &7273090715352822929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,6 +355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.FoodHolder
   holdsCookable: 1
+  holdsDrinkable: 0
 --- !u!114 &4254978644506283142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -508,6 +511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.FoodHolder
   holdsCookable: 1
+  holdsDrinkable: 0
 --- !u!114 &8868505873747859879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -570,6 +574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.FoodHolder
   holdsCookable: 1
+  holdsDrinkable: 0
 --- !u!114 &5136249651973425328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -642,11 +647,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8b8d1b20c2d17d4498647dd7b625eb4, type: 3}
---- !u!65 &268034048549303218 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 5144796468228905132, guid: f8b8d1b20c2d17d4498647dd7b625eb4, type: 3}
-  m_PrefabInstance: {fileID: 4962336413271616286}
-  m_PrefabAsset: {fileID: 0}
 --- !u!65 &1048204698375780879 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 5356532800669290769, guid: f8b8d1b20c2d17d4498647dd7b625eb4, type: 3}
@@ -657,13 +657,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7481258213351826092, guid: f8b8d1b20c2d17d4498647dd7b625eb4, type: 3}
   m_PrefabInstance: {fileID: 4962336413271616286}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &3225084944792497838 stripped
+--- !u!65 &3580017544701436748 stripped
 BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 7501887600586343856, guid: f8b8d1b20c2d17d4498647dd7b625eb4, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8463112866815412306, guid: f8b8d1b20c2d17d4498647dd7b625eb4, type: 3}
+  m_PrefabInstance: {fileID: 4962336413271616286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &4143392558516183984 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 9033529506355267758, guid: f8b8d1b20c2d17d4498647dd7b625eb4, type: 3}
   m_PrefabInstance: {fileID: 4962336413271616286}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &5386510497180516434 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 1017101509970750284, guid: f8b8d1b20c2d17d4498647dd7b625eb4, type: 3}
+  m_PrefabInstance: {fileID: 4962336413271616286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6740563691726701060 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 1825796626829961498, guid: f8b8d1b20c2d17d4498647dd7b625eb4, type: 3}
   m_PrefabInstance: {fileID: 4962336413271616286}
   m_PrefabAsset: {fileID: 0}

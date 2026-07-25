@@ -1,3 +1,4 @@
+using System;
 using BigHappyBurger.Interaction;
 using Shears;
 using UnityEngine;
@@ -8,12 +9,21 @@ namespace BigHappyBurger.Foods
     public partial class FoodHolder : MonoBehaviour
     {
         [SerializeField]
+        private bool allowAnythingElse = true;
+
+        [SerializeField]
         private bool holdsCookable = true;
 
+        [SerializeField]
+        private bool holdsDrinkable = false;
+
         [Auto]
+        [AutoEvent(nameof(ItemHolder.ItemChanged), nameof(OnItemChanged))]
         private ItemHolder holder;
 
         public Item Item => holder.Item;
+
+        public event Action<FoodHolder> ItemChanged;
 
         private void Awake()
         {
@@ -49,9 +59,16 @@ namespace BigHappyBurger.Foods
             {
                 if (food.IsCookable)
                     return holdsCookable;
+                else if (food.IsDrinkable)
+                    return holdsDrinkable;
                 else
-                    return false;
+                    return allowAnythingElse;
             }
+        }
+
+        private void OnItemChanged(Item item)
+        {
+            ItemChanged?.Invoke(this);
         }
     }
 }

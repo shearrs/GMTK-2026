@@ -54,7 +54,7 @@ namespace BigHappyBurger.Players
                 flipInput.IsPressed()
             );
 
-            if (dragInfo.ReleasedItem)
+            if (dragInfo.ReleasedItem && dragInfo.Item.IsHoldable)
                 holdInteractor.TryToPlaceIntoHolder(dragInfo.Item, dragInfo.DragOffset);
         }
     }

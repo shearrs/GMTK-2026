@@ -99,7 +99,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 34b6a184bb8a431438631433ee1c8a69, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 5d38893f81c1f824aa28ae0d0bee0eed, type: 2}
+      objectReference: {fileID: 2100000, guid: 9e1cdaae7092bc3429743d76120516ae, type: 2}
     - target: {fileID: 919132149155446097, guid: 34b6a184bb8a431438631433ee1c8a69, type: 3}
       propertyPath: m_Name
       value: cupLid

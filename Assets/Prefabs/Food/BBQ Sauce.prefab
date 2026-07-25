@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6521080497682778552}
   - component: {fileID: 1333393891133005964}
   - component: {fileID: 3829784327436135825}
+  - component: {fileID: -4972949346992508000}
   - component: {fileID: 2723321007888569245}
   - component: {fileID: 7267604367494726359}
   m_Layer: 0
@@ -55,7 +56,7 @@ MonoBehaviour:
   colliders:
   - {fileID: 2723321007888569245}
   draggable: {fileID: 1333393891133005964}
-  holdable: {fileID: 0}
+  holdable: {fileID: -4972949346992508000}
 --- !u!114 &1333393891133005964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,6 +90,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.Food
   cookable: {fileID: 0}
+  drinkable: {fileID: 0}
+--- !u!114 &-4972949346992508000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841018627615554408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f8ed6796fb7ac498573dbe464a0f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.PhysicsHoldable
+  rigidbody: {fileID: 7267604367494726359}
 --- !u!65 &2723321007888569245
 BoxCollider:
   m_ObjectHideFlags: 0

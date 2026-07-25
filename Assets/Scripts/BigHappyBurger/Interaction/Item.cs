@@ -7,14 +7,14 @@ using UnityEngine;
 
 namespace BigHappyBurger.Interaction
 {
-    [SelectionBase]
+    [SelectionBase, DisallowMultipleComponent]
     public class Item : MonoBehaviour, ISHLoggable
     {
         [field: Header("Logging")]
         [field: SerializeField]
         public SHLogLevels LogLevels { get; set; } = SHLogUtil.Default;
 
-        [Header("Item")]
+        [field: Header("Item")]
         [field: SerializeField, ReadOnly]
         public string ID { get; private set; }
 
@@ -43,6 +43,7 @@ namespace BigHappyBurger.Interaction
         public bool IsBeingHeld => holdable != null && holdable.IsBeingHeld;
         public bool IsBeingDragged => IsDraggable && draggable.IsBeingDragged;
         public bool IsFlipped { get; internal set; }
+        public bool IsHoldable => holdable != null && !IsBeingDragged;
 
         public event Action DragBegan;
 

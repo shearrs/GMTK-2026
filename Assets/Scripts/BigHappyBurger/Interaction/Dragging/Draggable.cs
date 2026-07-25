@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace BigHappyBurger.Interaction
 {
-    [RequireComponent(typeof(Item))]
+    [RequireComponent(typeof(Item)), DisallowMultipleComponent]
     public abstract class Draggable : MonoBehaviour
     {
         public bool IsBeingDragged { get; private set; }

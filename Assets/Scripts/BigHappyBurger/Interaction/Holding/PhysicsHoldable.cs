@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace BigHappyBurger.Interaction
 {
-    [RequireComponent(typeof(Rigidbody))]
+    [RequireComponent(typeof(Rigidbody)), DisallowMultipleComponent]
     public class PhysicsHoldable : Holdable
     {
         [SerializeField, Required, Local]

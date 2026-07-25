@@ -65,9 +65,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9076153269062108026}
   - component: {fileID: 6521080497682778552}
-  - component: {fileID: 7267604367494726359}
   - component: {fileID: 1333393891133005964}
-  - component: {fileID: -7749199181445986141}
+  - component: {fileID: 2781217137163528091}
+  - component: {fileID: 7267604367494726359}
   - component: {fileID: 1990931828754936409}
   - component: {fileID: 4165201157982304340}
   m_Layer: 0
@@ -114,7 +114,40 @@ MonoBehaviour:
   - {fileID: 4165201157982304340}
   - {fileID: 3356418706649961865}
   draggable: {fileID: 1333393891133005964}
-  holdable: {fileID: 0}
+  holdable: {fileID: 2781217137163528091}
+--- !u!114 &1333393891133005964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841018627615554408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc4f30ecab05d5e428a58b4e81c5c5d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.PhysicsDraggable
+  normalBounceMaterial: {fileID: 13400000, guid: e6b83725da90e714f8359037da69b551, type: 2}
+  noBounceMaterial: {fileID: 13400000, guid: f298dd7ef0dbae341bafebd1b1f1fd32, type: 2}
+  item: {fileID: 6521080497682778552}
+  rigidbody: {fileID: 7267604367494726359}
+  springiness: 800
+  damping: 25
+  angularSpringiness: 0.1
+  angularDamping: 20
+--- !u!114 &2781217137163528091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841018627615554408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f8ed6796fb7ac498573dbe464a0f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.PhysicsHoldable
+  rigidbody: {fileID: 7267604367494726359}
 --- !u!54 &7267604367494726359
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -142,39 +175,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &1333393891133005964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6841018627615554408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc4f30ecab05d5e428a58b4e81c5c5d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.PhysicsDraggable
-  normalBounceMaterial: {fileID: 13400000, guid: e6b83725da90e714f8359037da69b551, type: 2}
-  noBounceMaterial: {fileID: 13400000, guid: f298dd7ef0dbae341bafebd1b1f1fd32, type: 2}
-  item: {fileID: 6521080497682778552}
-  rigidbody: {fileID: 7267604367494726359}
-  springiness: 800
-  damping: 25
-  angularSpringiness: 0.1
-  angularDamping: 20
---- !u!114 &-7749199181445986141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6841018627615554408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5c266e9ed5e4914882f7d6154f4b9b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Cookable
-  cookTime: 20
 --- !u!136 &1990931828754936409
 CapsuleCollider:
   m_ObjectHideFlags: 0
