@@ -101,6 +101,8 @@ MonoBehaviour:
   <LogLevels>k__BackingField: 29
   <ID>k__BackingField: 05a271fd-c04f-41e0-bdca-9b1a3de8057a
   rigidbody: {fileID: 7267604367494726359}
+  colliders:
+  - {fileID: 6036764184128103084}
   draggable: {fileID: 1333393891133005964}
   holdable: {fileID: 0}
 --- !u!54 &7267604367494726359
@@ -144,9 +146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.PhysicsDraggable
   normalBounceMaterial: {fileID: 13400000, guid: cf73da34db3bfeb4c9e35e97246f3d70, type: 2}
   noBounceMaterial: {fileID: 13400000, guid: f298dd7ef0dbae341bafebd1b1f1fd32, type: 2}
+  item: {fileID: 6521080497682778552}
   rigidbody: {fileID: 7267604367494726359}
-  colliders:
-  - {fileID: 6036764184128103084}
   springiness: 500
   damping: 25
   angularSpringiness: 0.75
@@ -230,19 +231,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5344808690458786985, guid: 5144fca4601083b40aed4137641eb4c0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.27059564
+      value: 0.68301284
       objectReference: {fileID: 0}
     - target: {fileID: 5344808690458786985, guid: 5144fca4601083b40aed4137641eb4c0, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.27059564
+      value: -0.68301266
       objectReference: {fileID: 0}
     - target: {fileID: 5344808690458786985, guid: 5144fca4601083b40aed4137641eb4c0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6532826
+      value: -0.18301255
       objectReference: {fileID: 0}
     - target: {fileID: 5344808690458786985, guid: 5144fca4601083b40aed4137641eb4c0, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.65328246
+      value: -0.18301247
       objectReference: {fileID: 0}
     - target: {fileID: 5344808690458786985, guid: 5144fca4601083b40aed4137641eb4c0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -250,7 +251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5344808690458786985, guid: 5144fca4601083b40aed4137641eb4c0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 225
+      value: -30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

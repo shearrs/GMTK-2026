@@ -123,6 +123,8 @@ MonoBehaviour:
   <LogLevels>k__BackingField: 29
   <ID>k__BackingField: d484d122-3cfc-49f1-8279-48a63c3660cc
   rigidbody: {fileID: 8622920806659808852}
+  colliders:
+  - {fileID: 1754060783772591870}
   draggable: {fileID: 3148594549294884828}
   holdable: {fileID: 0}
 --- !u!54 &8622920806659808852
@@ -166,9 +168,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.PhysicsDraggable
   normalBounceMaterial: {fileID: 13400000, guid: cf73da34db3bfeb4c9e35e97246f3d70, type: 2}
   noBounceMaterial: {fileID: 13400000, guid: f298dd7ef0dbae341bafebd1b1f1fd32, type: 2}
+  item: {fileID: 2441994118130285095}
   rigidbody: {fileID: 8622920806659808852}
-  colliders:
-  - {fileID: 1754060783772591870}
   springiness: 500
   damping: 25
   angularSpringiness: 0.1
@@ -212,19 +213,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 248710727533612784, guid: 98863f21bbaec8f429b38f795f5177e5, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.000001244247
+      value: -0.70710707
       objectReference: {fileID: 0}
     - target: {fileID: 248710727533612784, guid: 98863f21bbaec8f429b38f795f5177e5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0000023171306
+      value: 0.7071066
       objectReference: {fileID: 0}
     - target: {fileID: 248710727533612784, guid: 98863f21bbaec8f429b38f795f5177e5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.70710695
+      value: -0.0000032559037
       objectReference: {fileID: 0}
     - target: {fileID: 248710727533612784, guid: 98863f21bbaec8f429b38f795f5177e5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.7071067
+      value: -0.0000042691827
       objectReference: {fileID: 0}
     - target: {fileID: 248710727533612784, guid: 98863f21bbaec8f429b38f795f5177e5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -232,7 +233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 248710727533612784, guid: 98863f21bbaec8f429b38f795f5177e5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -180
+      value: -359.999
       objectReference: {fileID: 0}
     - target: {fileID: 248710727533612784, guid: 98863f21bbaec8f429b38f795f5177e5, type: 3}
       propertyPath: m_ConstrainProportionsScale
