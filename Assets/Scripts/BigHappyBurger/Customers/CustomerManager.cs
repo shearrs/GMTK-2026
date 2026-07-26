@@ -47,6 +47,8 @@ namespace BigHappyBurger.Customers
 
             unspawnedCustomers.Add(customer);
 
+            customer.Exited += OnCustomerExited;
+
             return customer;
         }
 
@@ -69,8 +71,6 @@ namespace BigHappyBurger.Customers
             unspawnedCustomers.RemoveAt(0);
             activeCustomer.Spawn(restaurant, exitBezier);
             StartCoroutine(IEMoveCustomerIn(activeCustomer));
-
-            activeCustomer.Exited += OnCustomerExited;
         }
 
         private Car MakeRandomCar()
