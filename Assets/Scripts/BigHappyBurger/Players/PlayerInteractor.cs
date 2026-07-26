@@ -17,6 +17,9 @@ namespace BigHappyBurger.Players
         [SerializeField, Required, Local]
         private SpawnInteractor spawnInteractor;
 
+        [SerializeField, Required, Local]
+        private PlayerCustomerInteractor customerInteractor;
+
         [Header("Settings")]
         [SerializeField]
         private float itemScrollSensitivity = 0.1f;
@@ -58,6 +61,9 @@ namespace BigHappyBurger.Players
                     );
 
                     dragInteractor.UpdateDragging(interactInput.IsPressed(), flipInput.IsPressed());
+                } else if (customerInteractor.TryToStartDialogue())
+                {
+                    //turn off turning of player
                 }
             }
         }
