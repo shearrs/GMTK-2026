@@ -70,6 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.Food
   cookable: {fileID: 0}
   drinkable: {fileID: 0}
+  <IsNapkin>k__BackingField: 1
 --- !u!114 &3389894821363016449
 MonoBehaviour:
   m_ObjectHideFlags: 0

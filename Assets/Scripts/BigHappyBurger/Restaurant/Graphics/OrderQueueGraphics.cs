@@ -80,6 +80,12 @@ namespace BigHappyBurger.Restaurants.Graphics
                 orderElements.Remove(order);
                 orderTimers.Remove(order);
             }
+
+            if (orderElements.Count > 0)
+            {
+                var topElement = root.hierarchy[0];
+                topElement.style.backgroundColor = Color.yellowNice;
+            }
         }
 
         private void AddOrderElement(Order order)
@@ -116,6 +122,9 @@ namespace BigHappyBurger.Restaurants.Graphics
             }
 
             Label timerLabel = element.Query<Label>("TimerLabel");
+
+            if (orderElements.Count == 0)
+                element.style.backgroundColor = Color.yellowNice;
 
             orderElements[order] = element;
             orderTimers[order] = timerLabel;
@@ -167,9 +176,10 @@ namespace BigHappyBurger.Restaurants.Graphics
                 label.style.paddingLeft =
                     0;
             label.style.unityTextAlign = TextAnchor.LowerRight;
-            label.style.unityTextOutlineWidth = 1.0f;
+            label.style.unityTextOutlineWidth = 1.5f;
             label.style.unityTextOutlineColor = Color.black;
             label.style.color = Color.white;
+            label.style.unityFontStyleAndWeight = FontStyle.Bold;
 
             return label;
         }
