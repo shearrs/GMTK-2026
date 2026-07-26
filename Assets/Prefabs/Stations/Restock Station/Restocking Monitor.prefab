@@ -1261,9 +1261,9 @@ MonoBehaviour:
   appleSpawner: {fileID: 0}
   napkinSpawner: {fileID: 0}
   restockableItems:
+  - {fileID: 6521080497682778552, guid: 625f8a493ba92c240a4ea830572806c5, type: 3}
   - {fileID: 6521080497682778552, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
   - {fileID: 6521080497682778552, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
-  - {fileID: 6521080497682778552, guid: 625f8a493ba92c240a4ea830572806c5, type: 3}
   - {fileID: 6521080497682778552, guid: 0c96447c24dabaa478e26776d32a4eb7, type: 3}
   - {fileID: 5287054887795928058, guid: 8a851c379a47008489112573c60aba92, type: 3}
   deliveryTime: 10
@@ -1483,7 +1483,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 219cad830763ed24584074f54caff4dd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 29ecc408ef49d2c4ab08d33332fb535d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0

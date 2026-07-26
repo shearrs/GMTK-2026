@@ -24,6 +24,9 @@ public class TutorialSequence : MonoBehaviour
     [SerializeField]
     private List<string> tutorialLines5 = new();
 
+    [SerializeField]
+    private List<PointingHandAnimation> pointers = new();
+
     private int lineIndex = 0;
 
     private Label tutorialText;
@@ -34,6 +37,7 @@ public class TutorialSequence : MonoBehaviour
 
     private Coroutine bossEnters;
     private Coroutine dialogue1;
+    private Coroutine dialogue2;
 
 
 
@@ -110,32 +114,39 @@ public class TutorialSequence : MonoBehaviour
                 case 6:
                     //enable all turning
                     //change to be a check to see if the player is facing the hotplate station
-                    while (!Keyboard.current.dKey.wasPressedThisFrame)
-                        yield return null;
+                    yield return new WaitForSeconds(5f);
+                    //while (!Keyboard.current.dKey.wasPressedThisFrame)
+                    //    yield return null;
                     break;
 
                 case 8:
                     //check if the player has grabbed a bag at least once
+                    yield return new WaitForSeconds(7f);
                     break;
 
                 case 9:
                     //check if the player has put a bag on the counter at least once
+                    yield return new WaitForSeconds(5f);
                     break;
 
                 case 11:
                     //check if the player put the fries in a bag
+                    yield return new WaitForSeconds(7f);
                     break;
 
                 case 13:
                     //check if the player has gone back to the order counter
+                    yield return new WaitForSeconds(5f);
                     break;
 
                 case 14:
                     //check to see if cursor is over the buy button on the restock comp
+                    yield return new WaitForSeconds(10f);
                     break;
 
                 case 15:
                     //wait until player purchases napkins
+                    yield return new WaitForSeconds(7f);
                     break;
 
                 case 16:
@@ -149,42 +160,51 @@ public class TutorialSequence : MonoBehaviour
 
                 case 19:
                     //wait for player to navigate back to hotplate
+                    yield return new WaitForSeconds(5f);
                     break;
 
                 case 21:
                     //wait for player to put napkins in the bag
+                    yield return new WaitForSeconds(10f);
                     break;
 
                 case 22:
                     //wait for navigation to customer window WITH bag of food
+                    yield return new WaitForSeconds(5f);
                     break;
 
                 case 23:
                     //wait for customer order to be completed
+                    yield return new WaitForSeconds(7f);
                     break;
 
                 case 25:
                     //check to see if player is looking at order screen
+                    yield return new WaitForSeconds(5f);
                     break;
 
                 case 27:
-                    //check for navigation 
+                    yield return new WaitForSeconds(7f);
                     break;
 
                 case 28:
                     //check for drink being filled
+                    yield return new WaitForSeconds(10f);
                     break;
 
                 case 29:
                     //check for lid on drink
+                    yield return new WaitForSeconds(10f);
                     break;
 
                 case 30:
                     //complete customer order #2
+                    yield return new WaitForSeconds(10f);
                     break;
 
                 case 31:
                     //navigate back to order screen
+                    yield return new WaitForSeconds(5f);
                     break;
 
                 default:
@@ -199,24 +219,26 @@ public class TutorialSequence : MonoBehaviour
             {
                 //add first customer to board, always fries and ketchup
                 //finger points to order on board
+                pointers[0].gameObject.SetActive(true);
             }
 
             if (lineIndex == 4)
-                //teleport finger out of sight
+                pointers[0].gameObject.SetActive(false);
 
-                if (lineIndex == 6)
+            if (lineIndex == 6)
                 {
-                    //finger points at now cooking board
+                pointers[1].gameObject.SetActive(true);
                 }
 
             if (lineIndex == 7)
             {
-                //finger points at bag holder
+                pointers[1].gameObject.SetActive(false);
+                pointers[2].gameObject.SetActive(true);
             }
 
             if (lineIndex == 8)
             {
-                //finger disappears
+                pointers[2].gameObject.SetActive(false);
             }
 
             if (lineIndex == 10)
@@ -228,17 +250,18 @@ public class TutorialSequence : MonoBehaviour
             {
                 //disable rotating for the player
                 //disable buy button on restock comptuer for everything except ketchup
-                //finger point at joystick
+                pointers[3].gameObject.SetActive(true);
             }
 
             if (lineIndex == 14)
             {
-                //finger point at button
+                pointers[3].gameObject.SetActive(false);
+                pointers[4].gameObject.SetActive(true);
             }
 
             if (lineIndex == 15)
             {
-                //finger disappears
+                pointers[4].gameObject.SetActive(false);
             }
 
             if (lineIndex == 18)
@@ -249,12 +272,12 @@ public class TutorialSequence : MonoBehaviour
 
             if (lineIndex == 20)
             {
-                //finger point at napkins
+                pointers[5].gameObject.SetActive(true);
             }
 
             if (lineIndex == 21)
             {
-                //finger disappears
+                pointers[5].gameObject.SetActive(false);
             }
 
             if (lineIndex == 23)
@@ -270,18 +293,19 @@ public class TutorialSequence : MonoBehaviour
 
             if (lineIndex == 27)
             {
-                //finger points at cups
+                pointers[6].gameObject.SetActive(true);
             }
 
             if (lineIndex == 28)
             {
-                //finger points at lids
+                pointers[6].gameObject.SetActive(false);
+                pointers[7].gameObject.SetActive(true);
                 root.AddToClassList("TextBoxAbove");
             }
 
             if (lineIndex == 29)
             {
-                //finger disappears
+                pointers[7].gameObject.SetActive(false);
             }
 
             if (lineIndex == 30)
@@ -297,12 +321,12 @@ public class TutorialSequence : MonoBehaviour
 
             if (lineIndex == 32)
             {
-                //hand point to timer on order
+                pointers[8].gameObject.SetActive(true);
             }
 
             if (lineIndex == 33)
             {
-                //finger disappears
+                pointers[8].gameObject.SetActive(false);
             }
 
             dialogue1 = StartCoroutine(TutorialDialogue1(tutorialLines1[lineIndex]));
@@ -312,6 +336,12 @@ public class TutorialSequence : MonoBehaviour
             yield return new WaitForSeconds(2f);
             root.AddToClassList("TextBoxHidden");
             lineIndex = 0;
+
+            yield return new WaitForSeconds(180f);
+            root.RemoveFromClassList("TextBoxHidden");
+
+            yield return new WaitForSeconds(1.0f);
+            dialogue2 = StartCoroutine(TutorialDialogue2(tutorialLines2[lineIndex]));
         }
     }
 
