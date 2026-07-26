@@ -170,6 +170,10 @@ MonoBehaviour:
   rigidbody: {fileID: 7267604367494726359}
   colliders:
   - {fileID: 2723321007888569245}
+  - {fileID: 1852041585020882294}
+  - {fileID: 1274068268472780528}
+  - {fileID: 463543595588214800}
+  - {fileID: 3332095166294100452}
   draggable: {fileID: 1333393891133005964}
   holdable: {fileID: 5726767248550243723}
 --- !u!114 &6151296297775054226
@@ -186,6 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.Food
   cookable: {fileID: 0}
   drinkable: {fileID: 0}
+  <IsNapkin>k__BackingField: 0
 --- !u!114 &1333393891133005964
 MonoBehaviour:
   m_ObjectHideFlags: 0

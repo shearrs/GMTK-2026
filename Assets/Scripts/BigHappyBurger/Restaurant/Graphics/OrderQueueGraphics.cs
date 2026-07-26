@@ -110,15 +110,15 @@ namespace BigHappyBurger.Restaurants.Graphics
 
                     container.Add(image);
                 }
+            }
 
-                foreach (var drink in order.Drinks)
-                {
-                    var image = CreateImage(drink.Type.Sprite);
-                    var label = CreateSizeLabel(drink.Size);
+            foreach (var drink in order.Drinks)
+            {
+                var image = CreateImage(drink.Type.Sprite);
+                var label = CreateSizeLabel(drink.Size);
 
-                    image.Add(label);
-                    container.Add(image);
-                }
+                image.Add(label);
+                container.Add(image);
             }
 
             Label timerLabel = element.Query<Label>("TimerLabel");

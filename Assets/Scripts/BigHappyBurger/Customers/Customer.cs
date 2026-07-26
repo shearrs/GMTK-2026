@@ -170,6 +170,7 @@ public partial class Customer : MonoBehaviour, ISHLoggable
             }
         }
 
+        ReceivedRightItem?.Invoke();
         foodReceiver.Clear();
 
         if (order.IsEmpty())
