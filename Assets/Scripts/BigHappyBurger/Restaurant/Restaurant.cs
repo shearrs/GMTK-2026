@@ -71,5 +71,17 @@ namespace BigHappyBurger.Restaurants
 
             chef.Clear();
         }
+
+        public void AddTime(float time)
+        {
+            foreach (var order in orders)
+            {
+                float remainingTime = order.Timer.Time - order.Timer.CurrentTime;
+                remainingTime += time;
+
+                order.Timer.Stop();
+                order.Timer.Start(remainingTime);
+            }
+        }
     }
 }

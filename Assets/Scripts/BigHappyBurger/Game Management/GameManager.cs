@@ -7,13 +7,14 @@ using UnityEngine;
 
 namespace BigHappyBurger.GameManagement
 {
-    public class GameManager : MonoBehaviour
+    public partial class GameManager : MonoBehaviour
     {
         [Header("Managers")]
         [SerializeField]
         private Player player;
 
         [SerializeField]
+        [AutoEvent(nameof(CustomerManager.CustomerTalked), nameof(OnCustomerTalked))]
         private CustomerManager customerManager;
 
         [SerializeField]
@@ -70,6 +71,11 @@ namespace BigHappyBurger.GameManagement
             }
 
             return false;
+        }
+
+        private void OnCustomerTalked()
+        {
+            restaurant.AddTime(7.5f);
         }
     }
 }

@@ -41,6 +41,7 @@ namespace BigHappyBurger.Customers
 
         public event Action CustomerArrivedAtWindow;
         public event Action CustomerCorrectlyServed;
+        public event Action CustomerTalked;
 
         public Customer CreateCustomer()
         {
@@ -93,6 +94,7 @@ namespace BigHappyBurger.Customers
                 return;
 
             activeCustomer.OnDialogue();
+            CustomerTalked?.Invoke();
         }
 
         private Car MakeRandomCar()
