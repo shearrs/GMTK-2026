@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: 5f300affa810f0c4782f37f15136b3d9
+guid: d4b3baa783249474c8ee4905970e314d
 ModelImporter:
   serializedVersion: 24501
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: slideWindowFrame
+    second: {fileID: 2100000, guid: 6f9ca4389aadd6b469460551cc20b231, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: slideWindowPane
+    second: {fileID: 2100000, guid: 9a58036bd953b284dbb0be08f140e0cf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -34,7 +44,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 100
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
