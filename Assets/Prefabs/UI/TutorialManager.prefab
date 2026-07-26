@@ -160,3 +160,32 @@ MonoBehaviour:
   - "See this timer on the order? Don\u2019t let it count down to zero, or the customer
     will leave and you\u2019ll be written up. Three strikes and you're out."
   - I'm watching you.
+  tutorialLines2:
+  - Heya. Don't mind me, just wanted to share a lil' pro-tip with ya.
+  - If you want to empty a bag of its contents, press RIGHT-CLICK to turn it over
+    and give it a little shake to make stuff fall out.
+  - "Honestly it\u2019s super therapeutic. You\u2019ll thank me later."
+  - "ALSO! If you wanna buy some extra time, why not try sweet-talkin\u2019 the customer."
+  - You can LEFT-CLICK a customer to greet them when they drive up, and if you say
+    the right thing, they might be willing to wait a bit longer for their food.
+  - "Just a suggestion. Go get em\u2019 today, tiger."
+  tutorialLines3:
+  - Today we're rolling out a new menu item...
+  - Say hello to the all new, all original, CHICKEN SAMMIE (fries sold separately).
+  - "It\u2019s important we get this launch right. I\u2019m counting on you, valued
+    employee."
+  tutorialLines4:
+  - "Hey, you\u2019re good with kids right?"
+  - Nevermind. Dumb question. Shouldn't make an employee babysit my children.
+  - Speaking of children, watch out for orders with the BIG HAPPY BOX. It's a specialty
+    item for the young'uns.
+  - It comes with a CHICKEN NUGGET, an APPLE BAG, and a TOY. Make sure to put them
+    in the special box!
+  - "Gonna be a long night\u2026 I mean, day\u2026 Don\u2019t knock on my door."
+  tutorialLines5:
+  - "Ok, I\u2019m gonna level with ya. Today\u2019s gonna suck."
+  - "Just got word from corporate that all of the Big Happy Burgers in town are shut
+    down\u2026 except for ours."
+  - Some maniac went and destroyed their generators last night. Who would do such
+    a thing? And on Free Fry Friday!
+  - "Oh well, more profits for us. Give \u2018em hell, champ!"

@@ -12,13 +12,25 @@ public class TutorialSequence : MonoBehaviour
     [SerializeField]
     private List<string> tutorialLines1 = new();
 
+    [SerializeField]
+    private List<string> tutorialLines2 = new();
+
+    [SerializeField]
+    private List<string> tutorialLines3 = new();
+
+    [SerializeField]
+    private List<string> tutorialLines4 = new();
+
+    [SerializeField]
+    private List<string> tutorialLines5 = new();
+
     private int lineIndex = 0;
 
     private Label tutorialText;
 
     private VisualElement root;
 
-    private int tutorialPhase = 0;
+    private int day = 1;
 
     private Coroutine bossEnters;
     private Coroutine dialogue1;
@@ -54,9 +66,23 @@ public class TutorialSequence : MonoBehaviour
 
         yield return new WaitForSeconds(1.0f);
 
-        if (lineIndex < tutorialLines1.Count)
+        switch (day)
         {
-            dialogue1 = StartCoroutine(TutorialDialogue1(tutorialLines1[lineIndex]));
+            case 1:
+                dialogue1 = StartCoroutine(TutorialDialogue1(tutorialLines1[lineIndex]));
+                break;
+            case 2:
+                dialogue1 = StartCoroutine(TutorialDialogue2(tutorialLines2[lineIndex]));
+                break;
+            case 3:
+                dialogue1 = StartCoroutine(TutorialDialogue3(tutorialLines3[lineIndex]));
+                break;
+            case 4:
+                dialogue1 = StartCoroutine(TutorialDialogue4(tutorialLines4[lineIndex]));
+                break;
+            case 5:
+                dialogue1 = StartCoroutine(TutorialDialogue5(tutorialLines5[lineIndex]));
+                break;
         }
     }
 
@@ -178,22 +204,22 @@ public class TutorialSequence : MonoBehaviour
             if (lineIndex == 4)
                 //teleport finger out of sight
 
-            if(lineIndex == 6)
-            {
-                //finger points at now cooking board
-            }
+                if (lineIndex == 6)
+                {
+                    //finger points at now cooking board
+                }
 
-            if(lineIndex == 7)
+            if (lineIndex == 7)
             {
                 //finger points at bag holder
             }
 
-            if(lineIndex == 8)
+            if (lineIndex == 8)
             {
                 //finger disappears
             }
 
-            if(lineIndex == 10)
+            if (lineIndex == 10)
             {
                 root.AddToClassList("TextBoxAbove");
             }
@@ -205,7 +231,7 @@ public class TutorialSequence : MonoBehaviour
                 //finger point at joystick
             }
 
-            if(lineIndex == 14)
+            if (lineIndex == 14)
             {
                 //finger point at button
             }
@@ -280,6 +306,133 @@ public class TutorialSequence : MonoBehaviour
             }
 
             dialogue1 = StartCoroutine(TutorialDialogue1(tutorialLines1[lineIndex]));
+        }
+        else
+        {
+            yield return new WaitForSeconds(2f);
+            root.AddToClassList("TextBoxHidden");
+            lineIndex = 0;
+        }
+    }
+
+    private IEnumerator TutorialDialogue2(string fullText)
+    {
+        int totalLength = fullText.Length;
+
+        for (int i = 0; i <= totalLength; i++)
+        {
+            string visible = fullText.Substring(0, i);
+            string hidden = fullText.Substring(i);
+
+            tutorialText.text = $"{visible}<alpha=#00>{hidden}";
+
+            yield return new WaitForSeconds(0.02f);
+        }
+
+        tutorialText.text = fullText;
+        lineIndex++;
+
+        if (lineIndex < tutorialLines2.Count)
+        {
+            while (!Mouse.current.leftButton.wasPressedThisFrame)
+                yield return null;
+
+            dialogue1 = StartCoroutine(TutorialDialogue2(tutorialLines2[lineIndex]));
+        } else
+        {
+            yield return new WaitForSeconds(2f);
+            root.AddToClassList("TextBoxHidden");
+            lineIndex = 0;
+        }
+    }
+
+    private IEnumerator TutorialDialogue3(string fullText)
+    {
+        int totalLength = fullText.Length;
+
+        for (int i = 0; i <= totalLength; i++)
+        {
+            string visible = fullText.Substring(0, i);
+            string hidden = fullText.Substring(i);
+
+            tutorialText.text = $"{visible}<alpha=#00>{hidden}";
+
+            yield return new WaitForSeconds(0.02f);
+        }
+
+        tutorialText.text = fullText;
+        lineIndex++;
+
+        if (lineIndex < tutorialLines3.Count)
+        {
+            while (!Mouse.current.leftButton.wasPressedThisFrame)
+                yield return null;
+
+            dialogue1 = StartCoroutine(TutorialDialogue3(tutorialLines3[lineIndex]));
+        }
+        else
+        {
+            yield return new WaitForSeconds(2f);
+            root.AddToClassList("TextBoxHidden");
+            lineIndex = 0;
+        }
+    }
+
+    private IEnumerator TutorialDialogue4(string fullText)
+    {
+        int totalLength = fullText.Length;
+
+        for (int i = 0; i <= totalLength; i++)
+        {
+            string visible = fullText.Substring(0, i);
+            string hidden = fullText.Substring(i);
+
+            tutorialText.text = $"{visible}<alpha=#00>{hidden}";
+
+            yield return new WaitForSeconds(0.02f);
+        }
+
+        tutorialText.text = fullText;
+        lineIndex++;
+
+        if (lineIndex < tutorialLines4.Count)
+        {
+            while (!Mouse.current.leftButton.wasPressedThisFrame)
+                yield return null;
+
+            dialogue1 = StartCoroutine(TutorialDialogue4(tutorialLines4[lineIndex]));
+        }
+        else
+        {
+            yield return new WaitForSeconds(2f);
+            root.AddToClassList("TextBoxHidden");
+            lineIndex = 0;
+        }
+    }
+
+    private IEnumerator TutorialDialogue5(string fullText)
+    {
+        int totalLength = fullText.Length;
+
+        for (int i = 0; i <= totalLength; i++)
+        {
+            string visible = fullText.Substring(0, i);
+            string hidden = fullText.Substring(i);
+
+            tutorialText.text = $"{visible}<alpha=#00>{hidden}";
+
+            yield return new WaitForSeconds(0.02f);
+        }
+
+        tutorialText.text = fullText;
+        lineIndex++;
+
+        if (lineIndex < tutorialLines5.Count)
+        {
+            while (!Mouse.current.leftButton.wasPressedThisFrame)
+                yield return null;
+
+            dialogue1 = StartCoroutine(TutorialDialogue5(tutorialLines5[lineIndex]));
         }
         else
         {
