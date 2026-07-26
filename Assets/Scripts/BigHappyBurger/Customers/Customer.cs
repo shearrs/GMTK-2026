@@ -48,6 +48,7 @@ public partial class Customer : MonoBehaviour, ISHLoggable
     public event Action WaitedTooLong;
     public event Action BeganExiting;
     public event Action<Customer> Exited;
+    public event Action BeganTalking;
 
     private void OnDestroy()
     {
@@ -83,6 +84,11 @@ public partial class Customer : MonoBehaviour, ISHLoggable
         }
 
         car.transform.rotation = rotation;
+    }
+
+    public void OnDialogue()
+    {
+        BeganTalking?.Invoke();
     }
 
     internal void Spawn(Restaurant restaurant, Bezier exitRoute)

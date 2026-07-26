@@ -41,6 +41,7 @@ namespace BigHappyBurger.Customers
 
         public event Action CustomerArrivedAtWindow;
         public event Action CustomerCorrectlyServed;
+        public event Action CustomerTalked;
 
         public Customer CreateCustomer()
         {
@@ -85,6 +86,15 @@ namespace BigHappyBurger.Customers
 
             activeCustomer = null;
             unspawnedCustomers.Clear();
+        }
+
+        public void OnDialogue()
+        {
+            if (activeCustomer == null)
+                return;
+
+            activeCustomer.OnDialogue();
+            CustomerTalked?.Invoke();
         }
 
         private Car MakeRandomCar()

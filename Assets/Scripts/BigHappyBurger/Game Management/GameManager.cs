@@ -7,13 +7,14 @@ using UnityEngine;
 
 namespace BigHappyBurger.GameManagement
 {
-    public class GameManager : MonoBehaviour
+    public partial class GameManager : MonoBehaviour
     {
         [Header("Managers")]
         [SerializeField]
         private Player player;
 
         [SerializeField]
+        [AutoEvent(nameof(CustomerManager.CustomerTalked), nameof(OnCustomerTalked))]
         private CustomerManager customerManager;
 
         [SerializeField]
@@ -35,7 +36,7 @@ namespace BigHappyBurger.GameManagement
             int remainingCustomersToServe = data.CustomerCount;
             int remainingCustomersToCreate = data.CustomerCount;
 
-            customerCreateTimer.Start(data.CustomerArrivalRange.Random());
+            customerCreateTimer.Start(data.FirstCustomerArrivalTime);
 
             while (remainingCustomersToServe > 0)
             {
@@ -57,8 +58,6 @@ namespace BigHappyBurger.GameManagement
 
                 yield return null;
             }
-
-            Debug.Log("all customers done");
         }
 
         private bool TryCreateCustomer(out Customer customer)
@@ -72,6 +71,11 @@ namespace BigHappyBurger.GameManagement
             }
 
             return false;
+        }
+
+        private void OnCustomerTalked()
+        {
+            restaurant.AddTime(7.5f);
         }
     }
 }

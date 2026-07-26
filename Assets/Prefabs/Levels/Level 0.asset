@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: BigHappyBurger.GameManagement::BigHappyBurger.GameManagement.LevelData
   <CustomerCount>k__BackingField: 1000
   <TimePerOrderMultiplier>k__BackingField: 4
+  <FirstCustomerArrivalTime>k__BackingField: 10
   <CustomerArrivalRange>k__BackingField:
-    min: 10
-    max: 45
+    min: 20
+    max: 50
   foodCountRange:
     min: 0
     max: 3

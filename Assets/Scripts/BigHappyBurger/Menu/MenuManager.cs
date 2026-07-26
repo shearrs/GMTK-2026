@@ -1,11 +1,11 @@
-using UnityEngine;
-using Shears.UI;
-using Shears.Tweens;
-using TMPro;
 using System.Collections;
 using Shears;
-using UnityEngine.UI;
+using Shears.Tweens;
+using Shears.UI;
+using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public partial class MenuManager : UIElement
 {
@@ -48,9 +48,6 @@ public partial class MenuManager : UIElement
 
     private bool startingGame = false;
 
-
-
-    
     private void Start()
     {
         sunriseCoroutine = StartCoroutine(DoSunrise());
@@ -65,8 +62,16 @@ public partial class MenuManager : UIElement
     {
         yield return new WaitForSeconds(1f);
 
-        var sunTween = StoreTween(sunTransform.DoMoveTween(risenSunTransform.position, sunriseTween));
-        StoreTween(directionalLightTransform.DoRotateTween(risenDirectionalLightTransform.rotation, true, simpleTween));
+        var sunTween = StoreTween(
+            sunTransform.DoMoveTween(risenSunTransform.position, sunriseTween)
+        );
+        StoreTween(
+            directionalLightTransform.DoRotateTween(
+                risenDirectionalLightTransform.rotation,
+                true,
+                simpleTween
+            )
+        );
 
         sunTween.Completed += () =>
         {
@@ -96,7 +101,7 @@ public partial class MenuManager : UIElement
 
         yield return new WaitForSeconds(6f);
 
-        SceneManager.LoadScene("Blockout");
+        SceneManager.LoadScene("Game Scene");
     }
 
     private void OnEndButtonClicked()

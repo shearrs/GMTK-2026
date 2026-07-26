@@ -36,6 +36,9 @@ namespace BigHappyBurger.Foods.Graphics
         [SerializeField]
         private ParticleSystem limeParticle;
 
+        [SerializeField]
+        private AudioSource pourSource;
+
         private ParticleSystem currentParticle;
 
         [Auto]
@@ -62,31 +65,36 @@ namespace BigHappyBurger.Foods.Graphics
         {
             currentSprite.SetDrink(drink);
 
-            if(drink.Type == null)
+            if (drink.Type == null)
             {
                 var emission = currentParticle.emission;
                 emission.rateOverTime = 0;
-            } else
+                currentParticle.Stop();
+            }
+            else
             {
-                if(drink.Type == grapeType)
+                pourSource.Play();
+
+                if (drink.Type == grapeType)
                 {
                     currentParticle = grapeParticle;
-                } 
-                else if(drink.Type == waterType)
+                }
+                else if (drink.Type == waterType)
                 {
                     currentParticle = waterParticle;
-                } 
-                else if(drink.Type == limeType)
+                }
+                else if (drink.Type == limeType)
                 {
                     currentParticle = limeParticle;
-                } 
-                else if(drink.Type == orangeType)
+                }
+                else if (drink.Type == orangeType)
                 {
                     currentParticle = orangeParticle;
                 }
 
                 var emission = currentParticle.emission;
                 emission.rateOverTime = 30;
+                currentParticle.Play();
             }
         }
     }

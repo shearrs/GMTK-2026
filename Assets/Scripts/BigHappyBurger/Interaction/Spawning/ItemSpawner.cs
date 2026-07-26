@@ -33,6 +33,7 @@ namespace BigHappyBurger.Interaction
         public int MaxCount => maxCount;
         public Item ItemToSpawn => itemToSpawn;
 
+        public event Action ItemSpawned;
         public event Action<int> CountChanged;
 
         public readonly ref struct ItemSpawnInfo
@@ -64,6 +65,7 @@ namespace BigHappyBurger.Interaction
                 CountChanged?.Invoke(currentCount);
             }
 
+            ItemSpawned?.Invoke();
             return new(item, transform.rotation * dragOffset, planeDistanceOffset);
         }
 

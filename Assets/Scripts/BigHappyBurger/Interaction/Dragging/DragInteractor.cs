@@ -1,3 +1,4 @@
+using System;
 using Shears;
 using Shears.Detection;
 using Shears.Input;
@@ -20,6 +21,8 @@ namespace BigHappyBurger.Interaction
         private Vector3 dragOffset;
 
         public Item Item { get; private set; }
+
+        public event Action DragBegan;
 
         public readonly struct UpdateInfo
         {
@@ -82,6 +85,8 @@ namespace BigHappyBurger.Interaction
             UpdateDrag(flipInput);
             //CursorManager.SetCursorVisibility(false);
 
+            DragBegan?.Invoke();
+
             return new(Item, -(flatCamRotation * dragOffset));
         }
 
@@ -104,6 +109,8 @@ namespace BigHappyBurger.Interaction
             dragOffset = Quaternion.Inverse(item.Rotation) * offset;
             Item = item;
             Item.OnDragBegin();
+
+            DragBegan?.Invoke();
         }
 
         public void Release()

@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Shears;
 using UnityEngine;
 
@@ -5,6 +7,10 @@ namespace BigHappyBurger.Customers.Graphics
 {
     public class CustomerModel : MonoBehaviour
     {
+        [Header("Audio")]
+        [SerializeField, Required]
+        private AudioClip[] possibleTalkingSounds = Array.Empty<AudioClip>();
+
         [Header("Renderers")]
         [SerializeField, Required]
         private CustomerAnimator animator;
@@ -40,6 +46,8 @@ namespace BigHappyBurger.Customers.Graphics
 
         [SerializeField, Required(targetCollectionSize: 3)]
         private Texture2D[] mouthChoices;
+
+        public IReadOnlyList<AudioClip> PossibleTalkingSounds => possibleTalkingSounds;
 
         private Customer customer;
         private Quaternion initialLeftEyebrowRotation;
@@ -90,6 +98,8 @@ namespace BigHappyBurger.Customers.Graphics
             RandomizeEyes();
             RandomizeMouth();
         }
+
+        public AudioClip GetRandomTalkingSound() => possibleTalkingSounds.Random();
 
         private void RandomizeColor()
         {
