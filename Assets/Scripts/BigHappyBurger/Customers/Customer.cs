@@ -44,6 +44,7 @@ public partial class Customer : MonoBehaviour, ISHLoggable
     public event Action ReachedWindow;
     public event Action ReceivedRightItem;
     public event Action ReceivedWrongItem;
+    public event Action CorrectlyServed;
     public event Action WaitedTooLong;
     public event Action BeganExiting;
     public event Action<Customer> Exited;
@@ -133,7 +134,10 @@ public partial class Customer : MonoBehaviour, ISHLoggable
             ReceivedRightItem?.Invoke();
 
         if (order.IsEmpty())
+        {
             StartCoroutine(IEExit());
+            CorrectlyServed?.Invoke();
+        }
     }
 
     private void OnBagReceived(Bag bag)
@@ -180,6 +184,7 @@ public partial class Customer : MonoBehaviour, ISHLoggable
             {
                 ReceivedRightItem?.Invoke();
                 StartCoroutine(IEExit());
+                CorrectlyServed?.Invoke();
             }
         }
         else if (order.Foods.Count > 0)
@@ -201,9 +206,13 @@ public partial class Customer : MonoBehaviour, ISHLoggable
         WaitedTooLong?.Invoke();
 
         if (isSpawned)
+        {
             StartCoroutine(IEExit(.5f));
+        }
         else
             Exited?.Invoke(this);
+
+        restaurant.AddBadMark();
     }
 
     private IEnumerator IEExit(float extraDelay = 0.0f)

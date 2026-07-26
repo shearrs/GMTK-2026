@@ -40,6 +40,7 @@ namespace BigHappyBurger.Customers
         public int UnspawnedCustomerCount => unspawnedCustomers.Count;
 
         public event Action CustomerArrivedAtWindow;
+        public event Action CustomerCorrectlyServed;
 
         public Customer CreateCustomer()
         {
@@ -51,6 +52,7 @@ namespace BigHappyBurger.Customers
             unspawnedCustomers.Add(customer);
 
             customer.Exited += OnCustomerExited;
+            customer.CorrectlyServed += OnCustomerServed;
 
             return customer;
         }
@@ -114,6 +116,11 @@ namespace BigHappyBurger.Customers
             customer.SetPosition(entryBezier.Points[^1].Position);
             customer.OnReachedWindow();
             CustomerArrivedAtWindow?.Invoke();
+        }
+
+        private void OnCustomerServed()
+        {
+            CustomerCorrectlyServed?.Invoke();
         }
 
         private void OnCustomerExited(Customer customer)

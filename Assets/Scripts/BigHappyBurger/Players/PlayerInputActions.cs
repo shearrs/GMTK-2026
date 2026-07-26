@@ -165,6 +165,15 @@ namespace BigHappyBurger.Players
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""a3ce0f7c-c8a9-4ce8-b37d-c83552e008ba"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -255,6 +264,28 @@ namespace BigHappyBurger.Players
                     ""action"": ""Flip Item"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6e3ad15f-9a0d-4bb1-ade5-ca3b47aae34f"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e549ea35-07dd-446f-8333-a15cdd7ac9c4"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -271,6 +302,7 @@ namespace BigHappyBurger.Players
             m_Player_ScrollItem = m_Player.FindAction("Scroll Item", throwIfNotFound: true);
             m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
             m_Player_FlipItem = m_Player.FindAction("Flip Item", throwIfNotFound: true);
+            m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
         }
 
         ~@PlayerInputActions()
@@ -359,6 +391,7 @@ namespace BigHappyBurger.Players
         private readonly InputAction m_Player_ScrollItem;
         private readonly InputAction m_Player_Look;
         private readonly InputAction m_Player_FlipItem;
+        private readonly InputAction m_Player_Pause;
         /// <summary>
         /// Provides access to input actions defined in input action map "Player".
         /// </summary>
@@ -402,6 +435,10 @@ namespace BigHappyBurger.Players
             /// Provides access to the underlying input action "Player/FlipItem".
             /// </summary>
             public InputAction @FlipItem => m_Wrapper.m_Player_FlipItem;
+            /// <summary>
+            /// Provides access to the underlying input action "Player/Pause".
+            /// </summary>
+            public InputAction @Pause => m_Wrapper.m_Player_Pause;
             /// <summary>
             /// Provides access to the underlying input action map instance.
             /// </summary>
@@ -452,6 +489,9 @@ namespace BigHappyBurger.Players
                 @FlipItem.started += instance.OnFlipItem;
                 @FlipItem.performed += instance.OnFlipItem;
                 @FlipItem.canceled += instance.OnFlipItem;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
 
             /// <summary>
@@ -487,6 +527,9 @@ namespace BigHappyBurger.Players
                 @FlipItem.started -= instance.OnFlipItem;
                 @FlipItem.performed -= instance.OnFlipItem;
                 @FlipItem.canceled -= instance.OnFlipItem;
+                @Pause.started -= instance.OnPause;
+                @Pause.performed -= instance.OnPause;
+                @Pause.canceled -= instance.OnPause;
             }
 
             /// <summary>
@@ -583,6 +626,13 @@ namespace BigHappyBurger.Players
             /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
             /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
             void OnFlipItem(InputAction.CallbackContext context);
+            /// <summary>
+            /// Method invoked when associated input action "Pause" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+            /// </summary>
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+            /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+            void OnPause(InputAction.CallbackContext context);
         }
     }
 }

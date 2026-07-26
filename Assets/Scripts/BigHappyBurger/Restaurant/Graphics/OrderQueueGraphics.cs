@@ -63,12 +63,6 @@ namespace BigHappyBurger.Restaurants.Graphics
             if (root == null)
                 return;
 
-            if (order.Foods.Count + order.Drinks.Count > 6)
-            {
-                SHLogger.Log("Order count exceeds max count!", SHLogLevels.Error);
-                return;
-            }
-
             AddOrderElement(order);
         }
 

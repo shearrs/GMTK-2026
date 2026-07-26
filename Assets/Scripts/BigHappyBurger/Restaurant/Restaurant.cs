@@ -27,6 +27,7 @@ namespace BigHappyBurger.Restaurants
         public event Action<IReadOnlyCollection<Order>> OrdersChanged;
         public event Action<Order> OrderAdded;
         public event Action<Order> OrderRemoved;
+        public event Action<int> MarksChanged;
 
         private void Update()
         {
@@ -58,10 +59,7 @@ namespace BigHappyBurger.Restaurants
         {
             badMarks++;
 
-            if (badMarks >= 3)
-            {
-                Debug.Log("3 STRIKES, YOU'RE OUT");
-            }
+            MarksChanged?.Invoke(badMarks);
         }
 
         public void Clear()
