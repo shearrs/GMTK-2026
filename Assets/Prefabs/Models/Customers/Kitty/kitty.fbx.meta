@@ -3,27 +3,7 @@ guid: 76baad5d7fa60bb458366464aaed27a3
 ModelImporter:
   serializedVersion: 24501
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: eyes
-    second: {fileID: 2100000, guid: aa3712cec4ef98e44bee93775ba60f5d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: kittyBeige
-    second: {fileID: 2100000, guid: 8cb432d0015456b4992d08ee3a619243, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mouths
-    second: {fileID: 2100000, guid: dadd779faac395b429ce9f0f3ba544cc, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: whiskers
-    second: {fileID: 2100000, guid: 914db3fb02d629b499db59e52cccd055, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -43,130 +23,14 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: disappointment
-      takeName: kittyArmature|disappointment
-      internalID: -4971022787472852785
-      firstFrame: 0
-      lastFrame: 50
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: grabbing
-      takeName: kittyArmature|grabbing
-      internalID: -2734357390273516570
-      firstFrame: 0
-      lastFrame: 18
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: sitting
-      takeName: kittyArmature|sitting
-      internalID: -780019357406329455
-      firstFrame: 0
-      lastFrame: 0
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: sittingAttentive
-      takeName: kittyArmature|sittingAttentive
-      internalID: 3417555210668265902
-      firstFrame: 0
-      lastFrame: 0
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -223,7 +87,92 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: kitty(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: kitty
+      parentName: kitty(Clone)
+      position: {x: -0, y: -0.01452169, z: 0}
+      rotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: kittyArmature
+      parentName: kitty(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071067, y: 5.302452e-33, z: 5.302451e-33, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: torso
+      parentName: kittyArmature
+      position: {x: -0, y: 0, z: 0.26491576}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: head
+      parentName: torso
+      position: {x: -0, y: 0.4107605, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eyebrow.L
+      parentName: head
+      position: {x: -0.18987063, y: 0.38041267, z: 0.26135576}
+      rotation: {x: -0.63542676, y: 0.7721611, z: 0.00001958013, w: 0.000020295385}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: eyebrow.L_end
+      parentName: eyebrow.L
+      position: {x: -0, y: 0.1246079, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eyebrow.R
+      parentName: head
+      position: {x: 0.18987063, y: 0.38041267, z: 0.26135576}
+      rotation: {x: 0.63542676, y: 0.7721611, z: 0.00001958013, w: -0.000020295385}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: eyebrow.R_end
+      parentName: eyebrow.R
+      position: {x: -0, y: 0.1246079, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: arm.L
+      parentName: torso
+      position: {x: -0.10201027, y: 0.3432619, z: 0.000000046120267}
+      rotation: {x: -0.00000044955908, y: 3.3689326e-11, z: 0.95138395, w: 0.30800748}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: arm.L_end
+      parentName: arm.L
+      position: {x: -0, y: 0.32849786, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg.L
+      parentName: torso
+      position: {x: -0.092739716, y: -0.0017712355, z: 0.000000022964139}
+      rotation: {x: 1, y: 3.0160145e-15, z: 0.00000004371139, w: -0.0000005326322}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg.L_end
+      parentName: leg.L
+      position: {x: -0, y: 0.23807278, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: arm.R
+      parentName: torso
+      position: {x: 0.10201027, y: 0.3432619, z: 0.000000046120267}
+      rotation: {x: 0.00000044955908, y: 3.3689326e-11, z: 0.95138395, w: -0.30800748}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: arm.R_end
+      parentName: arm.R
+      position: {x: -0, y: 0.32849786, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg.R
+      parentName: torso
+      position: {x: 0.092739716, y: -0.0017712355, z: 0.000000022964139}
+      rotation: {x: 1, y: 3.0160145e-15, z: 0.00000004371139, w: -0.0000005326322}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg.R_end
+      parentName: leg.R
+      position: {x: -0, y: 0.23807278, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -232,15 +181,15 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 0.35
-    rootMotionBoneName: 
+    rootMotionBoneName: torso
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0

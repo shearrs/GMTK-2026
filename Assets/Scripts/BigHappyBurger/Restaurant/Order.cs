@@ -8,12 +8,13 @@ namespace BigHappyBurger.Restaurants
     public class Order
     {
         private const float BASE_TIME = 10.0f;
+        private const float DRINK_TIME = 15.0f;
 
         [SerializeField]
         private List<Food> foods = new();
 
         private readonly List<DrinkTypeSize> drinks = new();
-        private float timeMultiplier;
+        private readonly float timeMultiplier;
 
         public IReadOnlyList<Food> Foods => foods;
         public IReadOnlyList<DrinkTypeSize> Drinks => drinks;
@@ -34,9 +35,9 @@ namespace BigHappyBurger.Restaurants
             float foodTime = 0;
 
             foreach (var food in foods)
-                foodTime += food.CookTime;
+                foodTime += timeMultiplier * food.CookTime;
 
-            return BASE_TIME + timeMultiplier * foodTime;
+            return BASE_TIME + foodTime + (timeMultiplier * DRINK_TIME * drinks.Count);
         }
 
         public bool TakeFood(Food food)
@@ -73,6 +74,11 @@ namespace BigHappyBurger.Restaurants
             }
 
             return false;
+        }
+
+        public bool IsEmpty()
+        {
+            return Foods.Count == 0 && Drinks.Count == 0;
         }
     }
 }

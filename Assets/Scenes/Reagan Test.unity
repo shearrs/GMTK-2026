@@ -1892,7 +1892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78769f95462bbe4d93080e259a32515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Shears.Beziers::Shears.Beziers.Bezier
-  drawGizmos: 1
+  drawGizmos: 0
   closed: 0
   points:
   - position: {x: 0, y: 0, z: 0}
@@ -3395,7 +3395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78769f95462bbe4d93080e259a32515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Shears.Beziers::Shears.Beziers.Bezier
-  drawGizmos: 1
+  drawGizmos: 0
   closed: 0
   points:
   - position: {x: 0, y: 0, z: 0}
@@ -4455,7 +4455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78769f95462bbe4d93080e259a32515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Shears.Beziers::Shears.Beziers.Bezier
-  drawGizmos: 1
+  drawGizmos: 0
   closed: 0
   points:
   - position: {x: 0, y: 0, z: 0}
@@ -5539,6 +5539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18e8858f1338da4b893a1205df39d5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Customers::BigHappyBurger.Customers.CustomerManager
+  restaurant: {fileID: 1545561532}
   spawnTransform: {fileID: 362461673}
   entryBezier: {fileID: 694406408}
   exitBezier: {fileID: 422249472}
@@ -6825,7 +6826,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1545561533}
   - component: {fileID: 1545561532}
-  - component: {fileID: 1545561534}
   m_Layer: 0
   m_Name: Restaurant
   m_TagString: Untagged
@@ -6868,32 +6868,6 @@ Transform:
   - {fileID: 2125481478}
   m_Father: {fileID: 1940466102}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1545561534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1545561531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01158883bab83ec4b932770e709d425c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: BigHappyBurger.Restaurants::BigHappyBurger.Restaurants.RestaurantTest
-  restaurant: {fileID: 1545561532}
-  foodToOrder:
-  - {fileID: 547572033889251203, guid: db8398044669de4428884bc26f09952b, type: 3}
-  - {fileID: 547572033889251203, guid: db8398044669de4428884bc26f09952b, type: 3}
-  - {fileID: 547572033889251203, guid: db8398044669de4428884bc26f09952b, type: 3}
-  - {fileID: 547572033889251203, guid: db8398044669de4428884bc26f09952b, type: 3}
-  - {fileID: 547572033889251203, guid: db8398044669de4428884bc26f09952b, type: 3}
-  - {fileID: 547572033889251203, guid: db8398044669de4428884bc26f09952b, type: 3}
-  - {fileID: 547572033889251203, guid: db8398044669de4428884bc26f09952b, type: 3}
-  - {fileID: 547572033889251203, guid: db8398044669de4428884bc26f09952b, type: 3}
-  - {fileID: 547572033889251203, guid: db8398044669de4428884bc26f09952b, type: 3}
-  - {fileID: 547572033889251203, guid: db8398044669de4428884bc26f09952b, type: 3}
-  - {fileID: 547572033889251203, guid: db8398044669de4428884bc26f09952b, type: 3}
-  - {fileID: 547572033889251203, guid: db8398044669de4428884bc26f09952b, type: 3}
 --- !u!1 &1554830127
 GameObject:
   m_ObjectHideFlags: 0
@@ -8533,6 +8507,7 @@ MonoBehaviour:
   player: {fileID: 643581641}
   customerManager: {fileID: 1253393464}
   restaurant: {fileID: 1545561532}
+  levelData: {fileID: 11400000, guid: dc150bcf2d2289f45bd6e97b278d2730, type: 2}
 --- !u!4 &1940466102
 Transform:
   m_ObjectHideFlags: 0
@@ -9615,6 +9590,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2125481478}
     m_Modifications:
+    - target: {fileID: 4599943018817811853, guid: f9c7b0b964246584baee7ed8da117742, type: 3}
+      propertyPath: drawGizmos
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4916092590123305394, guid: f9c7b0b964246584baee7ed8da117742, type: 3}
       propertyPath: m_Name
       value: Drink Machine

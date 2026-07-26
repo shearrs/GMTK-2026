@@ -23,7 +23,7 @@ namespace BigHappyBurger.GameManagement
         [SerializeField]
         private LevelData levelData;
 
-        private readonly Timer customerSpawnTimer = new();
+        private readonly Timer customerCreateTimer = new();
 
         private void Start()
         {
@@ -32,25 +32,46 @@ namespace BigHappyBurger.GameManagement
 
         private IEnumerator IEPlayLevel(LevelData data)
         {
+            int remainingCustomersToServe = data.CustomerCount;
             int remainingCustomersToCreate = data.CustomerCount;
 
-            while (remainingCustomersToCreate > 0)
+            customerCreateTimer.Start(data.CustomerArrivalRange.Random());
+
+            while (remainingCustomersToServe > 0)
             {
-                customerSpawnTimer.Start(data.CustomerArrivalRange.Random());
-
-                if (customerSpawnTimer.IsDone)
+                if (remainingCustomersToCreate > 0)
                 {
-                    customerManager.CreateCustomer();
-                    remainingCustomersToCreate--;
+                    if (TryCreateCustomer(out var customer))
+                    {
+                        var order = data.GetRandomOrder();
+                        customer.SetOrder(order);
+                        restaurant.AddOrder(order);
 
-                    if (remainingCustomersToCreate > 0)
-                        customerSpawnTimer.Start(data.CustomerArrivalRange.Random());
+                        remainingCustomersToCreate--;
+                        customerCreateTimer.Start(data.CustomerArrivalRange.Random());
+                    }
                 }
+
+                if (customerManager.CanSpawnCustomer())
+                    customerManager.SpawnCustomer();
 
                 yield return null;
             }
+
+            Debug.Log("all customers done");
         }
 
-        private void TrySpawnCustomer() { }
+        private bool TryCreateCustomer(out Customer customer)
+        {
+            customer = null;
+
+            if (customerCreateTimer.IsDone)
+            {
+                customer = customerManager.CreateCustomer();
+                return true;
+            }
+
+            return false;
+        }
     }
 }

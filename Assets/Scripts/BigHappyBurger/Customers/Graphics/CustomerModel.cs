@@ -6,7 +6,10 @@ namespace BigHappyBurger.Customers.Graphics
     public class CustomerModel : MonoBehaviour
     {
         [Header("Renderers")]
-        [SerializeField]
+        [SerializeField, Required]
+        private CustomerAnimator animator;
+
+        [SerializeField, Required]
         private Renderer body;
 
         [SerializeField]
@@ -77,6 +80,8 @@ namespace BigHappyBurger.Customers.Graphics
         public void SetCustomer(Customer customer)
         {
             this.customer = customer;
+
+            animator.SetCustomer(customer);
         }
 
         public void Randomize()

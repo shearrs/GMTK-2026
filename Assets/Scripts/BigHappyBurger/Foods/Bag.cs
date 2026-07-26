@@ -74,8 +74,8 @@ namespace BigHappyBurger.Foods
 
             foreach (var holder in holders)
             {
-                if (holder.Item != null)
-                    food.Add(holder.GetComponent<Food>());
+                if (holder.Item != null && holder.Item.TryGetComponent(out Food bagFood))
+                    food.Add(bagFood);
             }
         }
 

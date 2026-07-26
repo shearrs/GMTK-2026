@@ -12,15 +12,16 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _ALPHA_CLIP_ON
   - _RECEIVE_SHADOWS_ON
   - _RIM_LIGHTING_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: 2450
   stringTagMap:
-    RenderType: Transparent
+    RenderType: AlphaTest
   disabledShaderPasses:
   - MOTIONVECTORS
   m_LockedProperties: 
@@ -84,13 +85,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints:
-    - _ALPHA_CLIP: 0
-    - _DstBlend: 10
+    - _ALPHA_CLIP: 1
+    - _DstBlend: 0
     - _RECEIVE_SHADOWS: 1
     - _RIM_LIGHTING: 1
-    - _SrcBlend: 5
-    - _SurfaceType: 1
-    - _ZWrite: 0
+    - _SrcBlend: 1
+    - _SurfaceType: 0
+    - _ZWrite: 1
     m_Floats:
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0

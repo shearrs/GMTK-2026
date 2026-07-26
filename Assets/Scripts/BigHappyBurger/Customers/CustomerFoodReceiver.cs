@@ -61,6 +61,9 @@ namespace BigHappyBurger.Customers
 
         private void OnItemChanged(Item item)
         {
+            if (item == null)
+                return;
+
             if (item.TryGetComponent(out Bag bag))
                 BagReceived?.Invoke(bag);
             else if (item.TryGetComponent(out Drinkable drink))

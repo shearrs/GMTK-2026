@@ -49,7 +49,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.35
+    globalScale: 35
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -102,7 +102,92 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: kitty(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: kitty
+      parentName: kitty(Clone)
+      position: {x: -0, y: -0.014521691, z: 0}
+      rotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: kittyArmature
+      parentName: kitty(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071067, y: 5.302452e-33, z: 5.302451e-33, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: torso
+      parentName: kittyArmature
+      position: {x: -0, y: 0, z: 0.26491576}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: head
+      parentName: torso
+      position: {x: -0, y: 0.41076052, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eyebrow.L
+      parentName: head
+      position: {x: -0.18987064, y: 0.38041267, z: 0.2613558}
+      rotation: {x: -0.63542676, y: 0.7721611, z: 0.00001958013, w: 0.000020295385}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: eyebrow.L_end
+      parentName: eyebrow.L
+      position: {x: -0, y: 0.124607906, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eyebrow.R
+      parentName: head
+      position: {x: 0.18987064, y: 0.38041267, z: 0.2613558}
+      rotation: {x: 0.63542676, y: 0.7721611, z: 0.00001958013, w: -0.000020295385}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: eyebrow.R_end
+      parentName: eyebrow.R
+      position: {x: -0, y: 0.124607906, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: arm.L
+      parentName: torso
+      position: {x: -0.10201028, y: 0.34326193, z: 0.00000004612027}
+      rotation: {x: -0.00000044955908, y: 3.3689326e-11, z: 0.95138395, w: 0.30800748}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: arm.L_end
+      parentName: arm.L
+      position: {x: -0, y: 0.3284979, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg.L
+      parentName: torso
+      position: {x: -0.092739716, y: -0.0017712356, z: 0.00000002296414}
+      rotation: {x: 1, y: 3.0160145e-15, z: 0.00000004371139, w: -0.0000005326322}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg.L_end
+      parentName: leg.L
+      position: {x: -0, y: 0.2380728, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: arm.R
+      parentName: torso
+      position: {x: 0.10201028, y: 0.34326193, z: 0.00000004612027}
+      rotation: {x: 0.00000044955908, y: 3.3689326e-11, z: 0.95138395, w: -0.30800748}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: arm.R_end
+      parentName: arm.R
+      position: {x: -0, y: 0.3284979, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg.R
+      parentName: torso
+      position: {x: 0.092739716, y: -0.0017712356, z: 0.00000002296414}
+      rotation: {x: 1, y: 3.0160145e-15, z: 0.00000004371139, w: -0.0000005326322}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg.R_end
+      parentName: leg.R
+      position: {x: -0, y: 0.2380728, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -110,16 +195,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.0034999999
-    rootMotionBoneName: 
+    globalScale: 0.35
+    rootMotionBoneName: torso
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 76baad5d7fa60bb458366464aaed27a3, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
