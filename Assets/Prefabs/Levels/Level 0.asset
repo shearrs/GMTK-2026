@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063aa11c277613b479bd6a463cc8048f, type: 3}
   m_Name: Level 0
   m_EditorClassIdentifier: BigHappyBurger.GameManagement::BigHappyBurger.GameManagement.LevelData
-  <CustomerCount>k__BackingField: 4
+  <CustomerCount>k__BackingField: 1000
   <TimePerOrderMultiplier>k__BackingField: 4
   <CustomerArrivalRange>k__BackingField:
-    min: 0
-    max: 0.1
+    min: 10
+    max: 45
   foodCountRange:
-    min: 1
-    max: 1
+    min: 0
+    max: 3
   drinkCountRange:
-    min: 1
-    max: 1
-  happyBoxChance: 0
+    min: 0
+    max: 3
+  happyBoxChance: 0.15
   happyBoxItems:
   - {fileID: 6151296297775054226, guid: 0c96447c24dabaa478e26776d32a4eb7, type: 3}
   - {fileID: 2697801232355024209, guid: 4d66d82b389eb7d4cb574bc626c5e29e, type: 3}
@@ -37,4 +37,7 @@ MonoBehaviour:
   - {fileID: 6151296297775054226, guid: 625f8a493ba92c240a4ea830572806c5, type: 3}
   possibleDrinks:
   - {fileID: 11400000, guid: 4f3cae62faa1074458e0e754ba1e7ad0, type: 2}
+  - {fileID: 11400000, guid: be7f342f871fd5b4ea4bc0b931b4cd0f, type: 2}
+  - {fileID: 11400000, guid: 99ec70a1dff2a294b957edeb41c2397e, type: 2}
+  - {fileID: 11400000, guid: 39e5d82c0e58fe4479fdb6ecd3c7d393, type: 2}
   possibleDrinkSizes: 000000000100000002000000
