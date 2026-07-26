@@ -13,7 +13,6 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _RECEIVE_SHADOWS_ON
-  - _RIM_LIGHTING_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -52,8 +51,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
-        m_Scale: {x: 10, y: 10}
+        m_Texture: {fileID: 2800000, guid: 7e14368784fb87b478d764912e2af2d1, type: 3}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -87,7 +86,7 @@ Material:
     - _ALPHA_CLIP: 0
     - _DstBlend: 0
     - _RECEIVE_SHADOWS: 1
-    - _RIM_LIGHTING: 1
+    - _RIM_LIGHTING: 0
     - _SrcBlend: 1
     - _SurfaceType: 0
     - _ZWrite: 1
@@ -121,7 +120,7 @@ Material:
     - _RimLightRadius: 12
     - _RimLightSmoothness: 0.01
     - _RimLightStrength: 1
-    - _Smoothness: 0.5
+    - _Smoothness: -0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -132,7 +131,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.79622644, g: 0.79622644, b: 0.79622644, a: 1}
+    - _Color: {r: 1, g: 0.9254902, b: 0.9372549, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
