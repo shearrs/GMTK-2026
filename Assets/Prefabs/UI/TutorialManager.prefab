@@ -109,8 +109,8 @@ MonoBehaviour:
     be going over the basics of your very important job.
   - This here is your station. Bask in its glory!
   - And look! Your very first customer has already arrived. Time to get to work!
-  - This monitor shows you the orders you have to fill. Looks like this cheapskate
-    only wants FRIES and KETCHUP.
+  - 'This monitor shows you the orders you have to fill. Looks like this cheapskate
+    only wants a few things.  '
   - That won't take long at all. In fact, I bet the cook is already done making the
     stuff.
   - 'Press D to rotate towards the Hotplate Station! '
@@ -123,10 +123,10 @@ MonoBehaviour:
   - God, FINALLY! Now we can fulfill the order.
   - You know the drill. Fries in the bag. Use the SCROLL-WHEEL to move it closer
     or further. Hurry now, the customer's waiting!!
-  - Alright, now we need some ketchup. Unfortunately, night shift forgot to restock
-    it last night. Needless to say, they're fired.
-  - 'Let''s go back to the order counter. There''s a computer we can use to restock.
-    Press A to rotate again. '
+  - Sorry if I seem on edge. Night shift forgot to restock the ketchup last night.
+    Needless to say, they're fired.
+  - 'Hey, you know what? Let''s go back to the order counter. There''s a computer
+    we can use to restock. Press A to rotate again. '
   - Grab that joystick on the desk and use it to move the cursor on the computer.
     Move it over the "BUY" button on the screen.
   - 'Wow you''re suprisingly good with computers. Somebody went to college! Now just
@@ -137,7 +137,7 @@ MonoBehaviour:
     about it they plug their ears and pretend I'm not in the room.
   - 'I owe a lot of a bad people money. Eventually, I think I''m gonna have to take
     some drastic actio '
-  - OH, hey look. The ketchup is here. Let's finish that order! Go back to the hotplate.
+  - OH, hey look. The stuff is here. Let's finish that order! Go back to the hotplate.
   - "Oops! In all this chaos, we almost forgot the napkins! That\u2019s a hangable
     offense around here. Hahah\u2026"
   - Seriously though. EVERY order needs napkins. Put them in the bag. If you ran
@@ -146,19 +146,18 @@ MonoBehaviour:
     Window.
   - There they are. Move the bag to the customer to give it to them. Be sure to smile!
   - "Alright! Just do that 1000 more times and PERHAPS you\u2019ll earn a promotion."
-  - Ope, another customer! Hurry up and check the order screen.
-  - "JUST a soda?! DON\u2019T YOU PEOPLE WANT FOOD??"
-  - "Whatever, let\u2019s go to the drink station. Press A or D to get there from
-    here."
+  - If you manage to not mess up any of the orders, that is.
+  - What? You want to learn how to make sodas? Sure, pal. Your funeral.
+  - "Let\u2019s go to the drink station. Press A or D to get there from here."
   - Take a cup from the side there and place it on the conveyor, then watch the magic!
   - Don't forget to put a lid on the drink! Don't want any nasty spills.
-  - "Now take it to that customer who thinks he\u2019s too good for our burgers!"
+  - Now take it to that customer over there at the window... there is one there,
+    right? I'm too short to see out the window.
   - "Alright that\u2019s it! Let\u2019s go back inside and wrap up orientation. Go
     back to the order screen for me real quick."
-  - Another customer already! And this one actually wants food. I'll let you take
-    it from here.
-  - "See this timer on the order? Don\u2019t let it count down to zero, or the customer
-    will leave and you\u2019ll be written up. Three strikes and you're out."
+  - I think you're ready for the big leagues. I'll let you take it from here.
+  - "One last thing. See this timer on the order? Don\u2019t let it count down to
+    zero, or the customer will leave and you\u2019ll be written up."
   - I'm watching you.
   tutorialLines2:
   - Heya. Don't mind me, just wanted to share a lil' pro-tip with ya.
@@ -189,3 +188,13 @@ MonoBehaviour:
   - Some maniac went and destroyed their generators last night. Who would do such
     a thing? And on Free Fry Friday!
   - "Oh well, more profits for us. Give \u2018em hell, champ!"
+  pointers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
