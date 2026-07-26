@@ -7,14 +7,15 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Wall
+  m_Name: Grape Juice
   m_Shader: {fileID: 4800000, guid: bdd2635aa32521a4392073a915cac3bd, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _RECEIVE_SHADOWS_ON
   - _RIM_LIGHTING_ON
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _RIM_LIGHTING_ON_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -52,8 +53,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 9e4936a2a9e5a8343a3294e74cf56561, type: 3}
-        m_Scale: {x: 2, y: 2}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -116,12 +117,15 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
+    - _RECEIVE_SHADOWS: 1
+    - _RIM_LIGHTING: 1
+    - _RIM_LIGHTING_ON: 1
     - _ReceiveShadows: 1
     - _RimLightCutoff: 0
     - _RimLightRadius: 12
     - _RimLightSmoothness: 0.01
     - _RimLightStrength: 1
-    - _Smoothness: 0.5
+    - _Smoothness: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -132,12 +136,12 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.90188676, g: 0.5753735, b: 0.50199354, a: 1}
+    - _Color: {r: 0.6387095, g: 0.0199714, b: 0.7056604, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &2694128831338719138
+--- !u!114 &6915636454494186680
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
