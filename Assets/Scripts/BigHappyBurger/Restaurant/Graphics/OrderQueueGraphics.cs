@@ -27,6 +27,7 @@ namespace BigHappyBurger.Restaurants.Graphics
         private Restaurant restaurant;
 
         private readonly Dictionary<Order, VisualElement> orderElements = new();
+        private readonly Dictionary<Order, Label> orderTimers = new();
         private VisualElement root;
 
         private void OnEnable()
@@ -41,6 +42,12 @@ namespace BigHappyBurger.Restaurants.Graphics
             __AutoOnDisable();
 
             panel.UnregisterUIReloadCallback(OnUILoaded);
+        }
+
+        private void Update()
+        {
+            foreach (var (order, timerLabel) in orderTimers)
+                timerLabel.text = GetTimerTime(order.Timer);
         }
 
         private void OnUILoaded(PanelRenderer _, VisualElement root)
@@ -71,6 +78,7 @@ namespace BigHappyBurger.Restaurants.Graphics
             {
                 element.RemoveFromHierarchy();
                 orderElements.Remove(order);
+                orderTimers.Remove(order);
             }
         }
 
@@ -107,7 +115,13 @@ namespace BigHappyBurger.Restaurants.Graphics
                 }
             }
 
+            Label timerLabel = element.Query<Label>("TimerLabel");
+
             orderElements[order] = element;
+            orderTimers[order] = timerLabel;
+
+            timerLabel.text = GetTimerTime(order.Timer);
+
             root.Add(element);
         }
 
@@ -158,6 +172,15 @@ namespace BigHappyBurger.Restaurants.Graphics
             label.style.color = Color.white;
 
             return label;
+        }
+
+        private string GetTimerTime(Timer timer)
+        {
+            int seconds = Mathf.RoundToInt(timer.Time - timer.CurrentTime);
+            int minutes = seconds / 60;
+            seconds -= 60 * minutes;
+
+            return $"{minutes}:{(seconds < 10 ? "0" : "")}{seconds}";
         }
     }
 }

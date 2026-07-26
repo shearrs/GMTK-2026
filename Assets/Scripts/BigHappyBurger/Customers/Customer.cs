@@ -25,10 +25,6 @@ public partial class Customer : MonoBehaviour, ISHLoggable
     [SerializeField]
     private Order order;
 
-    [SerializeField]
-    [AutoEvent(nameof(Timer.Completed), nameof(OnDisatisfactionTimerCompleted))]
-    private Timer disatisfactionTimer;
-
     [Auto]
     [AutoEvent(nameof(CustomerFoodReceiver.DrinkReceived), nameof(OnDrinkReceived))]
     [AutoEvent(nameof(CustomerFoodReceiver.BagReceived), nameof(OnBagReceived))]
@@ -42,7 +38,7 @@ public partial class Customer : MonoBehaviour, ISHLoggable
 
     internal Car Car => car;
     public Order Order => order;
-    public float Disatisfaction => disatisfactionTimer.Percentage;
+    public float Disatisfaction => order.Timer.Percentage;
 
     public event Action Spawned;
     public event Action ReachedWindow;
@@ -52,9 +48,18 @@ public partial class Customer : MonoBehaviour, ISHLoggable
     public event Action BeganExiting;
     public event Action<Customer> Exited;
 
+    private void OnDestroy()
+    {
+        if (order != null)
+            order.Timer.Completed -= OnDisatisfactionTimerCompleted;
+    }
+
     public void SetOrder(Order order)
     {
         this.order = order;
+
+        order.StartTimer();
+        order.Timer.Completed += OnDisatisfactionTimerCompleted;
     }
 
     public void SetPosition(Vector3 position)
@@ -91,7 +96,6 @@ public partial class Customer : MonoBehaviour, ISHLoggable
         foodReceiver.Disable();
         Spawned?.Invoke();
 
-        disatisfactionTimer.Start(order.GetExpectedWaitTime());
         isSpawned = true;
     }
 

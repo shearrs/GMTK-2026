@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063aa11c277613b479bd6a463cc8048f, type: 3}
   m_Name: Level 0
   m_EditorClassIdentifier: BigHappyBurger.GameManagement::BigHappyBurger.GameManagement.LevelData
-  <CustomerCount>k__BackingField: 20
+  <CustomerCount>k__BackingField: 2
   <TimePerOrderMultiplier>k__BackingField: 4
   <CustomerArrivalRange>k__BackingField:
     min: 0
@@ -23,6 +23,8 @@ MonoBehaviour:
   drinkCountRange:
     min: 1
     max: 1
+  happyBoxChance: 0.15
+  happyBoxItems: []
   possibleFoods:
   - {fileID: 547572033889251203, guid: db8398044669de4428884bc26f09952b, type: 3}
   possibleDrinks:

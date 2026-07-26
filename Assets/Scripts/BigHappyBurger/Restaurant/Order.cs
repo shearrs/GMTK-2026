@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using BigHappyBurger.Foods;
+using Shears;
 using UnityEngine;
 
 namespace BigHappyBurger.Restaurants
@@ -16,11 +17,13 @@ namespace BigHappyBurger.Restaurants
         [SerializeField]
         private List<DrinkTypeSize> drinks = new();
 
+        private readonly Timer orderTimer = new();
         private readonly float timeMultiplier;
 
         public IReadOnlyList<Food> Foods => foods;
         public IReadOnlyList<DrinkTypeSize> Drinks => drinks;
         public bool NeedsHappyBox { get; private set; }
+        public Timer Timer => orderTimer;
 
         public Order(
             IReadOnlyList<Food> foods,
@@ -33,6 +36,11 @@ namespace BigHappyBurger.Restaurants
             this.drinks.AddRange(drinks);
             this.timeMultiplier = timeMultiplier;
             NeedsHappyBox = happyBox;
+        }
+
+        public void StartTimer()
+        {
+            orderTimer.Start(GetExpectedWaitTime());
         }
 
         public float GetExpectedWaitTime()
