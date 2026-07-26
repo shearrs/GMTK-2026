@@ -176,9 +176,16 @@ public partial class Customer : MonoBehaviour, ISHLoggable
         {
             if (!hasNapkin)
                 OnWrongItem();
-
-            StartCoroutine(IEExit());
+            else
+            {
+                ReceivedRightItem?.Invoke();
+                StartCoroutine(IEExit());
+            }
         }
+        else if (order.Foods.Count > 0)
+            OnWrongItem();
+        else
+            ReceivedRightItem?.Invoke();
     }
 
     private void OnWrongItem()

@@ -28,14 +28,20 @@ namespace BigHappyBurger.GameManagement
         private Range<int> drinkCountRange = new(0, 1);
 
         [field: Header("Food Choices")]
-        [SerializeField]
+        [SerializeField, Range(0, 1)]
         private float happyBoxChance = 0.15f;
 
-        [SerializeField]
+        [SerializeField, Required]
         private Food[] happyBoxItems = Array.Empty<Food>();
+
+        [SerializeField, Required]
+        private Food fries;
 
         [SerializeField]
         private Food[] possibleFoods = Array.Empty<Food>();
+
+        [SerializeField]
+        private Food[] possibleCondiments = Array.Empty<Food>();
 
         [SerializeField]
         private DrinkType[] possibleDrinks = Array.Empty<DrinkType>();
@@ -48,14 +54,15 @@ namespace BigHappyBurger.GameManagement
 
         public Order GetRandomOrder()
         {
-            GetRandomFoods();
+            GetRandomFoods(out bool isHappyBox);
             GetRandomDrinks();
 
-            return new(chosenFoods, chosenDrinks, TimePerOrderMultiplier);
+            return new(chosenFoods, chosenDrinks, TimePerOrderMultiplier, isHappyBox);
         }
 
-        private void GetRandomFoods()
+        private void GetRandomFoods(out bool isHappyBox)
         {
+            isHappyBox = false;
             chosenFoods.Clear();
 
             float happyBox = UnityEngine.Random.Range(0.0f, 1.0f);
@@ -64,6 +71,8 @@ namespace BigHappyBurger.GameManagement
                 for (int i = 0; i < happyBoxItems.Length; i++)
                     chosenFoods.Add(happyBoxItems[i]);
 
+                isHappyBox = true;
+
                 return;
             }
 
@@ -71,6 +80,16 @@ namespace BigHappyBurger.GameManagement
 
             for (int i = 0; i < foodCount; i++)
                 chosenFoods.Add(possibleFoods.Random());
+
+            if (chosenFoods.Contains(fries) && possibleCondiments.Length > 0)
+            {
+                bool hasCondiment = UnityEngine.Random.Range(0, 2) > 0;
+
+                if (!hasCondiment)
+                    return;
+
+                chosenFoods.Add(possibleCondiments.Random());
+            }
         }
 
         private void GetRandomDrinks()

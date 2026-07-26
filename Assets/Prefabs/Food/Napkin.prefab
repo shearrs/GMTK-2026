@@ -53,7 +53,8 @@ MonoBehaviour:
   <ID>k__BackingField: f2836843-a1fa-4b4e-9502-8d33b3e58c51
   <Sprite>k__BackingField: {fileID: 21300000, guid: 942e0bdf9c3b8a34f8d0fbca0e1867a4, type: 3}
   rigidbody: {fileID: 3776106825270579136}
-  colliders: []
+  colliders:
+  - {fileID: 5933787342149268963}
   draggable: {fileID: 3389894821363016449}
   holdable: {fileID: 8373882274080538156}
 --- !u!114 &4689099787222718613
@@ -70,6 +71,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.Food
   cookable: {fileID: 0}
   drinkable: {fileID: 0}
+  <IsNapkin>k__BackingField: 1
 --- !u!114 &3389894821363016449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,5 +192,10 @@ PrefabInstance:
 --- !u!4 &882076290415763016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5201772988505945372, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
+  m_PrefabInstance: {fileID: 4903763927165889364}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &5933787342149268963 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 1609095037643972279, guid: d4bc0b2910684174dad0d133d1783b8f, type: 3}
   m_PrefabInstance: {fileID: 4903763927165889364}
   m_PrefabAsset: {fileID: 0}
