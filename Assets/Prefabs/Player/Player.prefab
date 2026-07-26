@@ -219,7 +219,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     unityEvents: []
-  <VerticalRotationIncrement>k__BackingField: 30
+  <VerticalRotationIncrement>k__BackingField: 35
   <VerticalTweenData>k__BackingField:
     usesDataObject: 0
     tweenDataObject: {fileID: 0}
