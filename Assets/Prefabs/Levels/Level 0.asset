@@ -16,14 +16,14 @@ MonoBehaviour:
   <TimePerOrderMultiplier>k__BackingField: 4
   <FirstCustomerArrivalTime>k__BackingField: 10
   <CustomerArrivalRange>k__BackingField:
-    min: 20
+    min: 30
     max: 50
   foodCountRange:
     min: 0
     max: 3
   drinkCountRange:
     min: 0
-    max: 3
+    max: 2
   happyBoxChance: 0.15
   happyBoxItems:
   - {fileID: 6151296297775054226, guid: 0c96447c24dabaa478e26776d32a4eb7, type: 3}
@@ -32,6 +32,9 @@ MonoBehaviour:
   fries: {fileID: 547572033889251203, guid: db8398044669de4428884bc26f09952b, type: 3}
   possibleFoods:
   - {fileID: 547572033889251203, guid: db8398044669de4428884bc26f09952b, type: 3}
+  - {fileID: 2697801232355024209, guid: 4d66d82b389eb7d4cb574bc626c5e29e, type: 3}
+  - {fileID: 6151296297775054226, guid: c8e4f135c58261d4d9148a63c0cdd4ac, type: 3}
+  - {fileID: 1164475447017585185, guid: c61252566d747a64e845b479f5de9527, type: 3}
   possibleCondiments:
   - {fileID: 3829784327436135825, guid: 3687c94f4e1d34545ab7f4b8af74dc86, type: 3}
   - {fileID: 6151296297775054226, guid: 004c8d020a1a95546964f096eb7e7727, type: 3}
