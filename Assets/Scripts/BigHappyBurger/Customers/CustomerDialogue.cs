@@ -1,11 +1,10 @@
+using System;
+using System.Collections;
 using Shears;
 using Shears.Tweens;
 using Shears.UI;
-using System;
-using System.Collections;
 using TMPro;
 using UnityEngine;
-using static UnityEngine.Audio.ProcessorInstance;
 using Random = UnityEngine.Random;
 
 namespace BigHappyBurger.Customers
@@ -54,6 +53,13 @@ namespace BigHappyBurger.Customers
         private TextMeshPro playerOptionText4;
         #endregion
 
+        [SerializeField, Required]
+        [AutoEvent(
+            nameof(CustomerManager.CustomerArrivedAtWindow),
+            nameof(OnCustomerArrivedAtWindow)
+        )]
+        private CustomerManager customerManager;
+
         [SerializeField]
         private RectTransform customerTextboxTransform;
 
@@ -66,25 +72,42 @@ namespace BigHappyBurger.Customers
         [Serializable]
         public struct Response
         {
-            [SerializeField] public string text;
-            [SerializeField] public float timeBonus;
+            [SerializeField]
+            public string text;
+
+            [SerializeField]
+            public float timeBonus;
         }
 
         [Header("Dialogues")]
         [Header("Greetings")]
-        [SerializeField] private Response[] customerGreetingsReply;
-        [Header("Compliment")]
-        [SerializeField] private string[] playerCompliment;
-        [SerializeField] private Response[] customerComplimentReply;
-        [Header("Update")]
-        [SerializeField] private string[] playerUpdate;
-        [SerializeField] private Response[] customerUpdateReply;
-        [Header("Weather")]
-        [SerializeField] private string[] playerWeather;
-        [SerializeField] private Response[] customerWeatherReply;
-        [Header("Plans")]
-        [SerializeField] private Response[] customerPlansReply;
+        [SerializeField]
+        private Response[] customerGreetingsReply;
 
+        [Header("Compliment")]
+        [SerializeField]
+        private string[] playerCompliment;
+
+        [SerializeField]
+        private Response[] customerComplimentReply;
+
+        [Header("Update")]
+        [SerializeField]
+        private string[] playerUpdate;
+
+        [SerializeField]
+        private Response[] customerUpdateReply;
+
+        [Header("Weather")]
+        [SerializeField]
+        private string[] playerWeather;
+
+        [SerializeField]
+        private Response[] customerWeatherReply;
+
+        [Header("Plans")]
+        [SerializeField]
+        private Response[] customerPlansReply;
 
         [SerializeField]
         private TweenData fadeTween;
@@ -92,17 +115,14 @@ namespace BigHappyBurger.Customers
         [SerializeField]
         private TweenData shakeTween;
 
-        private Coroutine fadeCoroutine;
-        private Coroutine textScrollCoroutine;
         public bool canStartDialogue = true;
-        private bool waitingForInput = true;
 
         public void StartDialogue()
         {
             if (canStartDialogue)
             {
                 canStartDialogue = false;
-                fadeCoroutine = StartCoroutine(DoGreetingAndResponse());
+                StartCoroutine(DoGreetingAndResponse());
             }
         }
 
@@ -116,12 +136,22 @@ namespace BigHappyBurger.Customers
             yield return new WaitForSeconds(1f);
 
             customerText.text = $"<alpha=#00>{responseText}";
-            var textboxEnterTween = StoreTween(customerTextboxTransform.DoMoveLocalTween(customerTextboxTargetTransform.localPosition, shakeTween));
+            var textboxEnterTween = StoreTween(
+                customerTextboxTransform.DoMoveLocalTween(
+                    customerTextboxTargetTransform.localPosition,
+                    shakeTween
+                )
+            );
             StoreTween(customerTextbox.DoFadeTween(1.0f, shakeTween));
 
             textboxEnterTween.Completed += () =>
             {
-                textScrollCoroutine = StartCoroutine(CustomerResponseTextScroll(responseText, customerGreetingsReply[responseIndex].timeBonus));
+                StartCoroutine(
+                    CustomerResponseTextScroll(
+                        responseText,
+                        customerGreetingsReply[responseIndex].timeBonus
+                    )
+                );
             };
 
             yield return null;
@@ -143,14 +173,14 @@ namespace BigHappyBurger.Customers
 
             //provide time bonus if any (use timeBonus)
 
-             StoreTween(playerGreeting.DoFadeTween(0.0f, shakeTween));
+            StoreTween(playerGreeting.DoFadeTween(0.0f, shakeTween));
 
-             yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1f);
 
-             playerGreeting.gameObject.SetActive(false);
-             playerGreeting.Alpha = 1.0f;
+            playerGreeting.gameObject.SetActive(false);
+            playerGreeting.Alpha = 1.0f;
 
-             fadeCoroutine = StartCoroutine(RevealOptions());
+            StartCoroutine(RevealOptions());
         }
 
         private IEnumerator RevealOptions()
@@ -171,8 +201,6 @@ namespace BigHappyBurger.Customers
             yield return new WaitForSeconds(0.25f);
 
             playerOption4.gameObject.SetActive(true);
-
-            waitingForInput = false;
         }
 
         private void OnOption1Clicked()
@@ -181,7 +209,9 @@ namespace BigHappyBurger.Customers
             var responseText = customerComplimentReply[responseIndex].text;
 
             customerText.text = $"<alpha=#00>{responseText}";
-            textScrollCoroutine = StartCoroutine(FinalResponse(responseText, customerComplimentReply[responseIndex].timeBonus));
+            StartCoroutine(
+                FinalResponse(responseText, customerComplimentReply[responseIndex].timeBonus)
+            );
         }
 
         private void OnOption2Clicked()
@@ -190,7 +220,9 @@ namespace BigHappyBurger.Customers
             var responseText = customerUpdateReply[responseIndex].text;
 
             customerText.text = $"<alpha=#00>{responseText}";
-            textScrollCoroutine = StartCoroutine(FinalResponse(responseText, customerUpdateReply[responseIndex].timeBonus));
+            StartCoroutine(
+                FinalResponse(responseText, customerUpdateReply[responseIndex].timeBonus)
+            );
         }
 
         private void OnOption3Clicked()
@@ -199,7 +231,9 @@ namespace BigHappyBurger.Customers
             var responseText = customerWeatherReply[responseIndex].text;
 
             customerText.text = $"<alpha=#00>{responseText}";
-            textScrollCoroutine = StartCoroutine(FinalResponse(responseText, customerWeatherReply[responseIndex].timeBonus));
+            StartCoroutine(
+                FinalResponse(responseText, customerWeatherReply[responseIndex].timeBonus)
+            );
         }
 
         private void OnOption4Clicked()
@@ -208,7 +242,9 @@ namespace BigHappyBurger.Customers
             var responseText = customerPlansReply[responseIndex].text;
 
             customerText.text = $"<alpha=#00>{responseText}";
-            textScrollCoroutine = StartCoroutine(FinalResponse(responseText, customerPlansReply[responseIndex].timeBonus));
+            StartCoroutine(
+                FinalResponse(responseText, customerPlansReply[responseIndex].timeBonus)
+            );
         }
 
         private IEnumerator FinalResponse(string fullText, float timeBonus)
@@ -234,10 +270,20 @@ namespace BigHappyBurger.Customers
 
             yield return new WaitForSeconds(1f);
 
-            StoreTween(customerTextboxTransform.DoMoveLocalTween(customerTextboxOriginalTransform.localPosition, shakeTween));
+            StoreTween(
+                customerTextboxTransform.DoMoveLocalTween(
+                    customerTextboxOriginalTransform.localPosition,
+                    shakeTween
+                )
+            );
             StoreTween(customerTextbox.DoFadeTween(0.0f, shakeTween));
 
             yield return null;
+        }
+
+        private void OnCustomerArrivedAtWindow()
+        {
+            canStartDialogue = true;
         }
     }
 }
