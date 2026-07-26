@@ -347,6 +347,7 @@ Transform:
   - {fileID: 508397748366361668}
   - {fileID: 978791269993427739}
   - {fileID: 3288114911097092166}
+  - {fileID: 1987374436838116895}
   m_Father: {fileID: 6343009479316764441}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4101299536320064320
@@ -364,6 +365,7 @@ MonoBehaviour:
   dragInteractor: {fileID: 1624616269570611870}
   holdInteractor: {fileID: 3445416414304042646}
   spawnInteractor: {fileID: 1987625992617294227}
+  customerInteractor: {fileID: 7400193517058639681}
   itemScrollSensitivity: 0.1
 --- !u!1 &2245784130523143827
 GameObject:
@@ -561,6 +563,82 @@ MonoBehaviour:
     m_Bits: 1
   detectTriggers: 0
   isBlockable: 1
+  continuousDetection: 0
+  continuousDetectionStep: 0.1
+  castCameraToCursor: 1
+  useLocalDirection: 1
+  originCamera: {fileID: 3315672623639643054}
+  offset: {x: 0, y: 0, z: 0}
+  direction: {x: 0, y: 0, z: 1}
+  distance: 100
+--- !u!1 &6027476350278778074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1987374436838116895}
+  - component: {fileID: 7400193517058639681}
+  - component: {fileID: 3669111957293483260}
+  m_Layer: 6
+  m_Name: Customer Interactor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1987374436838116895
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6027476350278778074}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4389110127491893703}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7400193517058639681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6027476350278778074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b92c4cc871c8ef4eb1b02725f67b3be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Players::BigHappyBurger.Players.PlayerCustomerInteractor
+  detector: {fileID: 3669111957293483260}
+--- !u!114 &3669111957293483260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6027476350278778074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1fabbcfe4a0cf46b68fdd5e2a45c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Shears.Detection::Shears.Detection.RayDetector3D
+  gizmoType: 1
+  highlightOnDetect: 0
+  defaultGizmoColor: {r: 1, g: 0, b: 0, a: 1}
+  detectingGizmoColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  maxDetections: 100
+  detectionMask:
+    serializedVersion: 2
+    m_Bits: 1
+  detectTriggers: 1
+  isBlockable: 0
   continuousDetection: 0
   continuousDetectionStep: 0.1
   castCameraToCursor: 1
