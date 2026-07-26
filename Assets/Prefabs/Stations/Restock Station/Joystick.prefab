@@ -167,10 +167,8 @@ MonoBehaviour:
   ballTarget: {fileID: 6514904859041800232}
   draggable: {fileID: 6841563732075973476}
   defaultPosition: {x: 0, y: 0.285, z: 0}
-  distanceRange:
-    min: 0.1
-    max: 0.25
-  minHeightDifference: 0.15
+  joystickDistance: 0.28
+  minHeight: 0.1
   cursorSensitivity: 0.01
   returnSpeed: 1
 --- !u!1001 &8095678224805816368

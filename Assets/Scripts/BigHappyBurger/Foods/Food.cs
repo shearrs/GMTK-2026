@@ -29,6 +29,7 @@ namespace BigHappyBurger.Foods
         public string ID => Item.ID;
         public bool IsCookable => cookable != null;
         public bool IsDrinkable => drinkable != null;
+        public float CookTime => IsCookable ? cookable.CookTime : 0f;
 
         internal void SetCookable(Cookable cookable)
         {

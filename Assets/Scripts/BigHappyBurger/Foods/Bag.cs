@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using BigHappyBurger.Interaction;
 using Shears;
 using Shears.Tweens;
@@ -64,6 +65,17 @@ namespace BigHappyBurger.Foods
                     item.TweenScale(Vector3.one, scaleTween);
                     break;
                 }
+            }
+        }
+
+        public void GetFood(List<Food> food)
+        {
+            food.Clear();
+
+            foreach (var holder in holders)
+            {
+                if (holder.Item != null && holder.Item.TryGetComponent(out Food bagFood))
+                    food.Add(bagFood);
             }
         }
 

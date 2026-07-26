@@ -1,0 +1,21 @@
+{
+    "name": "BigHappyBurger.GameManagement",
+    "rootNamespace": "BigHappyBurger.GameManagement",
+    "references": [
+        "GUID:b28a31c08beef024d83a7aa1ec3f2f6d",
+        "GUID:f9343658ba9f34f40af4f1a7b0c76be7",
+        "GUID:9fb02dea7db7d1249bccd1dd87e7d874",
+        "GUID:033b364649902a24aa410ff6f93cfeea",
+        "GUID:c0758f1eb59b55040acf98f5922c0731",
+        "GUID:f071de15cbc49934c90fce1a40f91bee"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -16,6 +16,8 @@ namespace BigHappyBurger.Restaurants
         [SerializeField, ReadOnly]
         private List<Order> orders = new();
 
+        private int badMarks = 0;
+
         public event Action<IReadOnlyCollection<Order>> OrdersChanged;
 
         private void Update()
@@ -37,6 +39,16 @@ namespace BigHappyBurger.Restaurants
             orders.Remove(order);
 
             OrdersChanged?.Invoke(orders);
+        }
+
+        public void AddBadMark()
+        {
+            badMarks++;
+
+            if (badMarks >= 3)
+            {
+                Debug.Log("3 STRIKES, YOU'RE OUT");
+            }
         }
     }
 }

@@ -80,7 +80,7 @@ namespace BigHappyBurger.Interaction
 
             Item.OnDragBegin();
             UpdateDrag(flipInput);
-            CursorManager.SetCursorVisibility(false);
+            //CursorManager.SetCursorVisibility(false);
 
             return new(Item, -(flatCamRotation * dragOffset));
         }
@@ -111,7 +111,7 @@ namespace BigHappyBurger.Interaction
             if (Item == null)
                 return;
 
-            CursorManager.SetCursorVisibility(true);
+            //CursorManager.SetCursorVisibility(true);
             Item.OnDragEnd();
             Item = null;
         }
