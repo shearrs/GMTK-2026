@@ -23,6 +23,9 @@ namespace BigHappyBurger.Foods
         [SerializeField, Required, Local]
         private SpecificItemHolder lidHolder;
 
+        [SerializeField, Required, Local]
+        private Renderer volume;
+
         public bool HasLiquid { get; private set; }
         public bool IsFull { get; private set; }
         public bool HasLid => lidHolder.HasItem;
@@ -42,6 +45,9 @@ namespace BigHappyBurger.Foods
             HasLiquid = true;
             DrinkType = drink.Type;
             IsFull = drink.Size == DrinkSize;
+
+            volume.gameObject.SetActive(true);
+            volume.material = drink.Type.Material;
         }
 
         public void EnableLidHolder()

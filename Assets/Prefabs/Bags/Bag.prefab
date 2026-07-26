@@ -371,6 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dae7d524d8f5254db24d68b8ffbc566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.Bag
+  <IsHappyBox>k__BackingField: 0
   holders:
   - {fileID: 3366145156890261700}
   - {fileID: 6107533190524578814}
@@ -454,7 +455,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 3
 --- !u!1 &9136507720520725019
 GameObject:
   m_ObjectHideFlags: 0

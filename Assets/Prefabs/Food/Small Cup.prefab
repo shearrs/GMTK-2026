@@ -64,6 +64,8 @@ MonoBehaviour:
   <IsLocked>k__BackingField: 0
   disableCollision: 1
   container: {fileID: 7725778688519947512}
+  overridePlaneDistance: 0
+  <PlaneDistanceOverride>k__BackingField: 0
 --- !u!65 &886750222219542611
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -122,6 +124,7 @@ Transform:
   m_Children:
   - {fileID: 3013136510853547424}
   - {fileID: 7725778688519947512}
+  - {fileID: 7523174081510805019}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6521080497682778552
@@ -138,6 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
   <LogLevels>k__BackingField: 29
   <ID>k__BackingField: 05a271fd-c04f-41e0-bdca-9b1a3de8057a
+  <Sprite>k__BackingField: {fileID: 0}
   rigidbody: {fileID: 7267604367494726359}
   colliders:
   - {fileID: 2241845229088551941}
@@ -157,6 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.Food
   cookable: {fileID: 0}
   drinkable: {fileID: 9195395893277379354}
+  <IsNapkin>k__BackingField: 0
 --- !u!114 &9195395893277379354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,6 +177,7 @@ MonoBehaviour:
   <DrinkType>k__BackingField: {fileID: 0}
   <DrinkSize>k__BackingField: 0
   lidHolder: {fileID: 8695790578147466776}
+  volume: {fileID: 5614373812713791886}
 --- !u!114 &1333393891133005964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,4 +304,87 @@ MeshCollider:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4801413703073171585, guid: 0ed125cd34a861b4087cca4d3a5fd927, type: 3}
   m_PrefabInstance: {fileID: 7742466092658920737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9035004179321277947
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 9076153269062108026}
+    m_Modifications:
+    - target: {fileID: 1514729660410086368, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1514729660410086368, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1514729660410086368, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1514729660410086368, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1514729660410086368, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1514729660410086368, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1514729660410086368, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1514729660410086368, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1514729660410086368, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1514729660410086368, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2360914859468330778, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.83029
+      objectReference: {fileID: 0}
+    - target: {fileID: 2360914859468330778, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.83029
+      objectReference: {fileID: 0}
+    - target: {fileID: 2360914859468330778, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.83029
+      objectReference: {fileID: 0}
+    - target: {fileID: 3136888131819490720, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9162490756275447254, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
+      propertyPath: m_Name
+      value: Small Cup Volume
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
+--- !u!23 &5614373812713791886 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3497198299177479285, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
+  m_PrefabInstance: {fileID: 9035004179321277947}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7523174081510805019 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1514729660410086368, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
+  m_PrefabInstance: {fileID: 9035004179321277947}
   m_PrefabAsset: {fileID: 0}
