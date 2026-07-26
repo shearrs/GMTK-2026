@@ -344,7 +344,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -1164,7 +1164,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 29.25
+      scalar: 0
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -5855,7 +5855,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -6675,7 +6675,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 29.25
+      scalar: 0
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -11124,7 +11124,15 @@ MonoBehaviour:
   - {fileID: 130043322862849597}
   - {fileID: 8130164320315287209}
   - {fileID: 1343835784418348480}
+  grapeType: {fileID: 11400000, guid: be7f342f871fd5b4ea4bc0b931b4cd0f, type: 2}
+  orangeType: {fileID: 11400000, guid: 99ec70a1dff2a294b957edeb41c2397e, type: 2}
+  waterType: {fileID: 11400000, guid: 39e5d82c0e58fe4479fdb6ecd3c7d393, type: 2}
+  limeType: {fileID: 11400000, guid: 4f3cae62faa1074458e0e754ba1e7ad0, type: 2}
   currentSprite: {fileID: 6483742021107110958}
+  orangeParticle: {fileID: 1215239368157666923}
+  grapeParticle: {fileID: 1671688154298373717}
+  waterParticle: {fileID: 5509948860960984156}
+  limeParticle: {fileID: 3917582749822463135}
 --- !u!114 &3186503777236450444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11370,7 +11378,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -12190,7 +12198,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 29.25
+      scalar: 0
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -16929,7 +16937,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -17749,7 +17757,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 29.25
+      scalar: 0
       minScalar: 10
       maxCurve:
         serializedVersion: 2
