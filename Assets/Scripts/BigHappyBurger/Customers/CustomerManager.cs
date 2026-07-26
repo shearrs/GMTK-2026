@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using BigHappyBurger.Restaurants;
@@ -38,6 +39,8 @@ namespace BigHappyBurger.Customers
 
         public int UnspawnedCustomerCount => unspawnedCustomers.Count;
 
+        public event Action CustomerArrivedAtWindow;
+
         public Customer CreateCustomer()
         {
             var customer = Instantiate(customerPrefab);
@@ -46,6 +49,8 @@ namespace BigHappyBurger.Customers
             customer.gameObject.SetActive(false);
 
             unspawnedCustomers.Add(customer);
+
+            customer.Exited += OnCustomerExited;
 
             return customer;
         }
@@ -69,8 +74,15 @@ namespace BigHappyBurger.Customers
             unspawnedCustomers.RemoveAt(0);
             activeCustomer.Spawn(restaurant, exitBezier);
             StartCoroutine(IEMoveCustomerIn(activeCustomer));
+        }
 
-            activeCustomer.Exited += OnCustomerExited;
+        public void ClearCustomers()
+        {
+            foreach (var customer in unspawnedCustomers)
+                customer.Dispose();
+
+            activeCustomer = null;
+            unspawnedCustomers.Clear();
         }
 
         private Car MakeRandomCar()
@@ -101,6 +113,7 @@ namespace BigHappyBurger.Customers
 
             customer.SetPosition(entryBezier.Points[^1].Position);
             customer.OnReachedWindow();
+            CustomerArrivedAtWindow?.Invoke();
         }
 
         private void OnCustomerExited(Customer customer)

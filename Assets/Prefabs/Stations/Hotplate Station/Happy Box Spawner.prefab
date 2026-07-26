@@ -1,0 +1,308 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &428149658533326856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 44014911596765653}
+  - component: {fileID: 4560245966193823066}
+  - component: {fileID: 7304983858008167533}
+  - component: {fileID: 8991955423055580110}
+  m_Layer: 0
+  m_Name: Happy Box Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &44014911596765653
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428149658533326856}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.863, y: 1.664, z: -0.045}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7826075292821584998}
+  - {fileID: 5274521765617120044}
+  - {fileID: 2025832521126377846}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4560245966193823066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428149658533326856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd623cc58dbdaf4ba2b2a8484372218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.ItemSpawnContainer
+  itemPrefab: {fileID: 7874623078953204908, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+  container: {fileID: 44014911596765653}
+  planeOffset: 0.5
+  maxCount: 5
+  spawnedItems:
+  - {fileID: 8596026178397550028}
+  - {fileID: 5972384270795405958}
+  - {fileID: 562322895064576220}
+--- !u!114 &7304983858008167533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428149658533326856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f2cb18f7dbd6bc49809643e35d2fb6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Shears.UI::Shears.UI.GridLayout3D
+  isStatic: 0
+  dimensions: {x: 3, y: 1, z: 1}
+  xSpacing: -0.55
+  ySpacing: 0.1
+  zSpacing: 0.1
+--- !u!114 &8991955423055580110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428149658533326856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d9d3d03f2dc824ea9f147e0e7c388f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.ItemRefiller
+  delayTime: 10
+--- !u!1001 &1874482315250436448
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 44014911596765653}
+    m_Modifications:
+    - target: {fileID: 4980000906346036150, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_Name
+      value: Big Happy Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00000011920929
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.000000044703484
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000119209275
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+--- !u!4 &7826075292821584998 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+  m_PrefabInstance: {fileID: 1874482315250436448}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8596026178397550028 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7874623078953204908, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+  m_PrefabInstance: {fileID: 1874482315250436448}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!1001 &4587598063379072554
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 44014911596765653}
+    m_Modifications:
+    - target: {fileID: 4980000906346036150, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_Name
+      value: Big Happy Box (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.54999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00000011920929
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.000000044703484
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000119209275
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+--- !u!4 &5274521765617120044 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+  m_PrefabInstance: {fileID: 4587598063379072554}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5972384270795405958 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7874623078953204908, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+  m_PrefabInstance: {fileID: 4587598063379072554}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!1001 &7675684392525466736
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 44014911596765653}
+    m_Modifications:
+    - target: {fileID: 4980000906346036150, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_Name
+      value: Big Happy Box (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00000011920929
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.000000044703484
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000119209275
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+--- !u!114 &562322895064576220 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7874623078953204908, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+  m_PrefabInstance: {fileID: 7675684392525466736}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+--- !u!4 &2025832521126377846 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8545775698048349446, guid: 624ce1c9004549644af6b27db646e25e, type: 3}
+  m_PrefabInstance: {fileID: 7675684392525466736}
+  m_PrefabAsset: {fileID: 0}

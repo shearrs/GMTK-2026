@@ -138,8 +138,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: BigHappyBurger.Restaurants.Graphics::BigHappyBurger.Restaurants.Graphics.OrderQueueGraphics
   panel: {fileID: 5092508820161268981}
   orderElementAsset: {fileID: 9197481963319205126, guid: de2a9f43f5f4a8444b044411b37acae8, type: 3}
-  happyBoxSprite: {fileID: 21300000, guid: 3f4f3784208be1444a6a6da304e1a2f1, type: 3}
-  drinkFont: {fileID: 12800000, guid: de35cbc3bf23c034b93cb6f53ced0fae, type: 3}
+  happyBoxSprite: {fileID: 21300000, guid: 5264cddcbc5e7a04d9df6b19d34462ff, type: 3}
+  drinkFont: {fileID: 12800000, guid: 3030144bca0b1f145af86f32a25f7390, type: 3}
   restaurant: {fileID: 0}
 --- !u!1001 &4028497043762450002
 PrefabInstance:

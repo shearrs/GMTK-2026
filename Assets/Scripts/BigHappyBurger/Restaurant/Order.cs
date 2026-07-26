@@ -79,7 +79,7 @@ namespace BigHappyBurger.Restaurants
             {
                 var desiredDrink = drinks[i];
 
-                if (drink.IsSameDrink(desiredDrink))
+                if (drink.IsSameDrink(desiredDrink) && drink.IsFull && drink.HasLid)
                 {
                     drinks.RemoveAt(i);
                     return true;

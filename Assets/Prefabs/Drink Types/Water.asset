@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a01e1aae1cdb57842881c995ab4de7d1, type: 3}
-  m_Name: Lemon Drink
+  m_Name: Water
   m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.DrinkType
-  <Name>k__BackingField: Lemon Drink
-  <Sprite>k__BackingField: {fileID: 21300000, guid: 08d84cf75b3aeeb4d8668ae347215040, type: 3}
+  <Name>k__BackingField: Lime Drink
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 3aa1fb1063628544dae638752a47e8b8, type: 3}
+  <Material>k__BackingField: {fileID: 2100000, guid: 4a3b223c5a599c746b681548b684bf73, type: 2}
