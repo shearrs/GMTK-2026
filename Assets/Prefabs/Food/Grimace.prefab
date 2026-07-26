@@ -67,6 +67,7 @@ GameObject:
   - component: {fileID: 6521080497682778552}
   - component: {fileID: 1333393891133005964}
   - component: {fileID: 2781217137163528091}
+  - component: {fileID: 4590551774942134402}
   - component: {fileID: 7267604367494726359}
   - component: {fileID: 1990931828754936409}
   - component: {fileID: 4165201157982304340}
@@ -108,6 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
   <LogLevels>k__BackingField: 29
   <ID>k__BackingField: 05a271fd-c04f-41e0-bdca-9b1a3de8057a
+  <Sprite>k__BackingField: {fileID: 0}
   rigidbody: {fileID: 7267604367494726359}
   colliders:
   - {fileID: 1990931828754936409}
@@ -148,6 +150,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.PhysicsHoldable
   rigidbody: {fileID: 7267604367494726359}
+--- !u!114 &4590551774942134402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841018627615554408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81be58ff1ca5d243a2ce14ca25bf0b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.Food
+  cookable: {fileID: 0}
+  drinkable: {fileID: 0}
 --- !u!54 &7267604367494726359
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -217,7 +233,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.2226874, y: 0.03252495, z: 0.118337326}
+  m_Size: {x: 0.16, y: 0.03252495, z: 0.118337326}
   m_Center: {x: -0.0036760122, y: 0.023095112, z: -0.01176342}
 --- !u!1001 &8266663092887907777
 PrefabInstance:

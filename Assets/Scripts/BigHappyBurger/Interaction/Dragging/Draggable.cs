@@ -1,3 +1,4 @@
+using System;
 using Shears;
 using UnityEngine;
 
@@ -10,6 +11,9 @@ namespace BigHappyBurger.Interaction
         protected Vector3 TargetPosition { get; private set; }
         protected Quaternion TargetRotation { get; private set; }
 
+        public event Action DragBegan;
+        public event Action DragEnded;
+
         public void OnDragBegin()
         {
             if (IsBeingDragged)
@@ -17,6 +21,8 @@ namespace BigHappyBurger.Interaction
 
             IsBeingDragged = true;
             OnDragBeginImplementation();
+
+            DragBegan?.Invoke();
         }
 
         public void OnDragEnd()
@@ -26,6 +32,8 @@ namespace BigHappyBurger.Interaction
 
             IsBeingDragged = false;
             OnDragEndImplementation();
+
+            DragEnded?.Invoke();
         }
 
         protected abstract void OnDragBeginImplementation();

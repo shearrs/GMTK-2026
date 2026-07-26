@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 2026284678527100231}
   - component: {fileID: 737819858724153183}
   - component: {fileID: 8175920886536761678}
+  - component: {fileID: 6726985546965870917}
   m_Layer: 0
   m_Name: POS Monitor
   m_TagString: Untagged
@@ -203,3 +204,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6726985546965870917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6091551320510554771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d132969b1733fe34781d9e25a0c444a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Restaurants.Graphics::BigHappyBurger.Restaurants.Graphics.OrderQueueGraphics
+  panel: {fileID: 5092508820161268981}
+  orderElementAsset: {fileID: 9197481963319205126, guid: de2a9f43f5f4a8444b044411b37acae8, type: 3}
+  happyBoxSprite: {fileID: 21300000, guid: 3f4f3784208be1444a6a6da304e1a2f1, type: 3}
+  drinkFont: {fileID: 12800000, guid: de35cbc3bf23c034b93cb6f53ced0fae, type: 3}
+  restaurant: {fileID: 0}

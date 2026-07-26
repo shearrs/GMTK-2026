@@ -110,6 +110,7 @@ namespace BigHappyBurger.Customers
             if (customer == activeCustomer)
                 activeCustomer = null;
 
+            restaurant.RemoveOrder(customer.Order);
             customer.Dispose();
         }
     }

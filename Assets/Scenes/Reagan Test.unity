@@ -1257,6 +1257,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1970493623}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
+--- !u!1 &323411047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 323411048}
+  m_Layer: 0
+  m_Name: Slide Window
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &323411048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323411047}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.16, y: 1.6811936, z: 1.55}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1475803991}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &339683471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1601,6 +1633,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 278106240619087025, guid: f939b9ddc5ac7464f964289d332f9ddd, type: 3}
   m_PrefabInstance: {fileID: 2200546615943436628}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &468341700 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6544349464976468840, guid: 7f4f74231800e154dac4a1a96cfd4532, type: 3}
+  m_PrefabInstance: {fileID: 951440170}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &475848225 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7056896322907531079, guid: df0c3ec96a945cd47bd8b633d1299045, type: 3}
@@ -1900,6 +1937,111 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1970493623}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &598953601
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 598953602}
+  - component: {fileID: 598953603}
+  - component: {fileID: 598953606}
+  - component: {fileID: 598953605}
+  - component: {fileID: 598953604}
+  m_Layer: 0
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &598953602
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598953601}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.98887956, y: 0.7862865, z: -0.01699996}
+  m_LocalScale: {x: 0.8013611, y: 0.9767533, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 468341700}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &598953603
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598953601}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.10820949, y: 0.5095382, z: 0.14715266}
+  m_Center: {x: 0.0076609254, y: -0.012203693, z: 0.020843267}
+--- !u!114 &598953604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598953601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7a4084480df1143a6de4266f78dff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.ManualDraggable
+  item: {fileID: 598953605}
+--- !u!114 &598953605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598953601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969ad6fe19b25b7478dbe4df6795db34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
+  <LogLevels>k__BackingField: 29
+  <ID>k__BackingField: 47f7a3d9-e538-4e03-b0ad-b7e999b609bd
+  <Sprite>k__BackingField: {fileID: 0}
+  rigidbody: {fileID: 0}
+  colliders:
+  - {fileID: 598953603}
+  draggable: {fileID: 598953604}
+  holdable: {fileID: 0}
+--- !u!114 &598953606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598953601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f12dc02c24c932d4caa43ce9d4a573e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Restaurants::BigHappyBurger.Restaurants.SlidableWindow
+  xMovementRange:
+    min: 0
+    max: 1.65
+  windowTransform: {fileID: 951440175}
 --- !u!1 &602028804
 GameObject:
   m_ObjectHideFlags: 0
@@ -3457,6 +3599,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: POS Monitor
       objectReference: {fileID: 0}
+    - target: {fileID: 6726985546965870917, guid: 81de60392bf994e43b1dd21f25e76497, type: 3}
+      propertyPath: restaurant
+      value: 
+      objectReference: {fileID: 1545561532}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3619,19 +3765,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 323411048}
     m_Modifications:
     - target: {fileID: 517817842375724161, guid: 7f4f74231800e154dac4a1a96cfd4532, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 517817842375724161, guid: 7f4f74231800e154dac4a1a96cfd4532, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6811936
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 517817842375724161, guid: 7f4f74231800e154dac4a1a96cfd4532, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 517817842375724161, guid: 7f4f74231800e154dac4a1a96cfd4532, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3639,15 +3785,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517817842375724161, guid: 7f4f74231800e154dac4a1a96cfd4532, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 517817842375724161, guid: 7f4f74231800e154dac4a1a96cfd4532, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 517817842375724161, guid: 7f4f74231800e154dac4a1a96cfd4532, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 517817842375724161, guid: 7f4f74231800e154dac4a1a96cfd4532, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3665,19 +3811,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slide Window Model
       objectReference: {fileID: 0}
-    - target: {fileID: 6544349464976468840, guid: 7f4f74231800e154dac4a1a96cfd4532, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.247877
-      objectReference: {fileID: 0}
-    - target: {fileID: 6544349464976468840, guid: 7f4f74231800e154dac4a1a96cfd4532, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.0238
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6544349464976468840, guid: 7f4f74231800e154dac4a1a96cfd4532, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 598953602}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f4f74231800e154dac4a1a96cfd4532, type: 3}
+--- !u!4 &951440175 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5265122186885571500, guid: 7f4f74231800e154dac4a1a96cfd4532, type: 3}
+  m_PrefabInstance: {fileID: 951440170}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &954682035
 GameObject:
   m_ObjectHideFlags: 0
@@ -5913,6 +6059,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1758689349606774098, guid: 0a75cb3f014a2ff40b6d2f16be328eb9, type: 3}
   m_PrefabInstance: {fileID: 5513451033343306320}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1475803991 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 517817842375724161, guid: 7f4f74231800e154dac4a1a96cfd4532, type: 3}
+  m_PrefabInstance: {fileID: 951440170}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1482148153
 GameObject:
@@ -10016,7 +10167,7 @@ SceneRoots:
   - {fileID: 1699093967}
   - {fileID: 1635369903}
   - {fileID: 1970493623}
-  - {fileID: 951440170}
+  - {fileID: 323411048}
   - {fileID: 1046162959}
   - {fileID: 496554668}
   - {fileID: 1126881184}

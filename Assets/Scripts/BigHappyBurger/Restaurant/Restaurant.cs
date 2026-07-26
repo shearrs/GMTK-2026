@@ -22,7 +22,11 @@ namespace BigHappyBurger.Restaurants
 
         private int badMarks = 0;
 
+        public IReadOnlyList<Order> Orders => orders;
+
         public event Action<IReadOnlyCollection<Order>> OrdersChanged;
+        public event Action<Order> OrderAdded;
+        public event Action<Order> OrderRemoved;
 
         private void Update()
         {
@@ -38,6 +42,7 @@ namespace BigHappyBurger.Restaurants
             foreach (var drink in order.Drinks)
                 drinkMachine.EnqueueDrink(drink);
 
+            OrderAdded?.Invoke(order);
             OrdersChanged?.Invoke(orders);
         }
 
@@ -45,6 +50,7 @@ namespace BigHappyBurger.Restaurants
         {
             orders.Remove(order);
 
+            OrderRemoved?.Invoke(order);
             OrdersChanged?.Invoke(orders);
         }
 

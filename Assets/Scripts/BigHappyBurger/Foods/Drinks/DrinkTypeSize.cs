@@ -2,12 +2,16 @@ using UnityEngine;
 
 namespace BigHappyBurger.Foods
 {
-    public readonly struct DrinkTypeSize
+    [System.Serializable]
+    public struct DrinkTypeSize
     {
         public static readonly DrinkTypeSize Empty = new();
 
-        public DrinkType Type { get; }
-        public Drinkable.Size Size { get; }
+        [field: SerializeField]
+        public DrinkType Type { get; private set; }
+
+        [field: SerializeField]
+        public Drinkable.Size Size { get; private set; }
 
         public DrinkTypeSize(DrinkType type, Drinkable.Size size)
         {

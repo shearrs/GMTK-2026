@@ -9,6 +9,9 @@ namespace BigHappyBurger.Foods
     [RequireComponent(typeof(Item))]
     public partial class Bag : MonoBehaviour
     {
+        [field: SerializeField]
+        public bool IsHappyBox { get; private set; }
+
         [SerializeField, Required(targetCollectionSize: 1), Local]
         private FoodHolder[] holders;
 

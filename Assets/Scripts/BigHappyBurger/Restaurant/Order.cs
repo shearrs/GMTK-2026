@@ -13,21 +13,26 @@ namespace BigHappyBurger.Restaurants
         [SerializeField]
         private List<Food> foods = new();
 
-        private readonly List<DrinkTypeSize> drinks = new();
+        [SerializeField]
+        private List<DrinkTypeSize> drinks = new();
+
         private readonly float timeMultiplier;
 
         public IReadOnlyList<Food> Foods => foods;
         public IReadOnlyList<DrinkTypeSize> Drinks => drinks;
+        public bool NeedsHappyBox { get; private set; }
 
         public Order(
             IReadOnlyList<Food> foods,
             IReadOnlyList<DrinkTypeSize> drinks,
-            float timeMultiplier = 1.0f
+            float timeMultiplier = 1.0f,
+            bool happyBox = false
         )
         {
             this.foods.AddRange(foods);
             this.drinks.AddRange(drinks);
             this.timeMultiplier = timeMultiplier;
+            NeedsHappyBox = happyBox;
         }
 
         public float GetExpectedWaitTime()

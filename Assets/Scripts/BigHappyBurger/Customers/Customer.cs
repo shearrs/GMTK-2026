@@ -36,6 +36,7 @@ public partial class Customer : MonoBehaviour, ISHLoggable
 
     private readonly Timer exitTimer = new();
     private readonly List<Food> bagFoods = new();
+    private bool isSpawned;
     private Bezier exitRoute;
     private Restaurant restaurant;
 
@@ -91,6 +92,7 @@ public partial class Customer : MonoBehaviour, ISHLoggable
         Spawned?.Invoke();
 
         disatisfactionTimer.Start(order.GetExpectedWaitTime());
+        isSpawned = true;
     }
 
     internal void OnReachedWindow()
@@ -122,12 +124,7 @@ public partial class Customer : MonoBehaviour, ISHLoggable
         foodReceiver.Clear();
 
         if (!correctDrink)
-        {
-            restaurant.AddBadMark();
-            StartCoroutine(IEExit(2.5f));
-
-            ReceivedWrongItem?.Invoke();
-        }
+            OnWrongItem();
         else
             ReceivedRightItem?.Invoke();
 
@@ -137,18 +134,34 @@ public partial class Customer : MonoBehaviour, ISHLoggable
 
     private void OnBagReceived(Bag bag)
     {
+        if (order.NeedsHappyBox && !bag.IsHappyBox)
+        {
+            foodReceiver.Clear();
+            OnWrongItem();
+            return;
+        }
+
+        bool hasNapkin = false;
+
         bag.GetFood(bagFoods);
+
+        if (bagFoods.Count == 0)
+        {
+            foodReceiver.Clear();
+            OnWrongItem();
+            return;
+        }
 
         foreach (var food in bagFoods)
         {
             bool correctFood = order.TakeFood(food);
 
-            if (!correctFood)
-            {
-                restaurant.AddBadMark();
-                StartCoroutine(IEExit(2.5f));
+            if (food.IsNapkin)
+                hasNapkin = true;
 
-                ReceivedWrongItem?.Invoke();
+            if (!correctFood && !food.IsNapkin)
+            {
+                OnWrongItem();
                 break;
             }
         }
@@ -156,14 +169,30 @@ public partial class Customer : MonoBehaviour, ISHLoggable
         foodReceiver.Clear();
 
         if (order.IsEmpty())
+        {
+            if (!hasNapkin)
+                OnWrongItem();
+
             StartCoroutine(IEExit());
+        }
+    }
+
+    private void OnWrongItem()
+    {
+        restaurant.AddBadMark();
+        StartCoroutine(IEExit(2.5f));
+
+        ReceivedWrongItem?.Invoke();
     }
 
     private void OnDisatisfactionTimerCompleted()
     {
         WaitedTooLong?.Invoke();
 
-        StartCoroutine(IEExit(.5f));
+        if (isSpawned)
+            StartCoroutine(IEExit(.5f));
+        else
+            Exited?.Invoke(this);
     }
 
     private IEnumerator IEExit(float extraDelay = 0.0f)

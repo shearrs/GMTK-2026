@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using BigHappyBurger.Foods;
 using BigHappyBurger.Restaurants;
@@ -9,6 +10,7 @@ namespace BigHappyBurger.GameManagement
     [CreateAssetMenu(menuName = "Big Happy Burger/Level Data")]
     public class LevelData : ScriptableObject
     {
+        [field: Header("Customers")]
         [field: SerializeField]
         public int CustomerCount { get; private set; }
 
@@ -18,41 +20,66 @@ namespace BigHappyBurger.GameManagement
         [field: SerializeField]
         public Range<float> CustomerArrivalRange { get; private set; } = new(10.0f, 20.0f);
 
+        [field: Header("Food Count")]
         [SerializeField]
         private Range<int> foodCountRange = new(1, 2);
 
         [SerializeField]
         private Range<int> drinkCountRange = new(0, 1);
 
+        [field: Header("Food Choices")]
         [SerializeField]
-        private Food[] possibleFoods;
+        private float happyBoxChance = 0.15f;
 
         [SerializeField]
-        private DrinkType[] possibleDrinks;
+        private Food[] happyBoxItems = Array.Empty<Food>();
 
         [SerializeField]
-        private Drinkable.Size[] possibleDrinkSizes;
+        private Food[] possibleFoods = Array.Empty<Food>();
+
+        [SerializeField]
+        private DrinkType[] possibleDrinks = Array.Empty<DrinkType>();
+
+        [SerializeField]
+        private Drinkable.Size[] possibleDrinkSizes = Array.Empty<Drinkable.Size>();
 
         private readonly List<Food> chosenFoods = new();
         private readonly List<DrinkTypeSize> chosenDrinks = new();
 
-        public IReadOnlyList<Food> PossibleFoods => possibleFoods;
-
         public Order GetRandomOrder()
         {
+            GetRandomFoods();
+            GetRandomDrinks();
+
+            return new(chosenFoods, chosenDrinks, TimePerOrderMultiplier);
+        }
+
+        private void GetRandomFoods()
+        {
             chosenFoods.Clear();
-            chosenDrinks.Clear();
+
+            float happyBox = UnityEngine.Random.Range(0.0f, 1.0f);
+            if (happyBoxChance >= happyBox)
+            {
+                for (int i = 0; i < happyBoxItems.Length; i++)
+                    chosenFoods.Add(happyBoxItems[i]);
+
+                return;
+            }
 
             int foodCount = foodCountRange.Random();
-            int drinkCount = drinkCountRange.Random();
-
-            if (foodCount == 0 && drinkCount == 0)
-                foodCount = 1;
 
             for (int i = 0; i < foodCount; i++)
-            {
                 chosenFoods.Add(possibleFoods.Random());
-            }
+        }
+
+        private void GetRandomDrinks()
+        {
+            chosenDrinks.Clear();
+            int drinkCount = drinkCountRange.Random();
+
+            if (chosenFoods.Count == 0 && drinkCount == 0 && possibleDrinks.Length > 0)
+                drinkCount = 1;
 
             for (int i = 0; i < drinkCount; i++)
             {
@@ -61,8 +88,6 @@ namespace BigHappyBurger.GameManagement
 
                 chosenDrinks.Add(new(type, size));
             }
-
-            return new(chosenFoods, chosenDrinks, TimePerOrderMultiplier);
         }
     }
 }

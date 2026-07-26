@@ -13,6 +13,9 @@ namespace BigHappyBurger.Foods
         [SerializeField, RuntimeReadOnly]
         private Drinkable drinkable;
 
+        [field: SerializeField, RuntimeReadOnly]
+        public bool IsNapkin { get; private set; }
+
         private Item item;
 
         internal Item Item
@@ -30,6 +33,7 @@ namespace BigHappyBurger.Foods
         public bool IsCookable => cookable != null;
         public bool IsDrinkable => drinkable != null;
         public float CookTime => IsCookable ? cookable.CookTime : 0f;
+        public Sprite Sprite => Item.Sprite;
 
         internal void SetCookable(Cookable cookable)
         {

@@ -4,7 +4,7 @@ using BigHappyBurger.Restaurants;
 using TMPro;
 using UnityEngine;
 
-namespace BigHappyBurger.Restaurant.Graphics
+namespace BigHappyBurger.Restaurants.Graphics
 {
     public class FoodTimerGraphics : MonoBehaviour
     {

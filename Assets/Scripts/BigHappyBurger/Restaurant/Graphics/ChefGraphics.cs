@@ -5,7 +5,7 @@ using BigHappyBurger.Restaurants;
 using Shears;
 using UnityEngine;
 
-namespace BigHappyBurger.Restaurant.Graphics
+namespace BigHappyBurger.Restaurants.Graphics
 {
     [RequireComponent(typeof(Chef))]
     public partial class ChefGraphics : MonoBehaviour
