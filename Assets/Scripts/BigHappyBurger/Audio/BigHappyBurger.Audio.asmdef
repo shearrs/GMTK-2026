@@ -1,0 +1,17 @@
+{
+    "name": "BigHappyBurger.Audio",
+    "rootNamespace": "BigHappyBurger.Audio",
+    "references": [
+        "GUID:b28a31c08beef024d83a7aa1ec3f2f6d",
+        "GUID:5fd467d2e238d8045a80c47090444a92"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

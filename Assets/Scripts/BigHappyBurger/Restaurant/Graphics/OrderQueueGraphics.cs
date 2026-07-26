@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using BigHappyBurger.Customers;
 using BigHappyBurger.Foods;
 using Shears;
 using Shears.Logging;
@@ -7,6 +8,7 @@ using UnityEngine.UIElements;
 
 namespace BigHappyBurger.Restaurants.Graphics
 {
+    [RequireComponent(typeof(AudioSource))]
     public partial class OrderQueueGraphics : MonoBehaviour
     {
         [SerializeField, Required, Local]
@@ -21,10 +23,23 @@ namespace BigHappyBurger.Restaurants.Graphics
         [SerializeField, Required, Local]
         private Font drinkFont;
 
+        [SerializeField, Required, Local]
+        private AudioClip orderAddedClip;
+
+        [SerializeField, Required, Local]
+        private AudioClip successfulOrderClip;
+
         [SerializeField, Required]
         [AutoEvent(nameof(Restaurant.OrderAdded), nameof(OnOrderAdded))]
         [AutoEvent(nameof(Restaurant.OrderRemoved), nameof(OnOrderRemoved))]
         private Restaurant restaurant;
+
+        [SerializeField, Required]
+        [AutoEvent(nameof(CustomerManager.CustomerCorrectlyServed), nameof(OnSuccessfulOrder))]
+        private CustomerManager customerManager;
+
+        [Auto]
+        private AudioSource audioSource;
 
         private readonly Dictionary<Order, VisualElement> orderElements = new();
         private readonly Dictionary<Order, Label> orderTimers = new();
@@ -64,6 +79,8 @@ namespace BigHappyBurger.Restaurants.Graphics
                 return;
 
             AddOrderElement(order);
+            audioSource.volume = 0.65f;
+            audioSource.PlayOneShot(orderAddedClip);
         }
 
         private void OnOrderRemoved(Order order)
@@ -185,6 +202,12 @@ namespace BigHappyBurger.Restaurants.Graphics
             seconds -= 60 * minutes;
 
             return $"{minutes}:{(seconds < 10 ? "0" : "")}{seconds}";
+        }
+
+        private void OnSuccessfulOrder()
+        {
+            audioSource.volume = 0.35f;
+            audioSource.PlayOneShot(successfulOrderClip);
         }
     }
 }

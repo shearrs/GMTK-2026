@@ -35,7 +35,7 @@ namespace BigHappyBurger.GameManagement
             int remainingCustomersToServe = data.CustomerCount;
             int remainingCustomersToCreate = data.CustomerCount;
 
-            customerCreateTimer.Start(data.CustomerArrivalRange.Random());
+            customerCreateTimer.Start(data.FirstCustomerArrivalTime);
 
             while (remainingCustomersToServe > 0)
             {
@@ -57,8 +57,6 @@ namespace BigHappyBurger.GameManagement
 
                 yield return null;
             }
-
-            Debug.Log("all customers done");
         }
 
         private bool TryCreateCustomer(out Customer customer)

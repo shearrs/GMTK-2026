@@ -159,6 +159,7 @@ namespace BigHappyBurger.Customers
 
         private IEnumerator CustomerResponseTextScroll(string fullText, float timeBonus)
         {
+            customerManager.OnDialogue();
             int totalLength = fullText.Length;
 
             for (int i = 0; i <= totalLength; i++)
@@ -249,6 +250,8 @@ namespace BigHappyBurger.Customers
 
         private IEnumerator FinalResponse(string fullText, float timeBonus)
         {
+            customerManager.OnDialogue();
+
             playerOption1.gameObject.SetActive(false);
             playerOption2.gameObject.SetActive(false);
             playerOption3.gameObject.SetActive(false);

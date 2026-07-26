@@ -45,6 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c10e42302421acb42bfaf98831cb1c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Customers.Graphics::BigHappyBurger.Customers.Graphics.CustomerModel
+  possibleTalkingSounds:
+  - {fileID: 8300000, guid: d201a1e3b24bd5a429fc52be1e1feba0, type: 3}
+  - {fileID: 8300000, guid: cbb66f1dd8a0bc54e8368abd823cfebf, type: 3}
   animator: {fileID: 561231085011772724}
   body: {fileID: 656197207126572835}
   bodyMaterialIndex: 0

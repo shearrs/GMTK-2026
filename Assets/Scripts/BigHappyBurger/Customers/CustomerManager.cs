@@ -87,6 +87,14 @@ namespace BigHappyBurger.Customers
             unspawnedCustomers.Clear();
         }
 
+        public void OnDialogue()
+        {
+            if (activeCustomer == null)
+                return;
+
+            activeCustomer.OnDialogue();
+        }
+
         private Car MakeRandomCar()
         {
             var prefab = carOptions.Random();

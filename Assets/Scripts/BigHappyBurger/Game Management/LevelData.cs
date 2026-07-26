@@ -18,6 +18,9 @@ namespace BigHappyBurger.GameManagement
         public float TimePerOrderMultiplier { get; private set; } = 1.0f;
 
         [field: SerializeField]
+        public float FirstCustomerArrivalTime { get; private set; } = 10.0f;
+
+        [field: SerializeField]
         public Range<float> CustomerArrivalRange { get; private set; } = new(10.0f, 20.0f);
 
         [field: Header("Food Count")]

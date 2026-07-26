@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 2421159334332436873}
   - component: {fileID: 7145027185613955440}
   - component: {fileID: 3737184511085926141}
+  - component: {fileID: 5436734072492401696}
   m_Layer: 0
   m_Name: Customer
   m_TagString: Untagged
@@ -160,10 +161,7 @@ MonoBehaviour:
   car: {fileID: 0}
   order:
     foods: []
-  disatisfactionTimer:
-    time: 1
-    currentTime: 0
-    isDone: 1
+    drinks: []
 --- !u!114 &2421159334332436873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,6 +178,8 @@ MonoBehaviour:
   - {fileID: 4413823962377284226, guid: 2d1ee837bec90c74fa315c4f9fcb0634, type: 3}
   - {fileID: 5816321113288071750, guid: 49a2a7685c0e86643971eda5643c1b51, type: 3}
   - {fileID: 4430015213338094491, guid: eabdfa3ef56c7944cbdaa0937f315743, type: 3}
+  driveInClip: {fileID: 8300000, guid: f14740522006e0e4fb15907644f17481, type: 3}
+  driveOutClip: {fileID: 8300000, guid: 78bb713a915102748bf01f7855692d36, type: 3}
 --- !u!114 &7145027185613955440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,3 +210,100 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Customers::BigHappyBurger.Customers.CustomerFoodReceiver
   collider: {fileID: 2723449994499862767}
+--- !u!82 &5436734072492401696
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7689122768453964891}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 244a17eed584ece4592b61168b9b9a58, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
