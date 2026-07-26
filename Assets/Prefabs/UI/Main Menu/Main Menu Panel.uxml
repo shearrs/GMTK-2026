@@ -1,0 +1,10 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MenuScreen.uss?fileID=7433441132597879392&amp;guid=2d141a3003c6134498d80ef90a58b02b&amp;type=3#MenuScreen"/>
+    <ui:VisualElement class="Normal Hidden">
+        <ui:Image style="height: 441px; width: 50%;"/>
+        <ui:VisualElement class="DisplayNormal DisplayHidden" style="width: 50%; height: auto;">
+            <ui:Button text="PLAY" name="Button" style="margin-top: 35%; margin-right: 15%; margin-left: 7%; height: 15%; font-size: 91px; -unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Fonts/GeistPixel-Regular-VariableFont_ELSH%20SDF%201.asset?fileID=11400000&amp;guid=d41d8f4641730b84eb5c223009898cc3&amp;type=2#GeistPixel-Regular-VariableFont_ELSH SDF 1&quot;); -unity-font-style: bold; -unity-text-auto-size: best-fit 10px 95px;"/>
+            <ui:Button text="QUIT" name="Button" style="margin-top: 2%; margin-right: 15%; margin-left: 7%; height: 15%; font-size: 92px; -unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Fonts/GeistPixel-Regular-VariableFont_ELSH%20SDF%201.asset?fileID=11400000&amp;guid=d41d8f4641730b84eb5c223009898cc3&amp;type=2#GeistPixel-Regular-VariableFont_ELSH SDF 1&quot;); -unity-font-style: bold; -unity-text-outline-color: rgb(255, 255, 255); -unity-text-auto-size: best-fit 10px 95px;"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

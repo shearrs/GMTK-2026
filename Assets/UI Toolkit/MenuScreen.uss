@@ -1,0 +1,18 @@
+:root {
+}
+
+.Normal {
+    flex-grow: 1;
+    flex-direction: row;
+    transition-duration: 1s;
+    opacity: 1;
+    translate: none;
+}
+
+.Hidden {
+    flex-grow: 1;
+    flex-direction: row;
+    opacity: 0;
+    translate: 53% 0;
+    transition-duration: 1s;
+}
