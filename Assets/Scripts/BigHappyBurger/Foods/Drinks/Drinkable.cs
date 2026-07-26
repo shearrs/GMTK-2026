@@ -53,5 +53,10 @@ namespace BigHappyBurger.Foods
         {
             lidHolder.gameObject.SetActive(false);
         }
+
+        public bool IsSameDrink(DrinkTypeSize drink)
+        {
+            return drink.Type == DrinkType && drink.Size == DrinkSize;
+        }
     }
 }
