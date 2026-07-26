@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using BigHappyBurger.Restaurants;
@@ -37,6 +38,8 @@ namespace BigHappyBurger.Customers
         private Customer activeCustomer;
 
         public int UnspawnedCustomerCount => unspawnedCustomers.Count;
+
+        public event Action CustomerArrivedAtWindow;
 
         public Customer CreateCustomer()
         {
@@ -110,6 +113,7 @@ namespace BigHappyBurger.Customers
 
             customer.SetPosition(entryBezier.Points[^1].Position);
             customer.OnReachedWindow();
+            CustomerArrivedAtWindow?.Invoke();
         }
 
         private void OnCustomerExited(Customer customer)
