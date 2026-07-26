@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6925655613028385015}
-  - component: {fileID: 6250232826795552466}
+  - component: {fileID: 4058089760008950028}
   m_Layer: 0
   m_Name: Food Timer
   m_TagString: Untagged
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 6450068138496411171}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6250232826795552466
+--- !u!114 &4058089760008950028
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,9 +43,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4683799391211365455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f6adedbba35e174aa802effeae65f12, type: 3}
+  m_Script: {fileID: 11500000, guid: d3419f819d3514d42bf905858e33cf93, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FoodTimer
+  m_EditorClassIdentifier: BigHappyBurger.Restaurant.Graphics::BigHappyBurger.Restaurant.Graphics.FoodTimerGraphics
+  countdownText: {fileID: 7304077971026381035}
+  spriteRenderer: {fileID: 494580620708251941}
 --- !u!1 &6623173004217094575
 GameObject:
   m_ObjectHideFlags: 0

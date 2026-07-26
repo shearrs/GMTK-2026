@@ -53,6 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
   <LogLevels>k__BackingField: 29
   <ID>k__BackingField: 05a271fd-c04f-41e0-bdca-9b1a3de8057a
+  <Sprite>k__BackingField: {fileID: 0}
   rigidbody: {fileID: 7267604367494726359}
   colliders:
   - {fileID: 6036764184128103084}
@@ -85,7 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.Drinkable
   <DrinkType>k__BackingField: {fileID: 0}
-  <DrinkSize>k__BackingField: 0
+  <DrinkSize>k__BackingField: 2
   lidHolder: {fileID: 2104727697344941427}
 --- !u!114 &1333393891133005964
 MonoBehaviour:
@@ -211,6 +212,8 @@ MonoBehaviour:
   <IsLocked>k__BackingField: 0
   disableCollision: 1
   container: {fileID: 5053630781570384156}
+  overridePlaneDistance: 0
+  <PlaneDistanceOverride>k__BackingField: 0
 --- !u!65 &2790728250344689194
 BoxCollider:
   m_ObjectHideFlags: 0
