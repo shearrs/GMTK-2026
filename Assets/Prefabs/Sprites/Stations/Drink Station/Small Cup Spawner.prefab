@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf29394d4b23f31489c018390ad26b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.ItemSpawner
-  itemToSpawn: {fileID: 6521080497682778552, guid: 2d149ce16afadeb46bcde561ad7ee6d4, type: 3}
+  itemToSpawn: {fileID: 6521080497682778552, guid: ee00465f236add64b960997d0d4041ca, type: 3}
   interactionCollider: {fileID: 8612867443140131308}
   spawnTransform: {fileID: 2684139667742149660}
   hasLimitedSupply: 0

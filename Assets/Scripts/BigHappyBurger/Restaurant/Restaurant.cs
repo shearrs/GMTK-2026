@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using BigHappyBurger.Foods;
 using Shears;
 using UnityEngine;
 
@@ -12,6 +13,9 @@ namespace BigHappyBurger.Restaurants
 
         [SerializeField, Required, Local]
         private FoodConveyor conveyor;
+
+        [SerializeField, Required, Local]
+        private DrinkMachine drinkMachine;
 
         [SerializeField, ReadOnly]
         private List<Order> orders = new();
@@ -30,6 +34,9 @@ namespace BigHappyBurger.Restaurants
         {
             orders.Add(order);
             chef.AddOrder(order);
+
+            foreach (var drink in order.Drinks)
+                drinkMachine.EnqueueDrink(drink);
 
             OrdersChanged?.Invoke(orders);
         }

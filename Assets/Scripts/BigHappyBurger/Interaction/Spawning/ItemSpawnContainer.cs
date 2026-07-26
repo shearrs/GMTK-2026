@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Shears;
 using UnityEngine;
@@ -23,6 +24,8 @@ namespace BigHappyBurger.Interaction
 
         public int MaxCount => maxCount;
         public Item ItemToSpawn => itemPrefab;
+
+        public event Action ItemReleased;
 
         private void Awake()
         {
@@ -69,6 +72,8 @@ namespace BigHappyBurger.Interaction
                     rigidbody.isKinematic = false;
 
                 item.UnlockDragging();
+
+                ItemReleased?.Invoke();
 
                 return new(item, Vector3.zero, -planeOffset);
             }
