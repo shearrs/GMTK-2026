@@ -3,10 +3,14 @@
     "rootNamespace": "BigHappyBurger.GameManagement.Graphics",
     "references": [
         "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
         "GUID:b28a31c08beef024d83a7aa1ec3f2f6d",
+        "GUID:f407bcfcca25ec846a3710ecbfd18364",
+        "GUID:f9343658ba9f34f40af4f1a7b0c76be7",
         "GUID:0cfe5e6e2e075b34cb876ddb9ca9b4d3",
         "GUID:033b364649902a24aa410ff6f93cfeea",
-        "GUID:9fb02dea7db7d1249bccd1dd87e7d874"
+        "GUID:9fb02dea7db7d1249bccd1dd87e7d874",
+        "GUID:c0758f1eb59b55040acf98f5922c0731"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
