@@ -73,6 +73,15 @@ namespace BigHappyBurger.Customers
             StartCoroutine(IEMoveCustomerIn(activeCustomer));
         }
 
+        public void ClearCustomers()
+        {
+            foreach (var customer in unspawnedCustomers)
+                customer.Dispose();
+
+            activeCustomer = null;
+            unspawnedCustomers.Clear();
+        }
+
         private Car MakeRandomCar()
         {
             var prefab = carOptions.Random();

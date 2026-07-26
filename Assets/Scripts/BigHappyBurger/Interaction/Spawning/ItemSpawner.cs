@@ -52,6 +52,7 @@ namespace BigHappyBurger.Interaction
         public ItemSpawnInfo SpawnItem()
         {
             var item = Instantiate(itemToSpawn, spawnTransform.position, spawnTransform.rotation);
+            item.Spawned = true;
 
             if (hasLimitedSupply)
             {

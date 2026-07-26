@@ -109,6 +109,15 @@ namespace BigHappyBurger.Restaurants
             ChefSlotsChanged?.Invoke(slots);
         }
 
+        public void Clear()
+        {
+            foreach (var slot in slots)
+            {
+                slot.Timer.Stop();
+                slot.Cookable = null;
+            }
+        }
+
         private void PauseCooking()
         {
             if (isPaused)

@@ -63,5 +63,15 @@ namespace BigHappyBurger.Restaurants
                 Debug.Log("3 STRIKES, YOU'RE OUT");
             }
         }
+
+        public void Clear()
+        {
+            while (orders.Count > 0)
+                RemoveOrder(orders[0]);
+
+            drinkMachine.Clear();
+
+            chef.Clear();
+        }
     }
 }

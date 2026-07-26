@@ -53,6 +53,14 @@ namespace BigHappyBurger.Foods
             TryPour();
         }
 
+        public void Clear()
+        {
+            drinkQueue.Clear();
+            DrinkQueueChanged?.Invoke();
+            PourChanged?.Invoke(DrinkTypeSize.Empty);
+            PourEnded?.Invoke();
+        }
+
         private void OnFoodHolderItemChanged(FoodHolder holder)
         {
             TryPour();
