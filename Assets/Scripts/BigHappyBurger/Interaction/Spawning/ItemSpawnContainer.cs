@@ -64,6 +64,7 @@ namespace BigHappyBurger.Interaction
             else
             {
                 var item = spawnedItems[^1];
+                item.Spawned = true;
                 spawnedItems.RemoveAt(spawnedItems.Count - 1);
 
                 item.SetParent(null);

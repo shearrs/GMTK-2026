@@ -29,6 +29,8 @@ namespace BigHappyBurger.Foods
 
         public event Action DrinkQueueChanged;
         public event Action<DrinkTypeSize> PourChanged;
+        public event Action PourStarted;
+        public event Action PourEnded;
 
         private void Awake()
         {
@@ -49,6 +51,14 @@ namespace BigHappyBurger.Foods
             DrinkQueueChanged?.Invoke();
 
             TryPour();
+        }
+
+        public void Clear()
+        {
+            drinkQueue.Clear();
+            DrinkQueueChanged?.Invoke();
+            PourChanged?.Invoke(DrinkTypeSize.Empty);
+            PourEnded?.Invoke();
         }
 
         private void OnFoodHolderItemChanged(FoodHolder holder)
@@ -85,6 +95,8 @@ namespace BigHappyBurger.Foods
                 yield break;
             }
 
+            PourStarted?.Invoke();
+
             isPouring = true;
             drinkable.DisableLidHolder();
             pourTimer.Start(GetPourTime(drinkable.DrinkSize));
@@ -104,6 +116,7 @@ namespace BigHappyBurger.Foods
             drinkable.EnableLidHolder();
 
             holder.Unlock();
+            PourEnded?.Invoke();
 
             while (holder.Item != null)
                 yield return null;

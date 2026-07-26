@@ -10,5 +10,8 @@ namespace BigHappyBurger.Foods
 
         [field: SerializeField]
         public Sprite Sprite { get; private set; }
+
+        [field: SerializeField]
+        public Material Material { get; private set; }
     }
 }

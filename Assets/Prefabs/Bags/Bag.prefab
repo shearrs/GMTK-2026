@@ -1,5 +1,70 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2301289835629793051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2085608836270101313}
+  - component: {fileID: 2581241517609806989}
+  - component: {fileID: 7525507675726069388}
+  m_Layer: 0
+  m_Name: Food Holder (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2085608836270101313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2301289835629793051}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0404, y: 0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6333369926892605272}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2581241517609806989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2301289835629793051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c883179a592a92448b528baabe8f115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.FoodHolder
+  allowAnythingElse: 1
+  holdsCookable: 1
+  holdsDrinkable: 0
+--- !u!114 &7525507675726069388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2301289835629793051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e1d6ce5dca97840a199de00d9dcb03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.ItemHolder
+  <IsLocked>k__BackingField: 0
+  disableCollision: 1
+  container: {fileID: 2085608836270101313}
+  overridePlaneDistance: 0
+  <PlaneDistanceOverride>k__BackingField: 0
 --- !u!1 &2396839445218126027
 GameObject:
   m_ObjectHideFlags: 0
@@ -27,7 +92,7 @@ Transform:
   m_GameObject: {fileID: 2396839445218126027}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0458, y: 0.3108, z: 0}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -65,6 +130,71 @@ MonoBehaviour:
   container: {fileID: 6597843379428113392}
   overridePlaneDistance: 0
   <PlaneDistanceOverride>k__BackingField: 0
+--- !u!1 &2966219155589990871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5810670947007670169}
+  - component: {fileID: 6865145101961619222}
+  - component: {fileID: 1203247239219316893}
+  m_Layer: 0
+  m_Name: Food Holder (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5810670947007670169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2966219155589990871}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0404, y: 0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6333369926892605272}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6865145101961619222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2966219155589990871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c883179a592a92448b528baabe8f115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.FoodHolder
+  allowAnythingElse: 1
+  holdsCookable: 1
+  holdsDrinkable: 0
+--- !u!114 &1203247239219316893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2966219155589990871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e1d6ce5dca97840a199de00d9dcb03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.ItemHolder
+  <IsLocked>k__BackingField: 0
+  disableCollision: 1
+  container: {fileID: 5810670947007670169}
+  overridePlaneDistance: 0
+  <PlaneDistanceOverride>k__BackingField: 0
 --- !u!1 &3108862774919017920
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,7 +222,7 @@ Transform:
   m_GameObject: {fileID: 3108862774919017920}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.29, z: 0}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -130,6 +260,71 @@ MonoBehaviour:
   container: {fileID: 8669419341321300230}
   overridePlaneDistance: 0
   <PlaneDistanceOverride>k__BackingField: 0
+--- !u!1 &6790941654658276978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9091807382245051932}
+  - component: {fileID: 7261042379857725878}
+  - component: {fileID: 8969264365611046550}
+  m_Layer: 0
+  m_Name: Food Holder (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9091807382245051932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6790941654658276978}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0404, y: 0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6333369926892605272}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7261042379857725878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6790941654658276978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c883179a592a92448b528baabe8f115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.FoodHolder
+  allowAnythingElse: 1
+  holdsCookable: 1
+  holdsDrinkable: 0
+--- !u!114 &8969264365611046550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6790941654658276978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e1d6ce5dca97840a199de00d9dcb03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.ItemHolder
+  <IsLocked>k__BackingField: 0
+  disableCollision: 1
+  container: {fileID: 9091807382245051932}
+  overridePlaneDistance: 0
+  <PlaneDistanceOverride>k__BackingField: 0
 --- !u!1 &6882800271281839546
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +352,7 @@ Transform:
   m_GameObject: {fileID: 6882800271281839546}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0404, y: 0.3543, z: 0}
+  m_LocalPosition: {x: -0.0404, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -222,7 +417,7 @@ Transform:
   m_GameObject: {fileID: 7432593822181344369}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.14, z: 0}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -258,6 +453,71 @@ MonoBehaviour:
   <IsLocked>k__BackingField: 0
   disableCollision: 1
   container: {fileID: 3166344452476155695}
+  overridePlaneDistance: 0
+  <PlaneDistanceOverride>k__BackingField: 0
+--- !u!1 &7773045842553281893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 157807471974204205}
+  - component: {fileID: 6152810900553977622}
+  - component: {fileID: 5094700314274190497}
+  m_Layer: 0
+  m_Name: Food Holder (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &157807471974204205
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7773045842553281893}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0404, y: 0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6333369926892605272}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6152810900553977622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7773045842553281893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c883179a592a92448b528baabe8f115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.FoodHolder
+  allowAnythingElse: 1
+  holdsCookable: 1
+  holdsDrinkable: 0
+--- !u!114 &5094700314274190497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7773045842553281893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e1d6ce5dca97840a199de00d9dcb03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.ItemHolder
+  <IsLocked>k__BackingField: 0
+  disableCollision: 1
+  container: {fileID: 157807471974204205}
   overridePlaneDistance: 0
   <PlaneDistanceOverride>k__BackingField: 0
 --- !u!1 &8093453694226497230
@@ -300,6 +560,10 @@ Transform:
   - {fileID: 8669419341321300230}
   - {fileID: 6597843379428113392}
   - {fileID: 3533696948758678930}
+  - {fileID: 157807471974204205}
+  - {fileID: 5810670947007670169}
+  - {fileID: 9091807382245051932}
+  - {fileID: 2085608836270101313}
   - {fileID: 7135611852273267182}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -371,11 +635,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dae7d524d8f5254db24d68b8ffbc566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.Bag
+  <IsHappyBox>k__BackingField: 0
   holders:
   - {fileID: 3366145156890261700}
   - {fileID: 6107533190524578814}
   - {fileID: 8739197701266860370}
   - {fileID: 8442118108524946467}
+  - {fileID: 6152810900553977622}
+  - {fileID: 6865145101961619222}
+  - {fileID: 7261042379857725878}
+  - {fileID: 2581241517609806989}
   holdScale: {x: 0.5, y: 0.5, z: 0.5}
   scaleTween:
     usesDataObject: 0
@@ -454,7 +723,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 3
 --- !u!1 &9136507720520725019
 GameObject:
   m_ObjectHideFlags: 0

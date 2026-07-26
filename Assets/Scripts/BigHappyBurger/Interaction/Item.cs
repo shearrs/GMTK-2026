@@ -41,6 +41,7 @@ namespace BigHappyBurger.Interaction
         public Vector3 Position => rigidbody != null ? rigidbody.position : transform.position;
         public Quaternion Rotation => rigidbody != null ? rigidbody.rotation : transform.rotation;
         public Transform Parent => transform.parent;
+        public bool Spawned { get; internal set; }
         public bool IsDraggable =>
             !isDraggingLocked && draggable != null && (!IsBeingHeld || holdable.CanBeReleased());
         public bool IsBeingHeld => holdable != null && holdable.IsBeingHeld;
