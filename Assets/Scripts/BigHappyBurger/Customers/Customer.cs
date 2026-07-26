@@ -12,6 +12,7 @@ using UnityEngine;
 [RequireComponent(typeof(CustomerFoodReceiver)), DisallowMultipleComponent, SelectionBase]
 public partial class Customer : MonoBehaviour, ISHLoggable
 {
+    private const float EXIT_DELAY = 1.0f;
     private const float EXIT_TIME = 1.0f;
 
     [field: Header("Logging")]
@@ -25,6 +26,7 @@ public partial class Customer : MonoBehaviour, ISHLoggable
     private Order order;
 
     [SerializeField]
+    [AutoEvent(nameof(Timer.Completed), nameof(OnDisatisfactionTimerCompleted))]
     private Timer disatisfactionTimer;
 
     [Auto]
@@ -32,15 +34,21 @@ public partial class Customer : MonoBehaviour, ISHLoggable
     [AutoEvent(nameof(CustomerFoodReceiver.BagReceived), nameof(OnBagReceived))]
     private CustomerFoodReceiver foodReceiver;
 
-    private readonly Timer exitTimer = new(EXIT_TIME);
+    private readonly Timer exitTimer = new();
     private readonly List<Food> bagFoods = new();
     private Bezier exitRoute;
     private Restaurant restaurant;
 
+    internal Car Car => car;
     public Order Order => order;
     public float Disatisfaction => disatisfactionTimer.Percentage;
 
     public event Action Spawned;
+    public event Action ReachedWindow;
+    public event Action ReceivedRightItem;
+    public event Action ReceivedWrongItem;
+    public event Action WaitedTooLong;
+    public event Action BeganExiting;
     public event Action<Customer> Exited;
 
     public void SetOrder(Order order)
@@ -88,6 +96,8 @@ public partial class Customer : MonoBehaviour, ISHLoggable
     internal void OnReachedWindow()
     {
         foodReceiver.Enable();
+
+        ReachedWindow?.Invoke();
     }
 
     internal void SetCar(Car car)
@@ -96,6 +106,11 @@ public partial class Customer : MonoBehaviour, ISHLoggable
 
         transform.SetParent(car.DriversSeat);
         transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+    }
+
+    internal void Dispose()
+    {
+        Destroy(car.gameObject);
     }
 
     private void OnDrinkReceived(Drinkable drink)
@@ -107,6 +122,16 @@ public partial class Customer : MonoBehaviour, ISHLoggable
         foodReceiver.Clear();
 
         if (!correctDrink)
+        {
+            restaurant.AddBadMark();
+            StartCoroutine(IEExit(2.5f));
+
+            ReceivedWrongItem?.Invoke();
+        }
+        else
+            ReceivedRightItem?.Invoke();
+
+        if (order.IsEmpty())
             StartCoroutine(IEExit());
     }
 
@@ -120,17 +145,40 @@ public partial class Customer : MonoBehaviour, ISHLoggable
 
             if (!correctFood)
             {
-                StartCoroutine(IEExit());
+                restaurant.AddBadMark();
+                StartCoroutine(IEExit(2.5f));
+
+                ReceivedWrongItem?.Invoke();
                 break;
             }
         }
 
         foodReceiver.Clear();
+
+        if (order.IsEmpty())
+            StartCoroutine(IEExit());
     }
 
-    private IEnumerator IEExit()
+    private void OnDisatisfactionTimerCompleted()
     {
-        exitTimer.Start();
+        WaitedTooLong?.Invoke();
+
+        StartCoroutine(IEExit(.5f));
+    }
+
+    private IEnumerator IEExit(float extraDelay = 0.0f)
+    {
+        BeganExiting?.Invoke();
+
+        if (!exitTimer.IsDone)
+            yield break;
+
+        exitTimer.Start(EXIT_DELAY + extraDelay);
+
+        while (!exitTimer.IsDone)
+            yield return null;
+
+        exitTimer.Start(EXIT_TIME);
         foodReceiver.Disable();
 
         while (!exitTimer.IsDone)
@@ -145,6 +193,5 @@ public partial class Customer : MonoBehaviour, ISHLoggable
         }
 
         Exited?.Invoke(this);
-        Destroy(gameObject);
     }
 }

@@ -24,10 +24,13 @@ namespace BigHappyBurger.Restaurants
         private Vector3 defaultPosition;
 
         [SerializeField]
-        private Range<float> distanceRange = new(0.05f, 0.25f);
+        private float joystickDistance = 0.28f;
 
         [SerializeField]
-        private float minHeightDifference = 0.15f;
+        private Range<float> zHeightRange = new(0.1f, 0.25f);
+
+        [SerializeField]
+        private float minHeight = 0.15f;
 
         [SerializeField]
         private float cursorSensitivity = 0.01f;
@@ -73,18 +76,26 @@ namespace BigHappyBurger.Restaurants
 
         private Vector3 ValidatePosition(Vector3 position)
         {
-            float heightDifference = position.y - ballPivot.position.y;
-
-            if (heightDifference < minHeightDifference)
-                position.y = ballPivot.position.y + minHeightDifference;
-
             var heading = (position - ballPivot.position);
             var distance = heading.magnitude;
             var targetDirection = heading / distance;
+            float yOffset = heading.y;
 
-            distance = distanceRange.Clamp(distance);
+            if (yOffset < zHeightRange.Min)
+            {
+                targetDirection += 3.0f * (zHeightRange.Min - yOffset) * transform.forward;
+                targetDirection.Normalize();
+            }
+            else if (yOffset > zHeightRange.Max)
+            {
+                targetDirection += 3.0f * (yOffset - zHeightRange.Max) * -transform.forward;
+                targetDirection.Normalize();
+            }
 
-            position = ballPivot.position + (distance * targetDirection);
+            position = ballPivot.position + (joystickDistance * targetDirection);
+
+            if (yOffset < minHeight)
+                position.y = ballPivot.position.y + minHeight;
 
             return position;
         }

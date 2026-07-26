@@ -46,8 +46,12 @@ namespace BigHappyBurger.Interaction
 
         private void Awake()
         {
-            interpolateTimer.Completed += () =>
-                rigidbody.interpolation = RigidbodyInterpolation.None;
+            interpolateTimer.Completed += ResetInterpolation;
+        }
+
+        private void OnDestroy()
+        {
+            interpolateTimer.Completed -= ResetInterpolation;
         }
 
         protected override void OnDragBeginImplementation()
@@ -112,6 +116,11 @@ namespace BigHappyBurger.Interaction
 
             rigidbody.AddTorque(springForce, ForceMode.Force);
             rigidbody.AddTorque(dampForce, ForceMode.Acceleration);
+        }
+
+        private void ResetInterpolation()
+        {
+            rigidbody.interpolation = RigidbodyInterpolation.None;
         }
 
         private void OnDrawGizmosSelected()

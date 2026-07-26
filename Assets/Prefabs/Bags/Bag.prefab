@@ -45,7 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c883179a592a92448b528baabe8f115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.FoodHolder
+  allowAnythingElse: 1
   holdsCookable: 1
+  holdsDrinkable: 0
 --- !u!114 &1683611271891844264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,6 +63,8 @@ MonoBehaviour:
   <IsLocked>k__BackingField: 0
   disableCollision: 1
   container: {fileID: 6597843379428113392}
+  overridePlaneDistance: 0
+  <PlaneDistanceOverride>k__BackingField: 0
 --- !u!1 &3108862774919017920
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c883179a592a92448b528baabe8f115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.FoodHolder
+  allowAnythingElse: 1
   holdsCookable: 1
+  holdsDrinkable: 0
 --- !u!114 &7232659170108889061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +128,8 @@ MonoBehaviour:
   <IsLocked>k__BackingField: 0
   disableCollision: 1
   container: {fileID: 8669419341321300230}
+  overridePlaneDistance: 0
+  <PlaneDistanceOverride>k__BackingField: 0
 --- !u!1 &6882800271281839546
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,7 +175,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c883179a592a92448b528baabe8f115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.FoodHolder
+  allowAnythingElse: 1
   holdsCookable: 1
+  holdsDrinkable: 0
 --- !u!114 &7123029790046084110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +193,8 @@ MonoBehaviour:
   <IsLocked>k__BackingField: 0
   disableCollision: 1
   container: {fileID: 3533696948758678930}
+  overridePlaneDistance: 0
+  <PlaneDistanceOverride>k__BackingField: 0
 --- !u!1 &7432593822181344369
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +240,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c883179a592a92448b528baabe8f115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.FoodHolder
+  allowAnythingElse: 1
   holdsCookable: 1
+  holdsDrinkable: 0
 --- !u!114 &2406725409523778766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +258,8 @@ MonoBehaviour:
   <IsLocked>k__BackingField: 0
   disableCollision: 1
   container: {fileID: 3166344452476155695}
+  overridePlaneDistance: 0
+  <PlaneDistanceOverride>k__BackingField: 0
 --- !u!1 &8093453694226497230
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
   <LogLevels>k__BackingField: 29
   <ID>k__BackingField: 6951d399-b862-42bc-a525-0b5d24b63a86
+  <Sprite>k__BackingField: {fileID: 0}
   rigidbody: {fileID: 3703658159907658131}
   colliders:
   - {fileID: 8687083555266516674}
@@ -489,7 +506,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.15, y: 0.15, z: 0.15}
+  m_Size: {x: 0.28, y: 0.15, z: 0.15}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &5732034356428132670
 PrefabInstance:

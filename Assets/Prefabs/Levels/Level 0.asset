@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 063aa11c277613b479bd6a463cc8048f, type: 3}
+  m_Name: Level 0
+  m_EditorClassIdentifier: BigHappyBurger.GameManagement::BigHappyBurger.GameManagement.LevelData
+  <CustomerCount>k__BackingField: 1
+  <TimePerOrderMultiplier>k__BackingField: 4
+  <CustomerArrivalRange>k__BackingField:
+    min: 0
+    max: 0.1
+  foodCountRange:
+    min: 1
+    max: 1
+  drinkCountRange:
+    min: 0
+    max: 0
+  possibleFoods:
+  - {fileID: 547572033889251203, guid: db8398044669de4428884bc26f09952b, type: 3}
+  possibleDrinks:
+  - {fileID: 11400000, guid: 4f3cae62faa1074458e0e754ba1e7ad0, type: 2}
+  possibleDrinkSizes: 01000000

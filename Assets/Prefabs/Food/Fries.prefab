@@ -53,6 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: BigHappyBurger.Interaction::BigHappyBurger.Interaction.Item
   <LogLevels>k__BackingField: 29
   <ID>k__BackingField: aac1a9b7-1b0b-4a14-8c28-5c16283f625c
+  <Sprite>k__BackingField: {fileID: 0}
   rigidbody: {fileID: 7050507629161092591}
   colliders:
   - {fileID: 6951308280279087480}
@@ -164,8 +165,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.25, y: 0.2842763, z: 0.25}
-  m_Center: {x: 0, y: 0.12286183, z: 0}
+  m_Size: {x: 0.25, y: 0.2842763, z: 0.16698837}
+  m_Center: {x: 0, y: 0.12286183, z: -0.019008875}
 --- !u!1001 &1730123319302036473
 PrefabInstance:
   m_ObjectHideFlags: 0

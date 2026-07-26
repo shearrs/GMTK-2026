@@ -38,7 +38,7 @@ namespace BigHappyBurger.Customers
 
         public int UnspawnedCustomerCount => unspawnedCustomers.Count;
 
-        public void CreateCustomer()
+        public Customer CreateCustomer()
         {
             var customer = Instantiate(customerPrefab);
 
@@ -46,7 +46,11 @@ namespace BigHappyBurger.Customers
             customer.gameObject.SetActive(false);
 
             unspawnedCustomers.Add(customer);
+
+            return customer;
         }
+
+        public bool CanSpawnCustomer() => unspawnedCustomers.Count > 0 && activeCustomer == null;
 
         public void SpawnCustomer()
         {
@@ -105,6 +109,8 @@ namespace BigHappyBurger.Customers
 
             if (customer == activeCustomer)
                 activeCustomer = null;
+
+            customer.Dispose();
         }
     }
 }
