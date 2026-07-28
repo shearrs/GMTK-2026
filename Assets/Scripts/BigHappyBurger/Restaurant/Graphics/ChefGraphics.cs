@@ -10,14 +10,17 @@ namespace BigHappyBurger.Restaurants.Graphics
     [RequireComponent(typeof(Chef))]
     public partial class ChefGraphics : MonoBehaviour
     {
-        [SerializeField, Required(targetCollectionSize: 4)]
+        [SerializeField, Required, Local]
+        [AutoEvent(nameof(FoodConveyor.QueueChanged), nameof(OnQueueChanged))]
+        private FoodConveyor foodConveyor;
+
+        [SerializeField, Required(targetCollectionSize: 4), Local]
         private List<FoodTimerGraphics> timerGraphics = new();
 
-        [SerializeField, Required(targetCollectionSize: 4)]
+        [SerializeField, Required(targetCollectionSize: 4), Local]
         private List<SpriteRenderer> queueSprites = new();
 
         [Auto]
-        [AutoEvent(nameof(Chef.QueueChanged), nameof(OnQueueChanged))]
         private Chef chef;
 
         private void Awake()
@@ -31,7 +34,7 @@ namespace BigHappyBurger.Restaurants.Graphics
                 sprite.sprite = null;
         }
 
-        private void OnQueueChanged(IReadOnlyList<Cookable> queue)
+        private void OnQueueChanged(IReadOnlyList<Food> queue)
         {
             foreach (var sprite in queueSprites)
                 sprite.sprite = null;

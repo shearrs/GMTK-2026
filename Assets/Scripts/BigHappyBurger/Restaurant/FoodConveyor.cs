@@ -35,7 +35,7 @@ namespace BigHappyBurger.Restaurants
         private readonly Timer releaseDelayTimer = new(RELEASE_DELAY);
         private readonly Dictionary<FoodHolder, Tween> holderTweens = new();
 
-        public event Action QueueChanged;
+        public event Action<List<Food>> QueueChanged;
 
         private void Awake()
         {
@@ -70,6 +70,8 @@ namespace BigHappyBurger.Restaurants
                     SetHolderActive(holder);
                     releaseDelayTimer.Start();
 
+                    QueueChanged?.Invoke(queue);
+
                     return;
                 }
             }
@@ -100,7 +102,7 @@ namespace BigHappyBurger.Restaurants
             }
 
             queue.Add(food);
-            QueueChanged?.Invoke();
+            QueueChanged?.Invoke(queue);
         }
 
         private void SetHolderActive(FoodHolder holder)

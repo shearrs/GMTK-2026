@@ -23,7 +23,6 @@ namespace BigHappyBurger.Restaurants
         public IReadOnlyList<ChefSlot> Slots => slots;
 
         public event Action<IReadOnlyList<ChefSlot>> ChefSlotsChanged;
-        public event Action<IReadOnlyList<Cookable>> QueueChanged;
 
         [Serializable]
         public class ChefSlot
@@ -63,6 +62,12 @@ namespace BigHappyBurger.Restaurants
             {
                 timer.Pause();
             }
+
+            public void UnpauseCooking()
+            {
+                if (Cookable != null && !timer.IsDone)
+                    timer.Unpause();
+            }
         }
 
         public void AddOrder(Order order)
@@ -70,10 +75,7 @@ namespace BigHappyBurger.Restaurants
             foreach (var food in order.Foods)
             {
                 if (food.IsCookable)
-                {
                     cookQueue.Add(food.GetComponent<Cookable>());
-                    QueueChanged?.Invoke(cookQueue);
-                }
             }
         }
 
@@ -84,8 +86,8 @@ namespace BigHappyBurger.Restaurants
                 PauseCooking();
                 return;
             }
-            else
-                isPaused = false;
+            else if (isPaused)
+                UnpauseCooking();
 
             ProcessSlots(out var openSlot);
 
@@ -101,8 +103,6 @@ namespace BigHappyBurger.Restaurants
                     cookQueue.RemoveAt(i);
                     openSlot.Cookable = food;
                     openSlot.BeginCooking();
-
-                    QueueChanged?.Invoke(cookQueue);
                 }
             }
 
@@ -127,6 +127,17 @@ namespace BigHappyBurger.Restaurants
                 slot.PauseCooking();
 
             isPaused = true;
+        }
+
+        private void UnpauseCooking()
+        {
+            if (!isPaused)
+                return;
+
+            foreach (var slot in slots)
+                slot.UnpauseCooking();
+
+            isPaused = false;
         }
 
         private void ProcessSlots(out ChefSlot openSlot)

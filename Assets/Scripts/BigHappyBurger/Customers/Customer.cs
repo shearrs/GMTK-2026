@@ -53,7 +53,10 @@ public partial class Customer : MonoBehaviour, ISHLoggable
     private void OnDestroy()
     {
         if (order != null)
+        {
+            order.Timer.Stop();
             order.Timer.Completed -= OnDisatisfactionTimerCompleted;
+        }
     }
 
     public void SetOrder(Order order)
@@ -62,6 +65,11 @@ public partial class Customer : MonoBehaviour, ISHLoggable
 
         order.StartTimer();
         order.Timer.Completed += OnDisatisfactionTimerCompleted;
+    }
+
+    public void SetRestaurant(Restaurant restaurant)
+    {
+        this.restaurant = restaurant;
     }
 
     public void SetPosition(Vector3 position)
@@ -91,12 +99,11 @@ public partial class Customer : MonoBehaviour, ISHLoggable
         BeganTalking?.Invoke();
     }
 
-    internal void Spawn(Restaurant restaurant, Bezier exitRoute)
+    internal void Spawn(Bezier exitRoute)
     {
         if (car != null)
             car.gameObject.SetActive(true);
 
-        this.restaurant = restaurant;
         this.exitRoute = exitRoute;
 
         gameObject.SetActive(true);
@@ -128,9 +135,6 @@ public partial class Customer : MonoBehaviour, ISHLoggable
 
     private void OnDrinkReceived(Drinkable drink)
     {
-        if (order.Drinks.Count == 0)
-            return;
-
         bool correctDrink = order.TakeDrink(drink);
         foodReceiver.Clear();
 
@@ -209,6 +213,9 @@ public partial class Customer : MonoBehaviour, ISHLoggable
 
     private void OnDisatisfactionTimerCompleted()
     {
+        if (this == null)
+            return;
+
         WaitedTooLong?.Invoke();
 
         if (isSpawned)

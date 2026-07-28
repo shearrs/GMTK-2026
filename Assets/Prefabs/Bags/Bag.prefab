@@ -678,7 +678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: BigHappyBurger.Foods::BigHappyBurger.Foods.BagExpander
   item: {fileID: 7995428495544808388}
   scaleTarget: {fileID: 1850920923224010201}
-  expandSize: {x: 0.18, y: 0.18, z: 1.75}
+  expandSize: {x: 0.18, y: 0.18, z: 2.25}
   scaleTween:
     usesDataObject: 0
     tweenDataObject: {fileID: 0}
@@ -775,7 +775,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.28, y: 0.15, z: 0.15}
+  m_Size: {x: 0.28, y: 0.15, z: 0.25}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &5732034356428132670
 PrefabInstance:

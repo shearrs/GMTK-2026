@@ -47,6 +47,7 @@ namespace BigHappyBurger.Customers
         {
             var customer = Instantiate(customerPrefab);
 
+            customer.SetRestaurant(restaurant);
             customer.SetCar(MakeRandomCar());
             customer.gameObject.SetActive(false);
 
@@ -75,7 +76,7 @@ namespace BigHappyBurger.Customers
 
             activeCustomer = unspawnedCustomers[0];
             unspawnedCustomers.RemoveAt(0);
-            activeCustomer.Spawn(restaurant, exitBezier);
+            activeCustomer.Spawn(exitBezier);
             StartCoroutine(IEMoveCustomerIn(activeCustomer));
         }
 
@@ -139,6 +140,8 @@ namespace BigHappyBurger.Customers
 
             if (customer == activeCustomer)
                 activeCustomer = null;
+            else
+                unspawnedCustomers.Remove(customer);
 
             restaurant.RemoveOrder(customer.Order);
             customer.Dispose();
