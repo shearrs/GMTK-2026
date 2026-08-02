@@ -469,7 +469,8 @@ namespace BigHappyBurger.GameManagement
                 yield return CoroutineUtil.WaitForSeconds(30.0f);
                 root.RemoveFromClassList("TextBoxHidden");
 
-                yield return CoroutineUtil.WaitForSeconds(1.0f);
+                tutorialText.text = string.Empty;
+                yield return CoroutineUtil.WaitForSeconds(0.5f);
                 StartCoroutine(TutorialDialogue2(tutorialLines2[lineIndex]));
             }
         }
@@ -504,6 +505,8 @@ namespace BigHappyBurger.GameManagement
                 yield return CoroutineUtil.WaitForSeconds(30.0f);
                 root.RemoveFromClassList("TextBoxHidden");
 
+                tutorialText.text = string.Empty;
+                yield return CoroutineUtil.WaitForSeconds(0.5f);
                 StartCoroutine(TutorialDialogue4(tutorialLines4[lineIndex]));
             }
         }

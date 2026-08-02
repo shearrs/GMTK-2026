@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using BigHappyBurger.Customers;
 using BigHappyBurger.Foods;
 using Shears;
-using Shears.Logging;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -11,6 +10,8 @@ namespace BigHappyBurger.Restaurants.Graphics
     [RequireComponent(typeof(AudioSource))]
     public partial class OrderQueueGraphics : MonoBehaviour
     {
+        private static readonly Color HIGHLIGHT_COLOR = new(0.9169811f, 0.7119653f, 0.102079f);
+
         [SerializeField, Required, Local]
         private PanelRenderer panel;
 
@@ -83,9 +84,16 @@ namespace BigHappyBurger.Restaurants.Graphics
             if (root == null)
                 return;
 
-            AddOrderElement(order);
+            var orderElement = AddOrderElement(order);
             audioSource.volume = 0.65f;
             audioSource.PlayOneShot(orderAddedClip);
+
+            if (orderElements.Count == 1)
+            {
+                var orderContainer = orderElement.Q("Container");
+
+                orderContainer.style.backgroundColor = HIGHLIGHT_COLOR;
+            }
         }
 
         private void OnOrderRemoved(Order order)
@@ -99,24 +107,26 @@ namespace BigHappyBurger.Restaurants.Graphics
 
             if (orderElements.Count > 0)
             {
-                var topElement = root.hierarchy[0];
-                topElement.style.backgroundColor = Color.yellowNice;
+                var topElement = orderElements[restaurant.Orders[0]];
+                var orderContainer = topElement.Q("Container");
+
+                orderContainer.style.backgroundColor = HIGHLIGHT_COLOR;
             }
         }
 
-        private void AddOrderElement(Order order)
+        private VisualElement AddOrderElement(Order order)
         {
             if (orderElements.ContainsKey(order))
-                return;
+                return null;
 
             VisualElement element = Instantiate(orderElementAsset).CloneTree();
-            VisualElement container = element.Query("IconContainer");
+            VisualElement iconContainer = element.Query("IconContainer");
 
             if (order.NeedsHappyBox)
             {
                 var image = CreateImage(happyBoxSprite);
 
-                container.Add(image);
+                iconContainer.Add(image);
             }
             else
             {
@@ -124,7 +134,7 @@ namespace BigHappyBurger.Restaurants.Graphics
                 {
                     var image = CreateImage(food.Sprite);
 
-                    container.Add(image);
+                    iconContainer.Add(image);
                 }
             }
 
@@ -134,13 +144,10 @@ namespace BigHappyBurger.Restaurants.Graphics
                 var label = CreateSizeLabel(drink.Size);
 
                 image.Add(label);
-                container.Add(image);
+                iconContainer.Add(image);
             }
 
             Label timerLabel = element.Query<Label>("TimerLabel");
-
-            if (orderElements.Count == 0)
-                element.style.backgroundColor = Color.yellowNice;
 
             orderElements[order] = element;
             orderTimers[order] = timerLabel;
@@ -148,6 +155,8 @@ namespace BigHappyBurger.Restaurants.Graphics
             timerLabel.text = GetTimerTime(order.Timer);
 
             root.Add(element);
+
+            return element;
         }
 
         private Image CreateImage(Sprite sprite)

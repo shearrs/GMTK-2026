@@ -317,10 +317,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Medium Cup Volume
       objectReference: {fileID: 0}
-    - target: {fileID: 5416397798430033351, guid: fd70375b9385e6e4eacc5a7e0033396f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6716790574745169597, guid: fd70375b9385e6e4eacc5a7e0033396f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

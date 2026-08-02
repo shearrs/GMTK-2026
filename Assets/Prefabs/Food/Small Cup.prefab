@@ -353,22 +353,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2360914859468330778, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.83029
-      objectReference: {fileID: 0}
-    - target: {fileID: 2360914859468330778, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.83029
-      objectReference: {fileID: 0}
-    - target: {fileID: 2360914859468330778, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.83029
-      objectReference: {fileID: 0}
-    - target: {fileID: 3136888131819490720, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9162490756275447254, guid: 563c0d36413fdd64ea942b690f635dd8, type: 3}
       propertyPath: m_Name
       value: Small Cup Volume

@@ -46,7 +46,6 @@ namespace BigHappyBurger.Restaurants
             }
             public bool IsCooking =>
                 Cookable != null && !IsForceCompleted && (!timer.IsDone || !HasTimer);
-            public bool IsPaused => timer.IsPaused;
             public bool HasTimer { get; internal set; }
             public Timer Timer => timer;
 
@@ -81,6 +80,8 @@ namespace BigHappyBurger.Restaurants
             {
                 if (food.IsCookable)
                 {
+                    Debug.Log("add food: " + food.gameObject.name);
+
                     cookQueue.Add(food.GetComponent<Cookable>());
                     foodTimerMap[food] = order.HasTimer;
                 }
@@ -130,6 +131,8 @@ namespace BigHappyBurger.Restaurants
                 slot.Timer.Stop();
                 slot.Cookable = null;
             }
+
+            foodTimerMap.Clear();
         }
 
         public void ForceComplete(ChefSlot slot)

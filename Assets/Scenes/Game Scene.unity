@@ -502,6 +502,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1473454495}
+    - target: {fileID: 1242208229138966601, guid: 02b3837313f9f3642bf02270319b0cb5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6136025342031005537, guid: 02b3837313f9f3642bf02270319b0cb5, type: 3}
       propertyPath: customerManager
       value: 
@@ -12677,6 +12681,11 @@ PrefabInstance:
       propertyPath: 'itemSpawners.Array.data[5]'
       value: 
       objectReference: {fileID: 1096729943}
+    - target: {fileID: 4649564163144459059, guid: bc1c0aa5a57060f4ea373e63b73633f1, type: 3}
+      propertyPath: 'tutorialLines1.Array.data[28]'
+      value: Take the cup out of the conveyor and don't forget to put a lid on! Don't
+        want any nasty spills.
+      objectReference: {fileID: 0}
     - target: {fileID: 4649564163144459059, guid: bc1c0aa5a57060f4ea373e63b73633f1, type: 3}
       propertyPath: 'itemSpawnContainers.Array.data[0]'
       value: 
