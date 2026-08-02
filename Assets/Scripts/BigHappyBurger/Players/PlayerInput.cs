@@ -1,3 +1,4 @@
+using Shears;
 using UnityEngine;
 
 namespace BigHappyBurger.Players
@@ -5,24 +6,32 @@ namespace BigHappyBurger.Players
     public class PlayerInput : MonoBehaviour
     {
         private PlayerInputActions actions;
+        private PlayerInputActions Actions
+        {
+            get
+            {
+                actions ??= new();
 
-        public PlayerInputActions.PlayerActions PlayerActions => actions.Player;
+                return actions;
+            }
+        }
+
+        public PlayerInputActions.PlayerActions PlayerActions => Actions.Player;
+        public PlayerInputActions.GameActions GameActions => Actions.Game;
 
         private void Awake()
         {
-            actions = new();
-
             Enable();
         }
 
         public void Enable()
         {
-            actions.Enable();
+            Actions.Enable();
         }
 
         public void Disable()
         {
-            actions.Disable();
+            Actions.Disable();
         }
     }
 }

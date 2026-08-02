@@ -65,7 +65,7 @@ namespace BigHappyBurger.Customers.Graphics
                     audioSource.volume = 0.15f;
                     audioSource.PlayOneShot(driveOutClip);
                 },
-                1.5f,
+                1.0f,
                 this
             );
         }

@@ -30,7 +30,16 @@ Transform:
   m_LocalPosition: {x: 6.84, y: 2.49586, z: 0.35395}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3144238150738562952}
+  - {fileID: 5512401797518893080}
+  - {fileID: 2365651390238216156}
+  - {fileID: 1315115314036742930}
+  - {fileID: 4654598306754110460}
+  - {fileID: 4932851073646001960}
+  - {fileID: 1886654554099841493}
+  - {fileID: 8573336294750135296}
+  - {fileID: 8225733436817606709}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1931382934 &1179916461720315261
@@ -103,7 +112,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925dbd6673d28fd40a131318b7181f78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TutorialSequence
+  player: {fileID: 0}
+  restaurant: {fileID: 0}
+  chef: {fileID: 0}
+  customerManager: {fileID: 0}
+  bagSpawner: {fileID: 0}
+  mediumCupSpawner: {fileID: 0}
+  monitor: {fileID: 0}
+  drinkMachine: {fileID: 0}
+  bag: {fileID: 82712947987858207, guid: 7faafff841272e3448ec556c4b12a511, type: 3}
+  fries: {fileID: 547572033889251203, guid: db8398044669de4428884bc26f09952b, type: 3}
+  ketchup: {fileID: 6151296297775054226, guid: 625f8a493ba92c240a4ea830572806c5, type: 3}
+  napkins: {fileID: 4689099787222718613, guid: 8a851c379a47008489112573c60aba92, type: 3}
+  grapeDrink: {fileID: 11400000, guid: be7f342f871fd5b4ea4bc0b931b4cd0f, type: 2}
+  itemSpawners:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  itemSpawnContainers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   tutorialPanel: {fileID: 1179916461720315261}
+  lineTimeOverrides:
+    entries:
+    - key: 14
+      value: 1
+    - key: 15
+      value: 0
+    - key: 16
+      value: 0
+    - key: 17
+      value: 0
   tutorialLines1:
   - Congratulations on your employment at Big Happy Burger! Today we're going to
     be going over the basics of your very important job.
@@ -111,8 +157,8 @@ MonoBehaviour:
   - And look! Your very first customer has already arrived. Time to get to work!
   - 'This monitor shows you the orders you have to fill. Looks like this cheapskate
     only wants a few things.  '
-  - That won't take long at all. In fact, I bet the cook is already done making the
-    stuff.
+  - That shouldn't take long at all. In fact, I bet the cook is already done making
+    the stuff.
   - 'Press D to rotate towards the Hotplate Station! '
   - This screen shows you how much time is left until the food gets done. Looks like
     Chef is pretty slow today. Gonna have to dock his pay again.
@@ -130,26 +176,30 @@ MonoBehaviour:
   - Grab that joystick on the desk and use it to move the cursor on the computer.
     Move it over the "BUY" button on the screen.
   - 'Wow you''re suprisingly good with computers. Somebody went to college! Now just
-    press the green button to click "BUY" and wait for the supplies to arrive. '
+    press the red button to click "BUY" and wait for the supplies to arrive. '
   - While we're waiting, I wanna level with you. This company is within weeks of
     bankrupcy, and there's no job security or mobility.
   - I've been waiting on a bonus check for three years. Every time I ask corporate
     about it they plug their ears and pretend I'm not in the room.
   - 'I owe a lot of a bad people money. Eventually, I think I''m gonna have to take
     some drastic actio '
-  - OH, hey look. The stuff is here. Let's finish that order! Go back to the hotplate.
+  - OH, hey look. The stuff is here. Let's finish that order! Go back to the hotplate
+    and put ketchup in the bag.
   - "Oops! In all this chaos, we almost forgot the napkins! That\u2019s a hangable
     offense around here. Hahah\u2026"
   - Seriously though. EVERY order needs napkins. Put them in the bag. If you ran
     out somehow, restock them first like I taught you.
   - Alright! Now for the perfect handoff. Hold onto the bag and rotate to the Drive-Thru
     Window.
-  - There they are. Move the bag to the customer to give it to them. Be sure to smile!
+  - There they are. Open the window by using its handle and move the bag to the customer
+    to give it to them by moving the bag with scroll wheel. Be sure to smile!
   - "Alright! Just do that 1000 more times and PERHAPS you\u2019ll earn a promotion."
   - If you manage to not mess up any of the orders, that is.
-  - What? You want to learn how to make sodas? Sure, pal. Your funeral.
+  - What? You want to learn how to make sodas? Sure, pal. Your funeral. Let's look
+    at what the customer wants on the order screen.
   - "Let\u2019s go to the drink station. Press A or D to get there from here."
-  - Take a cup from the side there and place it on the conveyor, then watch the magic!
+  - Take a cup from the side there and place it on the conveyor under the dispenser,
+    then watch the magic!
   - Don't forget to put a lid on the drink! Don't want any nasty spills.
   - Now take it to that customer over there at the window... there is one there,
     right? I'm too short to see out the window.
@@ -189,12 +239,705 @@ MonoBehaviour:
     a thing? And on Free Fry Friday!
   - "Oh well, more profits for us. Give \u2018em hell, champ!"
   pointers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 5927279245048525211}
+  - {fileID: 3606787408400604603}
+  - {fileID: 6820250099630322303}
+  - {fileID: 4141915958092488175}
+  - {fileID: 43244921901615477}
+  - {fileID: 6245534478325640527}
+  - {fileID: 646028210829618098}
+  - {fileID: 6989082583997749842}
+  - {fileID: 7215613784525944423}
+--- !u!1001 &422340008424838502
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3047504402187155707}
+    m_Modifications:
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.438
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.271
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.011999965
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.13806485
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6897717
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.02948067
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7101296
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 13.435
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 87.248
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -189.195
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829284735936848871, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_Name
+      value: Pointing Hand (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829284735936848871, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+--- !u!114 &43244921901615477 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 379946168661056531, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+  m_PrefabInstance: {fileID: 422340008424838502}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc654c17ef1e0b141a3f3e29801ea470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PointingHandAnimation
+--- !u!4 &1315115314036742930 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+  m_PrefabInstance: {fileID: 422340008424838502}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &987115405173684129
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3047504402187155707}
+    m_Modifications:
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.037
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.866
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.987
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.76423395
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.15929998
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6192431
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.08430892
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 20.359
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 281.214
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -4.186
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829284735936848871, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_Name
+      value: Pointing Hand (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829284735936848871, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+--- !u!114 &646028210829618098 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 379946168661056531, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+  m_PrefabInstance: {fileID: 987115405173684129}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc654c17ef1e0b141a3f3e29801ea470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PointingHandAnimation
+--- !u!4 &1886654554099841493 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+  m_PrefabInstance: {fileID: 987115405173684129}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3983492208190931368
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3047504402187155707}
+    m_Modifications:
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.834
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.659
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.032552883
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.68913484
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7238304
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.01015842
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 3.415
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 178.098
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 87.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829284735936848871, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_Name
+      value: Pointing Hand (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829284735936848871, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+--- !u!4 &2365651390238216156 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+  m_PrefabInstance: {fileID: 3983492208190931368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3606787408400604603 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 379946168661056531, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+  m_PrefabInstance: {fileID: 3983492208190931368}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc654c17ef1e0b141a3f3e29801ea470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PointingHandAnimation
+--- !u!1001 &4341150742100296188
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3047504402187155707}
+    m_Modifications:
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.4520001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.413
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.42999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.13806485
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6897717
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.02948067
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7101296
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 13.435
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 87.248
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -189.195
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829284735936848871, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_Name
+      value: Pointing Hand (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829284735936848871, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+--- !u!4 &3144238150738562952 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+  m_PrefabInstance: {fileID: 4341150742100296188}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4141915958092488175 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 379946168661056531, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+  m_PrefabInstance: {fileID: 4341150742100296188}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc654c17ef1e0b141a3f3e29801ea470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PointingHandAnimation
+--- !u!1001 &6046451401161044316
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3047504402187155707}
+    m_Modifications:
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.5019999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.323
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.265
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.107243985
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.94510096
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.091813594
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.29470867
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 14.882
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 146.219
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -173.445
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829284735936848871, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_Name
+      value: Pointing Hand (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829284735936848871, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+--- !u!4 &4932851073646001960 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+  m_PrefabInstance: {fileID: 6046451401161044316}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6245534478325640527 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 379946168661056531, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+  m_PrefabInstance: {fileID: 6046451401161044316}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc654c17ef1e0b141a3f3e29801ea470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PointingHandAnimation
+--- !u!1001 &6270200450549132680
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3047504402187155707}
+    m_Modifications:
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6529999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.206
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.2830001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5132313
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.3593005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5895398
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5098428
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 13.435
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 87.248
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -76.811
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829284735936848871, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_Name
+      value: Pointing Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829284735936848871, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+--- !u!4 &4654598306754110460 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+  m_PrefabInstance: {fileID: 6270200450549132680}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5927279245048525211 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 379946168661056531, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+  m_PrefabInstance: {fileID: 6270200450549132680}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc654c17ef1e0b141a3f3e29801ea470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PointingHandAnimation
+--- !u!1001 &6621331949184724588
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3047504402187155707}
+    m_Modifications:
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.2220001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.614
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.03405541
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.897427
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.439843
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.001764162
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 3.415
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 178.098
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 127.723
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829284735936848871, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_Name
+      value: Pointing Hand (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829284735936848871, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+--- !u!4 &5512401797518893080 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+  m_PrefabInstance: {fileID: 6621331949184724588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6820250099630322303 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 379946168661056531, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+  m_PrefabInstance: {fileID: 6621331949184724588}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc654c17ef1e0b141a3f3e29801ea470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PointingHandAnimation
+--- !u!1001 &7018531844291603060
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3047504402187155707}
+    m_Modifications:
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6459999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.372
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.42850447
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5816382
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5700532
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.39130592
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 177
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 289.085
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90.98401
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829284735936848871, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_Name
+      value: Pointing Hand (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829284735936848871, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+--- !u!114 &7215613784525944423 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 379946168661056531, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+  m_PrefabInstance: {fileID: 7018531844291603060}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc654c17ef1e0b141a3f3e29801ea470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PointingHandAnimation
+--- !u!4 &8573336294750135296 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+  m_PrefabInstance: {fileID: 7018531844291603060}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7330701941978039873
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3047504402187155707}
+    m_Modifications:
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.159
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.748
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.545
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.037714377
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6328212
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.06069312
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.77099377
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -8.124
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 281.16602
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -178.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829284735936848871, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_Name
+      value: Pointing Hand (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829284735936848871, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+--- !u!114 &6989082583997749842 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 379946168661056531, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+  m_PrefabInstance: {fileID: 7330701941978039873}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc654c17ef1e0b141a3f3e29801ea470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PointingHandAnimation
+--- !u!4 &8225733436817606709 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1701320972307467892, guid: e09689216c16a6a4f983667f38264d89, type: 3}
+  m_PrefabInstance: {fileID: 7330701941978039873}
+  m_PrefabAsset: {fileID: 0}

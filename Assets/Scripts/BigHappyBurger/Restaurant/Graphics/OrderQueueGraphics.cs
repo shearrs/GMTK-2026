@@ -62,7 +62,12 @@ namespace BigHappyBurger.Restaurants.Graphics
         private void Update()
         {
             foreach (var (order, timerLabel) in orderTimers)
-                timerLabel.text = GetTimerTime(order.Timer);
+            {
+                if (!order.HasTimer)
+                    timerLabel.text = "...";
+                else
+                    timerLabel.text = GetTimerTime(order.Timer);
+            }
         }
 
         private void OnUILoaded(PanelRenderer _, VisualElement root)

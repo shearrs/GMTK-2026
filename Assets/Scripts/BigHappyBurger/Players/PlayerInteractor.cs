@@ -28,6 +28,10 @@ namespace BigHappyBurger.Players
         private InputAction flipInput;
         private InputAction scrollItemInput;
 
+        public DragInteractor DragInteractor => dragInteractor;
+        public HoldInteractor HoldInteractor => holdInteractor;
+        public SpawnInteractor SpawnInteractor => spawnInteractor;
+
         public void Initialize(PlayerInput input)
         {
             interactInput = input.PlayerActions.Interact;
@@ -61,7 +65,8 @@ namespace BigHappyBurger.Players
                     );
 
                     dragInteractor.UpdateDragging(interactInput.IsPressed(), flipInput.IsPressed());
-                } else if (customerInteractor.TryToStartDialogue())
+                }
+                else if (customerInteractor.TryToStartDialogue())
                 {
                     //turn off turning of player
                 }

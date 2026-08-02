@@ -22,25 +22,55 @@ namespace BigHappyBurger.Restaurants
 
         public IReadOnlyList<Food> Foods => foods;
         public IReadOnlyList<DrinkTypeSize> Drinks => drinks;
-        public bool NeedsHappyBox { get; private set; }
+        public bool NeedsHappyBox { get; }
+        public bool HasTimer { get; }
         public Timer Timer => orderTimer;
+
+        public Order(
+            IReadOnlyList<Food> foods,
+            float timeMultiplier = 1.0f,
+            bool happyBox = false,
+            bool hasTimer = true
+        )
+        {
+            this.foods.AddRange(foods);
+            this.timeMultiplier = timeMultiplier;
+            NeedsHappyBox = happyBox;
+            HasTimer = hasTimer;
+        }
+
+        public Order(
+            IReadOnlyList<DrinkTypeSize> drinks,
+            float timeMultiplier = 1.0f,
+            bool happyBox = false,
+            bool hasTimer = true
+        )
+        {
+            this.drinks.AddRange(drinks);
+            this.timeMultiplier = timeMultiplier;
+            NeedsHappyBox = happyBox;
+            HasTimer = hasTimer;
+        }
 
         public Order(
             IReadOnlyList<Food> foods,
             IReadOnlyList<DrinkTypeSize> drinks,
             float timeMultiplier = 1.0f,
-            bool happyBox = false
+            bool happyBox = false,
+            bool hasTimer = true
         )
         {
             this.foods.AddRange(foods);
             this.drinks.AddRange(drinks);
             this.timeMultiplier = timeMultiplier;
             NeedsHappyBox = happyBox;
+            HasTimer = hasTimer;
         }
 
         public void StartTimer()
         {
-            orderTimer.Start(GetExpectedWaitTime());
+            if (HasTimer)
+                orderTimer.Start(GetExpectedWaitTime());
         }
 
         public float GetExpectedWaitTime()

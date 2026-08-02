@@ -23,6 +23,7 @@ namespace BigHappyBurger.Interaction
         public Item Item { get; private set; }
 
         public event Action DragBegan;
+        public event Action DragEnded;
 
         public readonly struct UpdateInfo
         {
@@ -59,6 +60,8 @@ namespace BigHappyBurger.Interaction
                 {
                     var releasedItem = Item;
                     Release();
+
+                    DragEnded?.Invoke();
                     return new(releasedItem, offset, true);
                 }
             }
@@ -83,7 +86,6 @@ namespace BigHappyBurger.Interaction
 
             Item.OnDragBegin();
             UpdateDrag(flipInput);
-            //CursorManager.SetCursorVisibility(false);
 
             DragBegan?.Invoke();
 
@@ -118,7 +120,6 @@ namespace BigHappyBurger.Interaction
             if (Item == null)
                 return;
 
-            //CursorManager.SetCursorVisibility(true);
             Item.OnDragEnd();
             Item = null;
         }

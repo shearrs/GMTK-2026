@@ -55,28 +55,31 @@ namespace BigHappyBurger.GameManagement
         private readonly List<Food> chosenFoods = new();
         private readonly List<DrinkTypeSize> chosenDrinks = new();
 
-        public Order GetRandomOrder()
+        public Order GetRandomOrder(bool canBeHappyBox)
         {
-            GetRandomFoods(out bool isHappyBox);
+            GetRandomFoods(canBeHappyBox, out bool isHappyBox);
             GetRandomDrinks();
 
             return new(chosenFoods, chosenDrinks, TimePerOrderMultiplier, isHappyBox);
         }
 
-        private void GetRandomFoods(out bool isHappyBox)
+        private void GetRandomFoods(bool canBeHappyBox, out bool isHappyBox)
         {
             isHappyBox = false;
             chosenFoods.Clear();
 
-            float happyBox = UnityEngine.Random.Range(0.0f, 1.0f);
-            if (happyBoxChance >= happyBox)
+            if (canBeHappyBox)
             {
-                for (int i = 0; i < happyBoxItems.Length; i++)
-                    chosenFoods.Add(happyBoxItems[i]);
+                float happyBox = UnityEngine.Random.Range(0.0f, 1.0f);
+                if (happyBoxChance >= happyBox)
+                {
+                    for (int i = 0; i < happyBoxItems.Length; i++)
+                        chosenFoods.Add(happyBoxItems[i]);
 
-                isHappyBox = true;
+                    isHappyBox = true;
 
-                return;
+                    return;
+                }
             }
 
             int foodCount = foodCountRange.Random();

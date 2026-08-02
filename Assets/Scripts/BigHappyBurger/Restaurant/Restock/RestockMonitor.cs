@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using BigHappyBurger.Foods;
 using BigHappyBurger.Interaction;
 using Shears;
 using Shears.Logging;
@@ -72,7 +74,7 @@ namespace BigHappyBurger.Restaurants
         private Vector2 maxExtents;
 
         private readonly Timer deliveryTimer = new();
-        int currentSelection = 0;
+        private int currentSelection = 0;
         private RestockButton currentHover;
 
         private Bounds Bounds
@@ -87,10 +89,18 @@ namespace BigHappyBurger.Restaurants
                 return new(midPoint, new(length, height, 0.01f));
             }
         }
+        public bool IsHoveringBuyButton => currentHover == buyButton;
+        public bool Clickable { get; set; } = true;
+        public bool CanChangeSelection { get; set; } = true;
+
+        public event Action<Item> RestockOrdered;
 
         [ContextMenu("Click")]
         public void Click()
         {
+            if (!Clickable)
+                return;
+
             if (!deliveryTimer.IsDone)
                 return;
 
@@ -137,6 +147,9 @@ namespace BigHappyBurger.Restaurants
 
         private void MoveSelection(int direction)
         {
+            if (!CanChangeSelection)
+                return;
+
             int newSelection = currentSelection + direction;
 
             if (newSelection < 0)
@@ -159,22 +172,6 @@ namespace BigHappyBurger.Restaurants
 
         private IEnumerator IEBuy()
         {
-            buyScreenContainer.SetActive(false);
-            deliveringScreenContainer.SetActive(true);
-            deliveryTimer.Start(deliveryTime);
-
-            while (!deliveryTimer.IsDone)
-            {
-                countdownText.text = Mathf
-                    .RoundToInt(deliveryTimer.Time - deliveryTimer.CurrentTime)
-                    .ToString();
-                countdownText.fontSize = countdownTextRange.Lerp(deliveryTimer.Percentage);
-                yield return null;
-            }
-
-            buyScreenContainer.SetActive(true);
-            deliveringScreenContainer.SetActive(false);
-
             IItemSpawner spawner = null;
             var item = restockableItems[currentSelection];
 
@@ -194,6 +191,24 @@ namespace BigHappyBurger.Restaurants
                 SHLogger.Log($"Failed to map item to spawner: {item}", SHLogLevels.Error);
                 yield break;
             }
+
+            RestockOrdered?.Invoke(item);
+
+            buyScreenContainer.SetActive(false);
+            deliveringScreenContainer.SetActive(true);
+            deliveryTimer.Start(deliveryTime);
+
+            while (!deliveryTimer.IsDone)
+            {
+                countdownText.text = Mathf
+                    .RoundToInt(deliveryTimer.Time - deliveryTimer.CurrentTime)
+                    .ToString();
+                countdownText.fontSize = countdownTextRange.Lerp(deliveryTimer.Percentage);
+                yield return null;
+            }
+
+            buyScreenContainer.SetActive(true);
+            deliveringScreenContainer.SetActive(false);
 
             int count = spawner.MaxCount;
             spawner.AddCount(count);

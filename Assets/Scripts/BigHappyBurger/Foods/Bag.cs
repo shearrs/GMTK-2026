@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using BigHappyBurger.Interaction;
 using Shears;
@@ -21,23 +22,26 @@ namespace BigHappyBurger.Foods
         [SerializeField]
         private TweenData scaleTween = new(0.5f, easingFunction: TweenEase.InOutBack);
 
-        [Auto]
-        private Item item;
-
         [AutoEvent(nameof(Timer.Completed), nameof(OnEmptyTimerCompleted))]
         private readonly Timer emptyTimer = new(0.5f);
 
         [AutoEvent(nameof(Timer.Completed), nameof(Unlock))]
         private readonly Timer unlockTimer = new(1.0f);
 
+        private Item item;
         private bool isFlipped = false;
+
+        public Item Item => this.LazyGet(ref item);
+        public string ID => Item.ID;
+
+        public event Action<Food> FoodHeld;
 
         private void Update()
         {
             if (holders.Length == 0)
                 return;
 
-            if (!isFlipped && item.IsFlipped)
+            if (!isFlipped && Item.IsFlipped)
             {
                 foreach (var holder in holders)
                     holder.Lock();
@@ -45,13 +49,13 @@ namespace BigHappyBurger.Foods
                 unlockTimer.Stop();
                 emptyTimer.Restart();
             }
-            else if (isFlipped && !item.IsFlipped)
+            else if (isFlipped && !Item.IsFlipped)
             {
                 emptyTimer.Stop();
                 unlockTimer.Restart();
             }
 
-            isFlipped = item.IsFlipped;
+            isFlipped = Item.IsFlipped;
         }
 
         public void EmptyFirst()
@@ -102,6 +106,21 @@ namespace BigHappyBurger.Foods
             }
         }
 
+        private void HoldFood(Food food)
+        {
+            foreach (var holder in holders)
+            {
+                if (holder.Hold(food))
+                {
+                    food.Item.TweenScale(holdScale, scaleTween);
+                    holder.Lock();
+
+                    FoodHeld?.Invoke(food);
+                    return;
+                }
+            }
+        }
+
         private void OnTriggerEnter(Collider other)
         {
             var food = other.GetComponentInParent<Food>(true);
@@ -109,15 +128,7 @@ namespace BigHappyBurger.Foods
             if (food == null || isFlipped)
                 return;
 
-            foreach (var holder in holders)
-            {
-                if (holder.Hold(food))
-                {
-                    food.Item.TweenScale(holdScale, scaleTween);
-                    holder.Lock();
-                    return;
-                }
-            }
+            HoldFood(food);
         }
     }
 }

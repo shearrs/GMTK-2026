@@ -64,7 +64,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5485802699729204944}
-  - component: {fileID: 2723449994499862767}
+  - component: {fileID: 8160162430454276616}
   m_Layer: 0
   m_Name: Receiver Collider
   m_TagString: Untagged
@@ -81,14 +81,14 @@ Transform:
   m_GameObject: {fileID: 4603355290198669425}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.568, y: 0.941, z: 0}
+  m_LocalPosition: {x: -0.7, y: 0.941, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7782833942432501788}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &2723449994499862767
-SphereCollider:
+--- !u!65 &8160162430454276616
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -106,7 +106,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.75
+  m_Size: {x: 1, y: 4, z: 4}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7689122768453964891
 GameObject:
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebdfb561410ffce4dbbd0fa197ad9c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: BigHappyBurger.Customers::BigHappyBurger.Customers.CustomerFoodReceiver
-  collider: {fileID: 2723449994499862767}
+  collider: {fileID: 8160162430454276616}
 --- !u!82 &5436734072492401696
 AudioSource:
   m_ObjectHideFlags: 0

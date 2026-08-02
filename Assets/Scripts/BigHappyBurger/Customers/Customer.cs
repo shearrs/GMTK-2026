@@ -39,6 +39,7 @@ public partial class Customer : MonoBehaviour, ISHLoggable
     internal Car Car => car;
     public Order Order => order;
     public float Disatisfaction => order.Timer.Percentage;
+    public bool IsExiting { get; private set; }
 
     public event Action Spawned;
     public event Action ReachedWindow;
@@ -219,9 +220,7 @@ public partial class Customer : MonoBehaviour, ISHLoggable
         WaitedTooLong?.Invoke();
 
         if (isSpawned)
-        {
             StartCoroutine(IEExit(.5f));
-        }
         else
             Exited?.Invoke(this);
 
@@ -230,10 +229,11 @@ public partial class Customer : MonoBehaviour, ISHLoggable
 
     private IEnumerator IEExit(float extraDelay = 0.0f)
     {
-        BeganExiting?.Invoke();
-
         if (!exitTimer.IsDone)
             yield break;
+
+        IsExiting = true;
+        BeganExiting?.Invoke();
 
         exitTimer.Start(EXIT_DELAY + extraDelay);
 

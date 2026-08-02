@@ -32,9 +32,12 @@ namespace BigHappyBurger.Restaurants.Graphics
         {
             if (slot.IsCooking)
             {
-                countdownText.text = Mathf
-                    .RoundToInt(slot.Timer.Time - slot.Timer.CurrentTime)
-                    .ToString();
+                if (slot.HasTimer)
+                    countdownText.text = Mathf
+                        .RoundToInt(slot.Timer.Time - slot.Timer.CurrentTime)
+                        .ToString();
+                else
+                    countdownText.text = "...";
             }
         }
 

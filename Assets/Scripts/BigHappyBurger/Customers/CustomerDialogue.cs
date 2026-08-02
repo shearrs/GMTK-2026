@@ -9,6 +9,7 @@ using Random = UnityEngine.Random;
 
 namespace BigHappyBurger.Customers
 {
+    [Serializable]
     public partial class CustomerDialogue : UIElement
     {
         #region //Buttons and Text
@@ -57,6 +58,10 @@ namespace BigHappyBurger.Customers
         [AutoEvent(
             nameof(CustomerManager.CustomerArrivedAtWindow),
             nameof(OnCustomerArrivedAtWindow)
+        )]
+        [AutoEvent(
+            nameof(CustomerManager.CustomerBeganExitingWindow),
+            nameof(OnCustomerExitedWindow)
         )]
         private CustomerManager customerManager;
 
@@ -117,6 +122,8 @@ namespace BigHappyBurger.Customers
 
         public bool canStartDialogue = true;
 
+        public event Action<float> TimeAddRequested;
+
         public void StartDialogue()
         {
             if (canStartDialogue)
@@ -133,7 +140,7 @@ namespace BigHappyBurger.Customers
             playerGreeting.gameObject.SetActive(true);
             StoreTween(playerGreeting.transform.DoShakeTween(.05f, 0.02f, shakeTween));
 
-            yield return new WaitForSeconds(1f);
+            yield return CoroutineUtil.WaitForSeconds(1f);
 
             customerText.text = $"<alpha=#00>{responseText}";
             var textboxEnterTween = StoreTween(
@@ -169,14 +176,14 @@ namespace BigHappyBurger.Customers
 
                 customerText.text = $"{visible}<alpha=#00>{hidden}";
 
-                yield return new WaitForSeconds(0.02f);
+                yield return CoroutineUtil.WaitForSeconds(0.02f);
             }
 
             //provide time bonus if any (use timeBonus)
 
             StoreTween(playerGreeting.DoFadeTween(0.0f, shakeTween));
 
-            yield return new WaitForSeconds(1f);
+            yield return CoroutineUtil.WaitForSeconds(1f);
 
             playerGreeting.gameObject.SetActive(false);
             playerGreeting.Alpha = 1.0f;
@@ -189,17 +196,17 @@ namespace BigHappyBurger.Customers
             var complimentIndex = Random.Range(0, playerCompliment.Length);
             playerOptionText1.text = playerCompliment[complimentIndex];
             playerOption1.gameObject.SetActive(true);
-            yield return new WaitForSeconds(0.25f);
+            yield return CoroutineUtil.WaitForSeconds(0.25f);
 
             var updateIndex = Random.Range(0, playerUpdate.Length);
             playerOptionText2.text = playerUpdate[updateIndex];
             playerOption2.gameObject.SetActive(true);
-            yield return new WaitForSeconds(0.25f);
+            yield return CoroutineUtil.WaitForSeconds(0.25f);
 
             var weatherIndex = Random.Range(0, playerWeather.Length);
             playerOptionText3.text = playerWeather[weatherIndex];
             playerOption3.gameObject.SetActive(true);
-            yield return new WaitForSeconds(0.25f);
+            yield return CoroutineUtil.WaitForSeconds(0.25f);
 
             playerOption4.gameObject.SetActive(true);
         }
@@ -261,17 +268,19 @@ namespace BigHappyBurger.Customers
 
             for (int i = 0; i <= totalLength; i++)
             {
-                string visible = fullText.Substring(0, i);
-                string hidden = fullText.Substring(i);
+                string visible = fullText[..i];
+                string hidden = fullText[i..];
 
                 customerText.text = $"{visible}<alpha=#00>{hidden}";
 
-                yield return new WaitForSeconds(0.02f);
+                yield return CoroutineUtil.WaitForSeconds(0.02f);
             }
 
             //provide time bonus if any (use timeBonus)
+            if (timeBonus != 0)
+                TimeAddRequested?.Invoke(timeBonus);
 
-            yield return new WaitForSeconds(1f);
+            yield return CoroutineUtil.WaitForSeconds(1f);
 
             StoreTween(
                 customerTextboxTransform.DoMoveLocalTween(
@@ -287,6 +296,18 @@ namespace BigHappyBurger.Customers
         private void OnCustomerArrivedAtWindow()
         {
             canStartDialogue = true;
+        }
+
+        private void OnCustomerExitedWindow()
+        {
+            StopAllCoroutines();
+
+            playerOption1.gameObject.SetActive(false);
+            playerOption2.gameObject.SetActive(false);
+            playerOption3.gameObject.SetActive(false);
+            playerOption4.gameObject.SetActive(false);
+
+            customerTextbox.Alpha = 0.0f;
         }
     }
 }

@@ -24,6 +24,7 @@ namespace BigHappyBurger.Interaction
 
         public int MaxCount => maxCount;
         public Item ItemToSpawn => itemPrefab;
+        public bool CanSpawn { get; set; } = true;
 
         public event Action ItemReleased;
 

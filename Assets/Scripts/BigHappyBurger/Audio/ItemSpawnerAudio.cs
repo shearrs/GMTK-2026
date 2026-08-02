@@ -17,7 +17,7 @@ namespace BigHappyBurger.Audio
         [Auto]
         private AudioSource audioSource;
 
-        private void OnItemSpawned()
+        private void OnItemSpawned(Item _)
         {
             audioSource.PlayWithRange(pitchRange.Min, pitchRange.Max);
         }

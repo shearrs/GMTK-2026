@@ -91,7 +91,7 @@ namespace BigHappyBurger.Foods
 
             if (!holder.Item.TryGetComponent(out Drinkable drinkable))
             {
-                SHLogger.Log($"Drink Machine received non drinkable item!", SHLogLevels.Error);
+                SHLogger.Log($"Drink Machine received non drinkable item!", SHLogLevels.Warning);
                 yield break;
             }
 

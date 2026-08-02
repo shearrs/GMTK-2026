@@ -16,9 +16,12 @@ namespace BigHappyBurger.Interaction
             if (!detector.Detect())
                 return false;
 
-            if (detector.TryGetDetection(out ItemSpawner spawner, true))
+            if (detector.TryGetDetection(out ItemSpawner spawner, true) && spawner.CanSpawn)
                 info = spawner.SpawnItem();
-            else if (detector.TryGetDetection(out ItemSpawnContainer container, true))
+            else if (
+                detector.TryGetDetection(out ItemSpawnContainer container, true)
+                && container.CanSpawn
+            )
                 info = container.Release();
 
             return info.Item != null;

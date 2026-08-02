@@ -44,13 +44,11 @@ public partial class MenuManager : UIElement
     [SerializeField]
     private TweenData simpleTween;
 
-    private Coroutine sunriseCoroutine;
-
     private bool startingGame = false;
 
     private void Start()
     {
-        sunriseCoroutine = StartCoroutine(DoSunrise());
+        StartCoroutine(DoSunrise());
     }
 
     private void Update()
@@ -60,7 +58,7 @@ public partial class MenuManager : UIElement
 
     private IEnumerator DoSunrise()
     {
-        yield return new WaitForSeconds(1f);
+        yield return CoroutineUtil.WaitForSeconds(1f);
 
         var sunTween = StoreTween(
             sunTransform.DoMoveTween(risenSunTransform.position, sunriseTween)
@@ -99,7 +97,7 @@ public partial class MenuManager : UIElement
             dayTextMesh.DoFadeTween(1.0f, simpleTween);
         };
 
-        yield return new WaitForSeconds(6f);
+        yield return CoroutineUtil.WaitForSeconds(6f);
 
         SceneManager.LoadScene("Game Scene");
     }

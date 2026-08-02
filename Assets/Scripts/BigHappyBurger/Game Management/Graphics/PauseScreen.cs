@@ -1,24 +1,38 @@
+using System;
 using BigHappyBurger.Players;
 using Shears;
+using Shears.Signals;
 using Shears.UI;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace BigHappyBurger.GameManagement.Graphics
 {
-    public class PauseScreen : MonoBehaviour
+    public partial class PauseScreen : MonoBehaviour
     {
         [SerializeField, Required]
-        private PlayerInput input;
+        private Players.PlayerInput input;
 
         [SerializeField, Required]
         private UIElement menuElement;
 
+        [SerializeField, Required]
+        [AutoEvent(nameof(UIButton.Clicked), nameof(OnRestartClicked))]
+        private UIButton restartButton;
+
         private bool isPaused = false;
 
-        private void Update()
+        private void OnEnable()
         {
-            if (input.PlayerActions.Pause.WasPressedThisFrame())
-                Pause();
+            __AutoOnEnable();
+
+            input.GameActions.Pause.performed += OnPauseInput;
+        }
+
+        private void OnDisable()
+        {
+            __AutoOnDisable();
         }
 
         public void Unpause()
@@ -26,18 +40,38 @@ namespace BigHappyBurger.GameManagement.Graphics
             if (!isPaused)
                 return;
 
-            input.Enable();
+            input.PlayerActions.Enable();
             menuElement.Disable();
             Time.timeScale = 1.0f;
+
+            isPaused = false;
+
+            SignalShuttle.Emit(new StringSignal("Unpaused"));
         }
 
         public void Pause()
         {
-            input.Disable();
+            input.PlayerActions.Disable();
             menuElement.Enable();
             Time.timeScale = 0.0f;
 
             isPaused = true;
+
+            SignalShuttle.Emit(new StringSignal("Paused"));
+        }
+
+        private void OnRestartClicked()
+        {
+            Unpause();
+            SceneManager.LoadScene("Game Scene");
+        }
+
+        private void OnPauseInput(InputAction.CallbackContext _)
+        {
+            if (isPaused)
+                Unpause();
+            else
+                Pause();
         }
     }
 }

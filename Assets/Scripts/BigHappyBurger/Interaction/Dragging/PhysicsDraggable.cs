@@ -65,7 +65,11 @@ namespace BigHappyBurger.Interaction
         protected override void OnDragEndImplementation()
         {
             foreach (var collider in item.Colliders)
+            {
+                collider.enabled = false;
                 collider.material = normalBounceMaterial;
+                collider.enabled = true;
+            }
 
             interpolateTimer.Restart();
         }

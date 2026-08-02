@@ -14,19 +14,28 @@ namespace BigHappyBurger.GameManagement
         private Player player;
 
         [SerializeField]
-        [AutoEvent(nameof(CustomerManager.CustomerTalked), nameof(OnCustomerTalked))]
         private CustomerManager customerManager;
 
         [SerializeField]
+        [AutoEvent(nameof(CustomerDialogue.TimeAddRequested), nameof(OnTimeAddRequested))]
+        private CustomerDialogue dialogue;
+
+        [SerializeField]
         private Restaurant restaurant;
+
+        [SerializeField]
+        [AutoEvent(nameof(TutorialSequence.TutorialFinished), nameof(StartLevel))]
+        [AutoEvent(nameof(TutorialSequence.HappyBoxEnabled), nameof(OnHappyBoxEnabled))]
+        private TutorialSequence tutorial;
 
         [Header("Levels")]
         [SerializeField]
         private LevelData levelData;
 
         private readonly Timer customerCreateTimer = new();
+        private bool canSpawnHappyBox = false;
 
-        private void Start()
+        private void StartLevel()
         {
             StartCoroutine(IEPlayLevel(levelData));
         }
@@ -44,7 +53,7 @@ namespace BigHappyBurger.GameManagement
                 {
                     if (TryCreateCustomer(out var customer))
                     {
-                        var order = data.GetRandomOrder();
+                        var order = data.GetRandomOrder(canSpawnHappyBox);
                         customer.SetOrder(order);
                         restaurant.AddOrder(order);
 
@@ -73,9 +82,14 @@ namespace BigHappyBurger.GameManagement
             return false;
         }
 
-        private void OnCustomerTalked()
+        private void OnTimeAddRequested(float time)
         {
-            restaurant.AddTime(7.5f);
+            restaurant.AddTime(time);
+        }
+
+        private void OnHappyBoxEnabled()
+        {
+            canSpawnHappyBox = true;
         }
     }
 }

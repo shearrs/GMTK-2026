@@ -18,6 +18,7 @@ namespace BigHappyBurger.Restaurants
         [SerializeField]
         private List<Cookable> cookQueue = new();
 
+        private readonly Dictionary<Food, bool> foodTimerMap = new();
         private bool isPaused;
 
         public IReadOnlyList<ChefSlot> Slots => slots;
@@ -32,17 +33,21 @@ namespace BigHappyBurger.Restaurants
 
             private readonly Timer timer = new();
 
+            internal bool IsForceCompleted { get; set; } = false;
             public Cookable Cookable
             {
                 get => cookable;
                 set
                 {
+                    IsForceCompleted = false;
                     cookable = value;
                     FoodChanged?.Invoke(cookable);
                 }
             }
-            public bool IsCooking => Cookable != null && !timer.IsDone;
+            public bool IsCooking =>
+                Cookable != null && !IsForceCompleted && (!timer.IsDone || !HasTimer);
             public bool IsPaused => timer.IsPaused;
+            public bool HasTimer { get; internal set; }
             public Timer Timer => timer;
 
             public event Action<Cookable> FoodChanged;
@@ -75,7 +80,10 @@ namespace BigHappyBurger.Restaurants
             foreach (var food in order.Foods)
             {
                 if (food.IsCookable)
+                {
                     cookQueue.Add(food.GetComponent<Cookable>());
+                    foodTimerMap[food] = order.HasTimer;
+                }
             }
         }
 
@@ -100,9 +108,15 @@ namespace BigHappyBurger.Restaurants
 
                 if (!FoodAlreadyCooking(food))
                 {
-                    cookQueue.RemoveAt(i);
+                    bool hasTimer = foodTimerMap[food.Food];
                     openSlot.Cookable = food;
-                    openSlot.BeginCooking();
+
+                    cookQueue.RemoveAt(i);
+                    foodTimerMap.Remove(food.Food);
+                    openSlot.HasTimer = hasTimer;
+
+                    if (hasTimer)
+                        openSlot.BeginCooking();
                 }
             }
 
@@ -116,6 +130,14 @@ namespace BigHappyBurger.Restaurants
                 slot.Timer.Stop();
                 slot.Cookable = null;
             }
+        }
+
+        public void ForceComplete(ChefSlot slot)
+        {
+            if (!slot.IsCooking)
+                return;
+
+            slot.IsForceCompleted = true;
         }
 
         private void PauseCooking()

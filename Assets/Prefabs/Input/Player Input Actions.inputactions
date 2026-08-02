@@ -77,15 +77,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Pause",
-                    "type": "Button",
-                    "id": "a3ce0f7c-c8a9-4ce8-b37d-c83552e008ba",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -176,10 +167,27 @@
                     "action": "Flip Item",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
+                }
+            ]
+        },
+        {
+            "name": "Game",
+            "id": "0baf984b-7bdc-4d0a-99ef-8055cf1823ab",
+            "actions": [
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "5dc9e566-f7c0-4d2e-94f2-b3f2a8eef7a8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
                 {
                     "name": "",
-                    "id": "6e3ad15f-9a0d-4bb1-ade5-ca3b47aae34f",
+                    "id": "9fd815f7-a58a-4cd1-b776-345aeafbeff8",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
@@ -190,7 +198,7 @@
                 },
                 {
                     "name": "",
-                    "id": "e549ea35-07dd-446f-8333-a15cdd7ac9c4",
+                    "id": "249067c1-bf1c-4ac5-8d1f-4c4415bd8990",
                     "path": "<Keyboard>/p",
                     "interactions": "",
                     "processors": "",

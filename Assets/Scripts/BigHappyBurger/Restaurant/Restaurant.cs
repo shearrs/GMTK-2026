@@ -76,6 +76,9 @@ namespace BigHappyBurger.Restaurants
         {
             foreach (var order in orders)
             {
+                if (!order.HasTimer)
+                    continue;
+
                 float remainingTime = order.Timer.Time - order.Timer.CurrentTime;
                 remainingTime += time;
 
