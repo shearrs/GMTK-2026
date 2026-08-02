@@ -49,6 +49,9 @@ namespace BigHappyBurger.GameManagement
 
             while (remainingCustomersToServe > 0)
             {
+                if (ApplicationUtil.IsQuitting)
+                    yield break;
+
                 if (remainingCustomersToCreate > 0)
                 {
                     if (TryCreateCustomer(out var customer))

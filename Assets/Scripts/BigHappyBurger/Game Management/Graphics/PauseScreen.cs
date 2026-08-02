@@ -38,6 +38,8 @@ namespace BigHappyBurger.GameManagement.Graphics
         private void OnDisable()
         {
             __AutoOnDisable();
+
+            input.GameActions.Pause.performed -= OnPauseInput;
         }
 
         public void Unpause()
@@ -68,6 +70,7 @@ namespace BigHappyBurger.GameManagement.Graphics
         private void OnSkipTutorialButtonClicked()
         {
             tutorial.ForceFinishTutorial();
+            Unpause();
         }
 
         private void OnRestartClicked()

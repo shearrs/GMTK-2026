@@ -59,7 +59,6 @@ namespace BigHappyBurger.Restaurants
                     return;
                 }
 
-                Debug.Log("begin cooking: " + Cookable.Food.gameObject.name);
                 timer.Start(Cookable.CookTime);
             }
 
@@ -81,8 +80,6 @@ namespace BigHappyBurger.Restaurants
             {
                 if (food.IsCookable)
                 {
-                    Debug.Log("add food: " + food.gameObject.name);
-
                     cookQueue.Add(food.GetComponent<Cookable>());
                     hasTimers = order.HasTimer;
                 }
@@ -117,7 +114,10 @@ namespace BigHappyBurger.Restaurants
                     openSlot.HasTimer = hasTimers;
 
                     if (hasTimers)
+                    {
                         openSlot.BeginCooking();
+                        break;
+                    }
                 }
             }
 

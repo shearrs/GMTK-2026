@@ -47,6 +47,7 @@ namespace BigHappyBurger.Interaction
                 spawnedItems.Add(instance);
 
                 LockItem(instance);
+                instance.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
             }
         }
 

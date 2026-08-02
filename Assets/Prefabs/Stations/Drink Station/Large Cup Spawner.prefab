@@ -140,7 +140,7 @@ MonoBehaviour:
   maxCount: 0
   currentCount: 0
   dragOffset: {x: 0, y: -0.25, z: 0}
-  planeDistanceOffset: -0.5
+  planeDistanceOffset: 0
 --- !u!1001 &6468921157974596277
 PrefabInstance:
   m_ObjectHideFlags: 0

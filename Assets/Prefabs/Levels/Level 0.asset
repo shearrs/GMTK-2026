@@ -16,8 +16,8 @@ MonoBehaviour:
   <TimePerOrderMultiplier>k__BackingField: 4
   <FirstCustomerArrivalTime>k__BackingField: 0
   <CustomerArrivalRange>k__BackingField:
-    min: 45
-    max: 65
+    min: 35
+    max: 60
   foodCountRange:
     min: 0
     max: 3

@@ -16,6 +16,7 @@ namespace BigHappyBurger.GameManagement
 {
     public class TutorialSequence : MonoBehaviour
     {
+        #region Variables
         private const float CUSTOMER_COUNTER = 0.0f;
         private const float ORDER_COUNTER = 90.0f;
         private const float CHEF_COUNTER = 180.0f;
@@ -116,6 +117,7 @@ namespace BigHappyBurger.GameManagement
 
         public event Action TutorialFinished;
         public event Action HappyBoxEnabled;
+        #endregion
 
         private void OnEnable()
         {
@@ -820,6 +822,9 @@ namespace BigHappyBurger.GameManagement
             mediumCupSpawner.ItemSpawned -= OnCupSpawned;
             monitor.RestockOrdered -= OnRestockOrdered;
 
+            foreach (var pointer in pointers)
+                pointer.gameObject.SetActive(false);
+
             foreach (var spawner in itemSpawners)
                 spawner.CanSpawn = true;
 
@@ -828,6 +833,7 @@ namespace BigHappyBurger.GameManagement
 
             isFinished = true;
             TutorialFinished?.Invoke();
+            HappyBoxEnabled?.Invoke();
         }
     }
 }

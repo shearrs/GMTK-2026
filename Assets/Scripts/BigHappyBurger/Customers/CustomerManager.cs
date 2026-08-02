@@ -58,6 +58,8 @@ namespace BigHappyBurger.Customers
             customer.Exited += OnCustomerExited;
             customer.CorrectlyServed += OnCustomerServed;
 
+            Debug.Log("create customer");
+
             return customer;
         }
 
