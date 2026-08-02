@@ -105,6 +105,7 @@ namespace BigHappyBurger.GameManagement
         private bool baghasKetchup = false;
         private bool bagHasNapkins = false;
         private bool isKetchupOrdered = false;
+        private bool isFinished = false;
         private Customer customer;
         private Bag spawnedBag;
         private Drinkable spawnedCup;
@@ -144,9 +145,11 @@ namespace BigHappyBurger.GameManagement
 
         private void Start()
         {
+            if (isFinished)
+                return;
+
             DisableAllTurning();
             DisableAllSpawners();
-            monitor.CanChangeSelection = false;
 
             StartCoroutine(EnterScreen());
 
@@ -502,7 +505,7 @@ namespace BigHappyBurger.GameManagement
                 root.AddToClassList("TextBoxHidden");
                 lineIndex = 0;
 
-                yield return CoroutineUtil.WaitForSeconds(30.0f);
+                yield return CoroutineUtil.WaitForSeconds(120.0f);
                 root.RemoveFromClassList("TextBoxHidden");
 
                 tutorialText.text = string.Empty;
@@ -794,9 +797,28 @@ namespace BigHappyBurger.GameManagement
             mediumCupSpawner.CanSpawn = false;
         }
 
+        public void ForceFinishTutorial()
+        {
+            if (isFinished)
+                return;
+
+            StopAllCoroutines();
+            root.AddToClassList("TextBoxHidden");
+            lineIndex = 0;
+
+            FinishTutorial();
+        }
+
         private void FinishTutorial()
         {
+            player.EnableInteraction();
             EnableAllTurning();
+            monitor.CanChangeSelection = true;
+            monitor.Clickable = true;
+
+            bagSpawner.ItemSpawned -= OnBagSpawned;
+            mediumCupSpawner.ItemSpawned -= OnCupSpawned;
+            monitor.RestockOrdered -= OnRestockOrdered;
 
             foreach (var spawner in itemSpawners)
                 spawner.CanSpawn = true;
@@ -804,6 +826,7 @@ namespace BigHappyBurger.GameManagement
             foreach (var spawner in itemSpawnContainers)
                 spawner.CanSpawn = true;
 
+            isFinished = true;
             TutorialFinished?.Invoke();
         }
     }

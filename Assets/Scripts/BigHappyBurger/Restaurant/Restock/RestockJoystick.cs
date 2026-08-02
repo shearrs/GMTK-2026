@@ -32,8 +32,8 @@ namespace BigHappyBurger.Restaurants
         [SerializeField]
         private float minHeight = 0.15f;
 
-        [SerializeField]
-        private float cursorSensitivity = 0.01f;
+        [SerializeField, Min(0)]
+        private float cursorSensitivity = 1.0f;
 
         [SerializeField]
         private float returnSpeed = 1.0f;
@@ -53,7 +53,7 @@ namespace BigHappyBurger.Restaurants
             var direction = heading / distance;
             var monitorDirection = new Vector2(direction.x, -direction.z);
 
-            monitor.MoveCursor(cursorSensitivity * distance * monitorDirection);
+            monitor.MoveCursor(Time.deltaTime * cursorSensitivity * distance * monitorDirection);
         }
 
         private void FixedUpdate()

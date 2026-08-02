@@ -2012,10 +2012,6 @@ PrefabInstance:
       propertyPath: monitor
       value: 
       objectReference: {fileID: 4056542957948830515}
-    - target: {fileID: 4870899980592302509, guid: 734c83781cf81164bb93258ac7c606e4, type: 3}
-      propertyPath: joystickDistance
-      value: 0.25
-      objectReference: {fileID: 0}
     - target: {fileID: 6093470319878192522, guid: 734c83781cf81164bb93258ac7c606e4, type: 3}
       propertyPath: m_Name
       value: Joystick

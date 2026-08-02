@@ -92,7 +92,7 @@ namespace BigHappyBurger.Restaurants.Graphics
             {
                 var orderContainer = orderElement.Q("Container");
 
-                orderContainer.style.backgroundColor = HIGHLIGHT_COLOR;
+                orderContainer.SetAllBorderColors(HIGHLIGHT_COLOR);
             }
         }
 
@@ -110,7 +110,7 @@ namespace BigHappyBurger.Restaurants.Graphics
                 var topElement = orderElements[restaurant.Orders[0]];
                 var orderContainer = topElement.Q("Container");
 
-                orderContainer.style.backgroundColor = HIGHLIGHT_COLOR;
+                orderContainer.SetAllBorderColors(HIGHLIGHT_COLOR);
             }
         }
 

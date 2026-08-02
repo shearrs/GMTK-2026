@@ -1,5 +1,3 @@
-using System;
-using BigHappyBurger.Players;
 using Shears;
 using Shears.Signals;
 using Shears.UI;
@@ -16,6 +14,13 @@ namespace BigHappyBurger.GameManagement.Graphics
 
         [SerializeField, Required]
         private UIElement menuElement;
+
+        [SerializeField, Required]
+        private TutorialSequence tutorial;
+
+        [SerializeField, Required]
+        [AutoEvent(nameof(UIButton.Clicked), nameof(OnSkipTutorialButtonClicked))]
+        private UIButton skipTutorialButton;
 
         [SerializeField, Required]
         [AutoEvent(nameof(UIButton.Clicked), nameof(OnRestartClicked))]
@@ -58,6 +63,11 @@ namespace BigHappyBurger.GameManagement.Graphics
             isPaused = true;
 
             SignalShuttle.Emit(new StringSignal("Paused"));
+        }
+
+        private void OnSkipTutorialButtonClicked()
+        {
+            tutorial.ForceFinishTutorial();
         }
 
         private void OnRestartClicked()

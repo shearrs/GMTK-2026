@@ -18,8 +18,8 @@ namespace BigHappyBurger.Restaurants
         [SerializeField]
         private List<Cookable> cookQueue = new();
 
-        private readonly Dictionary<Food, bool> foodTimerMap = new();
         private bool isPaused;
+        private bool hasTimers; // this is not a good way to do this, but we are just making things work
 
         public IReadOnlyList<ChefSlot> Slots => slots;
 
@@ -59,6 +59,7 @@ namespace BigHappyBurger.Restaurants
                     return;
                 }
 
+                Debug.Log("begin cooking: " + Cookable.Food.gameObject.name);
                 timer.Start(Cookable.CookTime);
             }
 
@@ -83,7 +84,7 @@ namespace BigHappyBurger.Restaurants
                     Debug.Log("add food: " + food.gameObject.name);
 
                     cookQueue.Add(food.GetComponent<Cookable>());
-                    foodTimerMap[food] = order.HasTimer;
+                    hasTimers = order.HasTimer;
                 }
             }
         }
@@ -109,14 +110,13 @@ namespace BigHappyBurger.Restaurants
 
                 if (!FoodAlreadyCooking(food))
                 {
-                    bool hasTimer = foodTimerMap[food.Food];
                     openSlot.Cookable = food;
 
                     cookQueue.RemoveAt(i);
-                    foodTimerMap.Remove(food.Food);
-                    openSlot.HasTimer = hasTimer;
+                    i--;
+                    openSlot.HasTimer = hasTimers;
 
-                    if (hasTimer)
+                    if (hasTimers)
                         openSlot.BeginCooking();
                 }
             }
@@ -131,8 +131,6 @@ namespace BigHappyBurger.Restaurants
                 slot.Timer.Stop();
                 slot.Cookable = null;
             }
-
-            foodTimerMap.Clear();
         }
 
         public void ForceComplete(ChefSlot slot)
